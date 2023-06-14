@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DAF0C57B-DAC9-4526-A10D-EFE0D3B9FF2B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Ruby_Hospital</RootNamespace>
+    <AssemblyName>Ruby Hospital</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assgin_lab_test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assgin_lab_test.Designer.cs">
+      <DependentUpon>Assgin_lab_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assign_IPD_Drugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assign_IPD_Drugs.Designer.cs">
+      <DependentUpon>Assign_IPD_Drugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assign_OPD_Drugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assign_OPD_Drugs.Designer.cs">
+      <DependentUpon>Assign_OPD_Drugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DASHBOARD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DASHBOARD.Designer.cs">
+      <DependentUpon>DASHBOARD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard_page.Designer.cs">
+      <DependentUpon>Dashboard_page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashbord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashbord.Designer.cs">
+      <DependentUpon>Dashbord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fill_IPD_Billing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fill_IPD_Billing.Designer.cs">
+      <DependentUpon>Fill_IPD_Billing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employeeregistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employeeregistration.Designer.cs">
+      <DependentUpon>Employeeregistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fill_IPD_Discharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fill_IPD_Discharge.Designer.cs">
+      <DependentUpon>Fill_IPD_Discharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fill_IPD_Discharge_gridview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fill_IPD_Discharge_gridview.Designer.cs">
+      <DependentUpon>Fill_IPD_Discharge_gridview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPD Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPD Registration.Designer.cs">
+      <DependentUpon>IPD Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPD_Daily_Procedure_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPD_Daily_Procedure_grid.Designer.cs">
+      <DependentUpon>IPD_Daily_Procedure_grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPD_Daily_Procedure_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPD_Daily_Procedure_main.Designer.cs">
+      <DependentUpon>IPD_Daily_Procedure_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPD_Surgical_Procedure_Billing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPD_Surgical_Procedure_Billing.Designer.cs">
+      <DependentUpon>IPD_Surgical_Procedure_Billing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLD_Discharge_Summary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD_Discharge_Summary.Designer.cs">
+      <DependentUpon>OLD_Discharge_Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPD_ECG_and_Radiology_list_gridview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPD_ECG_and_Radiology_list_gridview.Designer.cs">
+      <DependentUpon>IPD_ECG_and_Radiology_list_gridview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPD_ECG_and_Radiology_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPD_ECG_and_Radiology_main.Designer.cs">
+      <DependentUpon>IPD_ECG_and_Radiology_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPD_Hospital_Procedure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPD_Hospital_Procedure.Designer.cs">
+      <DependentUpon>IPD_Hospital_Procedure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPD_Patient_ifo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPD_Patient_ifo.Designer.cs">
+      <DependentUpon>IPD_Patient_ifo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPD_Patient_Transfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPD_Patient_Transfer.Designer.cs">
+      <DependentUpon>IPD_Patient_Transfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPD_Print_Certificates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPD_Print_Certificates.Designer.cs">
+      <DependentUpon>IPD_Print_Certificates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MLC Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MLC Details.Designer.cs">
+      <DependentUpon>MLC Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSI_REPORT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSI_REPORT.Designer.cs">
+      <DependentUpon>MSI_REPORT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Old_lab_Reciept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Old_lab_Reciept.Designer.cs">
+      <DependentUpon>Old_lab_Reciept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Old_OPD_Receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Old_OPD_Receipt.Designer.cs">
+      <DependentUpon>Old_OPD_Receipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OPD_Consultaion_gridview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OPD_Consultaion_gridview.Designer.cs">
+      <DependentUpon>OPD_Consultaion_gridview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OPD_Consultaion_mainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OPD_Consultaion_mainform.Designer.cs">
+      <DependentUpon>OPD_Consultaion_mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OPD_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OPD_List.Designer.cs">
+      <DependentUpon>OPD_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OPD_Print_Certificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OPD_Print_Certificate.Designer.cs">
+      <DependentUpon>OPD_Print_Certificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintFormManually.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintFormManually.Designer.cs">
+      <DependentUpon>PrintFormManually.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Patient_Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient_Registration.Designer.cs">
+      <DependentUpon>Patient_Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SingUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SingUp.Designer.cs">
+      <DependentUpon>SingUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update_patient_status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_patient_status.Designer.cs">
+      <DependentUpon>Update_patient_status.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Assgin_lab_test.resx">
+      <DependentUpon>Assgin_lab_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assign_IPD_Drugs.resx">
+      <DependentUpon>Assign_IPD_Drugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assign_OPD_Drugs.resx">
+      <DependentUpon>Assign_OPD_Drugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DASHBOARD.resx">
+      <DependentUpon>DASHBOARD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard_page.resx">
+      <DependentUpon>Dashboard_page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashbord.resx">
+      <DependentUpon>Dashbord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fill_IPD_Billing.resx">
+      <DependentUpon>Fill_IPD_Billing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employeeregistration.resx">
+      <DependentUpon>Employeeregistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fill_IPD_Discharge.resx">
+      <DependentUpon>Fill_IPD_Discharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fill_IPD_Discharge_gridview.resx">
+      <DependentUpon>Fill_IPD_Discharge_gridview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPD Registration.resx">
+      <DependentUpon>IPD Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPD_Daily_Procedure_grid.resx">
+      <DependentUpon>IPD_Daily_Procedure_grid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPD_Daily_Procedure_main.resx">
+      <DependentUpon>IPD_Daily_Procedure_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPD_Surgical_Procedure_Billing.resx">
+      <DependentUpon>IPD_Surgical_Procedure_Billing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD_Discharge_Summary.resx">
+      <DependentUpon>OLD_Discharge_Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPD_ECG_and_Radiology_list_gridview.resx">
+      <DependentUpon>IPD_ECG_and_Radiology_list_gridview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPD_ECG_and_Radiology_main.resx">
+      <DependentUpon>IPD_ECG_and_Radiology_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPD_Hospital_Procedure.resx">
+      <DependentUpon>IPD_Hospital_Procedure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPD_Patient_ifo.resx">
+      <DependentUpon>IPD_Patient_ifo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPD_Patient_Transfer.resx">
+      <DependentUpon>IPD_Patient_Transfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPD_Print_Certificates.resx">
+      <DependentUpon>IPD_Print_Certificates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MLC Details.resx">
+      <DependentUpon>MLC Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSI_REPORT.resx">
+      <DependentUpon>MSI_REPORT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Old_lab_Reciept.resx">
+      <DependentUpon>Old_lab_Reciept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Old_OPD_Receipt.resx">
+      <DependentUpon>Old_OPD_Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OPD_Consultaion_gridview.resx">
+      <DependentUpon>OPD_Consultaion_gridview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OPD_Consultaion_mainform.resx">
+      <DependentUpon>OPD_Consultaion_mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OPD_List.resx">
+      <DependentUpon>OPD_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OPD_Print_Certificate.resx">
+      <DependentUpon>OPD_Print_Certificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintFormManually.resx">
+      <DependentUpon>PrintFormManually.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Patient_Registration.resx">
+      <DependentUpon>Patient_Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SingUp.resx">
+      <DependentUpon>SingUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_patient_status.resx">
+      <DependentUpon>Update_patient_status.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-locked-user-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sign-up-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-locked-user-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\264294910_108862081637008_8238947895213189007_n-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-male-user-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\904-shirt-1024x536.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\264294910_108862081637008_8238947895213189007_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-icons-login-icon-design-others-logo-silhouette-share-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-50 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-avatar-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-avatar-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line-40935.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black Orange Corporate Geometric Business Plan Business Presentation.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-50 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black Orange Corporate Geometric Business Plan Business Presentation %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DSC_336.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black Orange Corporate Geometric Business Plan Business Presentation %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-admin-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-64.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
