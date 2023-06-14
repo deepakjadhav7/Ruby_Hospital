@@ -17,7 +17,7 @@ namespace Ruby_Hospital
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
            // Application.Run(new Assign_IPD_Drugs ());
-            Application.Run(new IPD_Surgical_Procedure_Billing());
+            Application.Run(new Main_patient());
         }
     }
 }
