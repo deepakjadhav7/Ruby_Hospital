@@ -60,8 +60,13 @@ namespace Ruby_Hospital
             this.rbtrubystarhospital = new System.Windows.Forms.RadioButton();
             this.rbtcontractor = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtgender = new System.Windows.Forms.ComboBox();
+            this.checkStatus = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.txtLandmark = new System.Windows.Forms.TextBox();
             this.txtExperience = new System.Windows.Forms.TextBox();
+            this.txtprobationDate = new System.Windows.Forms.DateTimePicker();
+            this.label16 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -77,11 +82,6 @@ namespace Ruby_Hospital
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.txtprobationDate = new System.Windows.Forms.DateTimePicker();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.checkStatus = new System.Windows.Forms.CheckBox();
-            this.txtgender = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -499,6 +499,45 @@ namespace Ruby_Hospital
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
+            // txtgender
+            // 
+            this.txtgender.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtgender.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtgender.FormattingEnabled = true;
+            this.txtgender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Other"});
+            this.txtgender.Location = new System.Drawing.Point(149, 137);
+            this.txtgender.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.txtgender.Name = "txtgender";
+            this.txtgender.Size = new System.Drawing.Size(152, 29);
+            this.txtgender.TabIndex = 22;
+            // 
+            // checkStatus
+            // 
+            this.checkStatus.AutoSize = true;
+            this.checkStatus.Checked = true;
+            this.checkStatus.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkStatus.Location = new System.Drawing.Point(637, 482);
+            this.checkStatus.Name = "checkStatus";
+            this.checkStatus.Size = new System.Drawing.Size(68, 21);
+            this.checkStatus.TabIndex = 21;
+            this.checkStatus.Text = "Active";
+            this.checkStatus.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(512, 482);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 21);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Status";
+            // 
             // txtLandmark
             // 
             this.txtLandmark.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -528,6 +567,27 @@ namespace Ruby_Hospital
             this.txtExperience.TabIndex = 8;
             this.txtExperience.Text = "Enter  The Working Experience\r\n";
             this.txtExperience.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtprobationDate
+            // 
+            this.txtprobationDate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtprobationDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtprobationDate.Location = new System.Drawing.Point(147, 472);
+            this.txtprobationDate.Name = "txtprobationDate";
+            this.txtprobationDate.Size = new System.Drawing.Size(152, 27);
+            this.txtprobationDate.TabIndex = 18;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(33, 475);
+            this.label16.Margin = new System.Windows.Forms.Padding(3);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(115, 21);
+            this.label16.TabIndex = 8;
+            this.label16.Text = "Probation Till  ";
             // 
             // label10
             // 
@@ -708,66 +768,6 @@ namespace Ruby_Hospital
             this.textBox8.TabIndex = 8;
             this.textBox8.Text = "Enter Id\'s";
             this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtprobationDate
-            // 
-            this.txtprobationDate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtprobationDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprobationDate.Location = new System.Drawing.Point(147, 472);
-            this.txtprobationDate.Name = "txtprobationDate";
-            this.txtprobationDate.Size = new System.Drawing.Size(152, 27);
-            this.txtprobationDate.TabIndex = 18;
-            // 
-            // label16
-            // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(33, 475);
-            this.label16.Margin = new System.Windows.Forms.Padding(3);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(115, 21);
-            this.label16.TabIndex = 8;
-            this.label16.Text = "Probation Till  ";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(512, 482);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 21);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Status";
-            // 
-            // checkStatus
-            // 
-            this.checkStatus.AutoSize = true;
-            this.checkStatus.Checked = true;
-            this.checkStatus.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkStatus.Location = new System.Drawing.Point(637, 482);
-            this.checkStatus.Name = "checkStatus";
-            this.checkStatus.Size = new System.Drawing.Size(68, 21);
-            this.checkStatus.TabIndex = 21;
-            this.checkStatus.Text = "Active";
-            this.checkStatus.UseVisualStyleBackColor = true;
-            // 
-            // txtgender
-            // 
-            this.txtgender.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtgender.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtgender.FormattingEnabled = true;
-            this.txtgender.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Other"});
-            this.txtgender.Location = new System.Drawing.Point(149, 137);
-            this.txtgender.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.txtgender.Name = "txtgender";
-            this.txtgender.Size = new System.Drawing.Size(152, 29);
-            this.txtgender.TabIndex = 22;
             // 
             // Employeeregistration
             // 
