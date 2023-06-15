@@ -71,7 +71,7 @@ namespace Ruby_Hospital
             con.Open();
             SqlCommand cmb = new SqlCommand(@"INSERT INTO Employee_registration (Employee_of,MR_M,Name,Gender,Current_Address,Nearest_Landmark,Permanrnt_Address,Mobile_Number,MaritalStatus,Experience,Alternate_Mobile_number,Date_Of_Birth,Department,Designation,Joining_Date,Probation,Status)
                                     Values (@Employee_of,@MR_M,@Name,@Gender,@Current_Address,@Nearest_Landmark,@Permanrnt_Address,@Mobile_Number,@MaritalStatus,@Experience,@Alternate_Mobile_number,@Date_Of_Birth,@Department,@Designation,@Joining_Date,@Probation,@Status)", con);
-            if(rbtrubystarhospital.Checked=true)
+            if(rbtrubystarhospital.Checked==true)
             {
                 cmb.Parameters.AddWithValue("@Employee_of", "Ruby Star Hospital");
             }
@@ -94,7 +94,7 @@ namespace Ruby_Hospital
             cmb.Parameters.AddWithValue("@Designation", txtDesignation.Text);
             cmb.Parameters.AddWithValue("@Joining_Date", txtJoinDate.Text);
             cmb.Parameters.AddWithValue("@Probation", txtprobationDate.Text);
-            if(checkStatus.Enabled=true)
+            if(checkStatus.Enabled==true)
             {
                 cmb.Parameters.AddWithValue("@Status","Active");
             }
