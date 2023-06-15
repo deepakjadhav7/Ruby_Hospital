@@ -34,14 +34,12 @@ namespace Ruby_Hospital
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRelativeMobileNo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtReativeName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bunSave = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -50,31 +48,32 @@ namespace Ruby_Hospital
             this.rbtnonmlc = new System.Windows.Forms.RadioButton();
             this.rbtmlc = new System.Windows.Forms.RadioButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmbReferredBy = new System.Windows.Forms.ComboBox();
+            this.cmbConsultant = new System.Windows.Forms.ComboBox();
+            this.cmbRoomSegment = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbTypeOfAddmission = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbMediclaim = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DVGPatientInfo = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtPatientIPDID = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbRelation = new System.Windows.Forms.ComboBox();
+            this.cmb_BedNo = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DVGPatientInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,7 +107,7 @@ namespace Ruby_Hospital
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(818, 700);
+            this.button4.Location = new System.Drawing.Point(809, 679);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(127, 40);
             this.button4.TabIndex = 14;
@@ -120,11 +119,10 @@ namespace Ruby_Hospital
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.cmbRelation);
+            this.groupBox1.Controls.Add(this.txtRelativeMobileNo);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtReativeName);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,19 +134,20 @@ namespace Ruby_Hospital
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // textBox1
+            // txtRelativeMobileNo
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(639, 101);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.textBox1.MaxLength = 10;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(260, 28);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "123456789";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtRelativeMobileNo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRelativeMobileNo.ForeColor = System.Drawing.Color.Gray;
+            this.txtRelativeMobileNo.Location = new System.Drawing.Point(639, 101);
+            this.txtRelativeMobileNo.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.txtRelativeMobileNo.MaxLength = 10;
+            this.txtRelativeMobileNo.Multiline = true;
+            this.txtRelativeMobileNo.Name = "txtRelativeMobileNo";
+            this.txtRelativeMobileNo.Size = new System.Drawing.Size(260, 28);
+            this.txtRelativeMobileNo.TabIndex = 3;
+            this.txtRelativeMobileNo.Text = "123456789";
+            this.txtRelativeMobileNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtRelativeMobileNo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtRelativeMobileNo_MouseClick);
             // 
             // label3
             // 
@@ -161,51 +160,20 @@ namespace Ruby_Hospital
             this.label3.TabIndex = 17;
             this.label3.Text = "Relative Mobile Number";
             // 
-            // comboBox2
+            // txtReativeName
             // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Mstr.",
-            "Mr.",
-            "Miss.",
-            "mrs.",
-            "Smt.",
-            "Dr."});
-            this.comboBox2.Location = new System.Drawing.Point(189, 25);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(68, 29);
-            this.comboBox2.TabIndex = 0;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Gray;
-            this.textBox4.Location = new System.Drawing.Point(163, 102);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.textBox4.MaxLength = 10;
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(260, 28);
-            this.textBox4.TabIndex = 2;
-            this.textBox4.Text = "Enter the Relation ";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Location = new System.Drawing.Point(256, 25);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.textBox2.MaxLength = 40;
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(643, 28);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "Firstname                                    Middlename                          " +
+            this.txtReativeName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReativeName.ForeColor = System.Drawing.Color.Gray;
+            this.txtReativeName.Location = new System.Drawing.Point(193, 25);
+            this.txtReativeName.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.txtReativeName.MaxLength = 40;
+            this.txtReativeName.Multiline = true;
+            this.txtReativeName.Name = "txtReativeName";
+            this.txtReativeName.Size = new System.Drawing.Size(643, 28);
+            this.txtReativeName.TabIndex = 1;
+            this.txtReativeName.Text = "Firstname                                    Middlename                          " +
     "       Lastname";
+            this.txtReativeName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtReativeName_MouseClick);
             // 
             // label5
             // 
@@ -229,18 +197,19 @@ namespace Ruby_Hospital
             this.label2.TabIndex = 0;
             this.label2.Text = "Full Name ";
             // 
-            // button3
+            // bunSave
             // 
-            this.button3.BackColor = System.Drawing.Color.Goldenrod;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(655, 700);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 40);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = false;
+            this.bunSave.BackColor = System.Drawing.Color.Goldenrod;
+            this.bunSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bunSave.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunSave.ForeColor = System.Drawing.Color.White;
+            this.bunSave.Location = new System.Drawing.Point(655, 679);
+            this.bunSave.Name = "bunSave";
+            this.bunSave.Size = new System.Drawing.Size(127, 40);
+            this.bunSave.TabIndex = 13;
+            this.bunSave.Text = "Save";
+            this.bunSave.UseVisualStyleBackColor = false;
+            this.bunSave.Click += new System.EventHandler(this.bunSave_Click);
             // 
             // pictureBox4
             // 
@@ -294,19 +263,19 @@ namespace Ruby_Hospital
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox2.Controls.Add(this.cmb_BedNo);
             this.groupBox2.Controls.Add(this.rbtnonmlc);
             this.groupBox2.Controls.Add(this.rbtmlc);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.textBox3);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.comboBox6);
-            this.groupBox2.Controls.Add(this.comboBox5);
-            this.groupBox2.Controls.Add(this.comboBox4);
+            this.groupBox2.Controls.Add(this.cmbReferredBy);
+            this.groupBox2.Controls.Add(this.cmbConsultant);
+            this.groupBox2.Controls.Add(this.cmbRoomSegment);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.comboBox3);
+            this.groupBox2.Controls.Add(this.cmbTypeOfAddmission);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cmbMediclaim);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
@@ -347,24 +316,11 @@ namespace Ruby_Hospital
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(161, 34);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(164, 27);
             this.dateTimePicker1.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Gray;
-            this.textBox3.Location = new System.Drawing.Point(486, 76);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.textBox3.MaxLength = 10;
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(178, 28);
-            this.textBox3.TabIndex = 8;
-            this.textBox3.Text = "Bed No";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -377,38 +333,45 @@ namespace Ruby_Hospital
             this.label4.TabIndex = 17;
             this.label4.Text = "Bed No ";
             // 
-            // comboBox6
+            // cmbReferredBy
             // 
-            this.comboBox6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(830, 80);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(210, 29);
-            this.comboBox6.TabIndex = 9;
-            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.cmbReferredBy.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbReferredBy.FormattingEnabled = true;
+            this.cmbReferredBy.Items.AddRange(new object[] {
+            "dsdffdfd"});
+            this.cmbReferredBy.Location = new System.Drawing.Point(830, 80);
+            this.cmbReferredBy.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.cmbReferredBy.Name = "cmbReferredBy";
+            this.cmbReferredBy.Size = new System.Drawing.Size(210, 29);
+            this.cmbReferredBy.TabIndex = 9;
+            this.cmbReferredBy.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
-            // comboBox5
+            // cmbConsultant
             // 
-            this.comboBox5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(830, 29);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(210, 29);
-            this.comboBox5.TabIndex = 6;
-            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.cmbConsultant.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbConsultant.FormattingEnabled = true;
+            this.cmbConsultant.Items.AddRange(new object[] {
+            "sasdsdsd"});
+            this.cmbConsultant.Location = new System.Drawing.Point(830, 29);
+            this.cmbConsultant.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.cmbConsultant.Name = "cmbConsultant";
+            this.cmbConsultant.Size = new System.Drawing.Size(210, 29);
+            this.cmbConsultant.TabIndex = 6;
+            this.cmbConsultant.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
-            // comboBox4
+            // cmbRoomSegment
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(485, 29);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(178, 29);
-            this.comboBox4.TabIndex = 5;
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.cmbRoomSegment.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRoomSegment.FormattingEnabled = true;
+            this.cmbRoomSegment.Items.AddRange(new object[] {
+            "ICU"});
+            this.cmbRoomSegment.Location = new System.Drawing.Point(485, 29);
+            this.cmbRoomSegment.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.cmbRoomSegment.Name = "cmbRoomSegment";
+            this.cmbRoomSegment.Size = new System.Drawing.Size(178, 29);
+            this.cmbRoomSegment.TabIndex = 5;
+            this.cmbRoomSegment.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.cmbRoomSegment.Click += new System.EventHandler(this.cmbRoomSegment_Click);
             // 
             // label12
             // 
@@ -432,16 +395,18 @@ namespace Ruby_Hospital
             this.label11.TabIndex = 0;
             this.label11.Text = "Consultant";
             // 
-            // comboBox3
+            // cmbTypeOfAddmission
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(158, 80);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(169, 29);
-            this.comboBox3.TabIndex = 7;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.cmbTypeOfAddmission.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTypeOfAddmission.FormattingEnabled = true;
+            this.cmbTypeOfAddmission.Items.AddRange(new object[] {
+            "IPD"});
+            this.cmbTypeOfAddmission.Location = new System.Drawing.Point(158, 80);
+            this.cmbTypeOfAddmission.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.cmbTypeOfAddmission.Name = "cmbTypeOfAddmission";
+            this.cmbTypeOfAddmission.Size = new System.Drawing.Size(169, 29);
+            this.cmbTypeOfAddmission.TabIndex = 7;
+            this.cmbTypeOfAddmission.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -454,15 +419,17 @@ namespace Ruby_Hospital
             this.label8.TabIndex = 0;
             this.label8.Text = "Room Segment";
             // 
-            // comboBox1
+            // cmbMediclaim
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(158, 124);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(169, 29);
-            this.comboBox1.TabIndex = 10;
+            this.cmbMediclaim.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMediclaim.FormattingEnabled = true;
+            this.cmbMediclaim.Items.AddRange(new object[] {
+            "Yes"});
+            this.cmbMediclaim.Location = new System.Drawing.Point(158, 124);
+            this.cmbMediclaim.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.cmbMediclaim.Name = "cmbMediclaim";
+            this.cmbMediclaim.Size = new System.Drawing.Size(169, 29);
+            this.cmbMediclaim.TabIndex = 10;
             // 
             // label9
             // 
@@ -497,15 +464,15 @@ namespace Ruby_Hospital
             this.label6.TabIndex = 0;
             this.label6.Text = "Mediclaim ";
             // 
-            // dataGridView1
+            // DVGPatientInfo
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(157, 185);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1084, 90);
-            this.dataGridView1.TabIndex = 40;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.DVGPatientInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DVGPatientInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DVGPatientInfo.Location = new System.Drawing.Point(157, 185);
+            this.DVGPatientInfo.Name = "DVGPatientInfo";
+            this.DVGPatientInfo.Size = new System.Drawing.Size(1084, 90);
+            this.DVGPatientInfo.TabIndex = 40;
+            this.DVGPatientInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label13
             // 
@@ -531,20 +498,20 @@ namespace Ruby_Hospital
             this.label14.TabIndex = 19;
             this.label14.Text = "Patient IPD No.";
             // 
-            // textBox5
+            // txtPatientIPDID
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Gray;
-            this.textBox5.Location = new System.Drawing.Point(1094, 154);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.textBox5.MaxLength = 10;
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(147, 28);
-            this.textBox5.TabIndex = 21;
-            this.textBox5.Text = "123456789";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPatientIPDID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPatientIPDID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPatientIPDID.ForeColor = System.Drawing.Color.Gray;
+            this.txtPatientIPDID.Location = new System.Drawing.Point(1094, 154);
+            this.txtPatientIPDID.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.txtPatientIPDID.MaxLength = 10;
+            this.txtPatientIPDID.Multiline = true;
+            this.txtPatientIPDID.Name = "txtPatientIPDID";
+            this.txtPatientIPDID.Size = new System.Drawing.Size(147, 28);
+            this.txtPatientIPDID.TabIndex = 21;
+            this.txtPatientIPDID.Text = "123456789";
+            this.txtPatientIPDID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox1
             // 
@@ -557,20 +524,42 @@ namespace Ruby_Hospital
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
             // 
+            // cmbRelation
+            // 
+            this.cmbRelation.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRelation.FormattingEnabled = true;
+            this.cmbRelation.Location = new System.Drawing.Point(189, 94);
+            this.cmbRelation.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.cmbRelation.Name = "cmbRelation";
+            this.cmbRelation.Size = new System.Drawing.Size(210, 29);
+            this.cmbRelation.TabIndex = 18;
+            // 
+            // cmb_BedNo
+            // 
+            this.cmb_BedNo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_BedNo.FormattingEnabled = true;
+            this.cmb_BedNo.Items.AddRange(new object[] {
+            "1"});
+            this.cmb_BedNo.Location = new System.Drawing.Point(483, 73);
+            this.cmb_BedNo.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.cmb_BedNo.Name = "cmb_BedNo";
+            this.cmb_BedNo.Size = new System.Drawing.Size(178, 29);
+            this.cmb_BedNo.TabIndex = 19;
+            // 
             // IPD_Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1333, 752);
-            this.Controls.Add(this.textBox5);
+            this.ClientSize = new System.Drawing.Size(1333, 749);
+            this.Controls.Add(this.txtPatientIPDID);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DVGPatientInfo);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.bunSave);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox2);
@@ -592,7 +581,7 @@ namespace Ruby_Hospital
             this.panel3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DVGPatientInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -605,39 +594,38 @@ namespace Ruby_Hospital
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtReativeName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bunSave;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRelativeMobileNo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbRoomSegment;
+        private System.Windows.Forms.ComboBox cmbTypeOfAddmission;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbMediclaim;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cmbReferredBy;
+        private System.Windows.Forms.ComboBox cmbConsultant;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DVGPatientInfo;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtPatientIPDID;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RadioButton rbtnonmlc;
         private System.Windows.Forms.RadioButton rbtmlc;
+        private System.Windows.Forms.ComboBox cmbRelation;
+        private System.Windows.Forms.ComboBox cmb_BedNo;
     }
 }

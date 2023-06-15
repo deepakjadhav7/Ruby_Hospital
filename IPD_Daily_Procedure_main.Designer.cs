@@ -122,7 +122,7 @@ namespace Ruby_Hospital
             this.panel_head.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_head.Location = new System.Drawing.Point(0, 0);
             this.panel_head.Name = "panel_head";
-            this.panel_head.Size = new System.Drawing.Size(1604, 40);
+            this.panel_head.Size = new System.Drawing.Size(1370, 40);
             this.panel_head.TabIndex = 69;
             // 
             // label10
@@ -889,7 +889,7 @@ namespace Ruby_Hospital
             // 
             // IPD_Daily_Procedure_main
             // 
-            this.ClientSize = new System.Drawing.Size(1604, 881);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
