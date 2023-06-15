@@ -287,6 +287,7 @@ namespace Ruby_Hospital
             this.txtDateOfBirth.Name = "txtDateOfBirth";
             this.txtDateOfBirth.Size = new System.Drawing.Size(150, 27);
             this.txtDateOfBirth.TabIndex = 9;
+            this.txtDateOfBirth.ValueChanged += new System.EventHandler(this.txtDateOfBirth_ValueChanged);
             // 
             // txtJoinDate
             // 
@@ -311,6 +312,8 @@ namespace Ruby_Hospital
             this.txtname.TabIndex = 4;
             this.txtname.Text = "Fisrtname                    Middle                  Lastname";
             this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtname.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtname_MouseClick);
+            this.txtname.MouseLeave += new System.EventHandler(this.txtname_MouseLeave);
             // 
             // txtMaritalStatus
             // 
@@ -709,6 +712,7 @@ namespace Ruby_Hospital
             this.button2.TabIndex = 21;
             this.button2.Text = "Create New";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 

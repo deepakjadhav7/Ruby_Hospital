@@ -40,7 +40,7 @@ namespace Ruby_Hospital
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Labelrole = new System.Windows.Forms.Label();
-            this.txtms = new System.Windows.Forms.ComboBox();
+            this.txtRole = new System.Windows.Forms.ComboBox();
             this.btnsave = new System.Windows.Forms.Button();
             this.txtcpass = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -145,7 +145,7 @@ namespace Ruby_Hospital
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
             this.panel2.Controls.Add(this.Labelrole);
-            this.panel2.Controls.Add(this.txtms);
+            this.panel2.Controls.Add(this.txtRole);
             this.panel2.Controls.Add(this.btnsave);
             this.panel2.Controls.Add(this.txtcpass);
             this.panel2.Controls.Add(this.label6);
@@ -174,18 +174,18 @@ namespace Ruby_Hospital
             this.Labelrole.TabIndex = 57;
             this.Labelrole.Text = "Role";
             // 
-            // txtms
+            // txtRole
             // 
-            this.txtms.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtms.FormattingEnabled = true;
-            this.txtms.Items.AddRange(new object[] {
+            this.txtRole.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRole.FormattingEnabled = true;
+            this.txtRole.Items.AddRange(new object[] {
             "Admin",
             "User"});
-            this.txtms.Location = new System.Drawing.Point(38, 36);
-            this.txtms.Margin = new System.Windows.Forms.Padding(2);
-            this.txtms.Name = "txtms";
-            this.txtms.Size = new System.Drawing.Size(294, 29);
-            this.txtms.TabIndex = 1;
+            this.txtRole.Location = new System.Drawing.Point(38, 36);
+            this.txtRole.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRole.Name = "txtRole";
+            this.txtRole.Size = new System.Drawing.Size(294, 29);
+            this.txtRole.TabIndex = 1;
             // 
             // btnsave
             // 
@@ -202,6 +202,7 @@ namespace Ruby_Hospital
             this.btnsave.Text = "Save";
             this.btnsave.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnsave.UseVisualStyleBackColor = false;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
             // txtcpass
             // 
@@ -400,7 +401,7 @@ namespace Ruby_Hospital
         private System.Windows.Forms.TextBox txtmail;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.ComboBox txtms;
+        private System.Windows.Forms.ComboBox txtRole;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }
