@@ -264,6 +264,12 @@
     <Compile Include="Patient_Registration.Designer.cs">
       <DependentUpon>Patient_Registration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Referred_doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referred_doctor.Designer.cs">
+      <DependentUpon>Referred_doctor.cs</DependentUpon>
+    </Compile>
     <Compile Include="SingUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -381,6 +387,9 @@
     </Compile>
     <EmbeddedResource Include="Patient_Registration.resx">
       <DependentUpon>Patient_Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referred_doctor.resx">
+      <DependentUpon>Referred_doctor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SingUp.resx">
       <DependentUpon>SingUp.cs</DependentUpon>

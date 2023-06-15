@@ -275,7 +275,7 @@ namespace Ruby_Hospital
 
         private void txtconsultacharges_Enter(object sender, EventArgs e)
         {
-            if (txtconsultacharges.Text == "50") ;
+            if (txtconsultacharges.Text == "50" )
             {
                 txtconsultacharges.Text = "";
                 txtconsultacharges.ForeColor = Color.Black;
@@ -284,7 +284,7 @@ namespace Ruby_Hospital
 
         private void txtconsultacharges_Leave(object sender, EventArgs e)
         {
-            if (txtconsultacharges.Text == "") ;
+            if (txtconsultacharges.Text == "") 
             {
                 txtconsultacharges.Text = "50";
                 txtconsultacharges.ForeColor = Color.Gray;
@@ -312,6 +312,12 @@ namespace Ruby_Hospital
         private void txtage_Enter(object sender, EventArgs e)
         {
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Referred_doctor rd = new Referred_doctor();
+            rd.Show();
         }
     }
 }

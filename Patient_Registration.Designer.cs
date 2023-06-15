@@ -41,6 +41,10 @@ namespace Ruby_Hospital
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtconsultacharges = new System.Windows.Forms.TextBox();
+            this.txtregicharges = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnfemale = new System.Windows.Forms.RadioButton();
             this.btnmale = new System.Windows.Forms.RadioButton();
@@ -92,12 +96,8 @@ namespace Ruby_Hospital
             this.txtdname = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.txtregicharges = new System.Windows.Forms.TextBox();
-            this.txtconsultacharges = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -226,6 +226,32 @@ namespace Ruby_Hospital
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
+            // txtconsultacharges
+            // 
+            this.txtconsultacharges.ForeColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.txtconsultacharges, "txtconsultacharges");
+            this.txtconsultacharges.Name = "txtconsultacharges";
+            this.txtconsultacharges.Enter += new System.EventHandler(this.txtconsultacharges_Enter);
+            this.txtconsultacharges.Leave += new System.EventHandler(this.txtconsultacharges_Leave);
+            // 
+            // txtregicharges
+            // 
+            this.txtregicharges.ForeColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.txtregicharges, "txtregicharges");
+            this.txtregicharges.Name = "txtregicharges";
+            this.txtregicharges.Enter += new System.EventHandler(this.txtregicharges_Enter);
+            this.txtregicharges.Leave += new System.EventHandler(this.txtregicharges_Leave);
+            // 
+            // label25
+            // 
+            resources.ApplyResources(this.label25, "label25");
+            this.label25.Name = "label25";
+            // 
+            // label24
+            // 
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.Name = "label24";
+            // 
             // panel4
             // 
             resources.ApplyResources(this.panel4, "panel4");
@@ -311,7 +337,6 @@ namespace Ruby_Hospital
             this.txtage.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtage, "txtage");
             this.txtage.Name = "txtage";
-           
             // 
             // txtmobilenumber
             // 
@@ -547,6 +572,7 @@ namespace Ruby_Hospital
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -598,21 +624,11 @@ namespace Ruby_Hospital
             this.panel5.Controls.Add(this.button3);
             this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.comboBox1);
+            this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.btnsave);
             this.panel5.Controls.Add(this.txtdname);
             this.panel5.Controls.Add(this.label23);
-            this.panel5.Controls.Add(this.button2);
             this.panel5.Name = "panel5";
-            // 
-            // button3
-            // 
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.BackColor = System.Drawing.Color.DarkKhaki;
-            this.button3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
@@ -624,31 +640,15 @@ namespace Ruby_Hospital
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // label24
+            // button3
             // 
-            resources.ApplyResources(this.label24, "label24");
-            this.label24.Name = "label24";
-            // 
-            // label25
-            // 
-            resources.ApplyResources(this.label25, "label25");
-            this.label25.Name = "label25";
-            // 
-            // txtregicharges
-            // 
-            this.txtregicharges.ForeColor = System.Drawing.Color.Gray;
-            resources.ApplyResources(this.txtregicharges, "txtregicharges");
-            this.txtregicharges.Name = "txtregicharges";
-            this.txtregicharges.Enter += new System.EventHandler(this.txtregicharges_Enter);
-            this.txtregicharges.Leave += new System.EventHandler(this.txtregicharges_Leave);
-            // 
-            // txtconsultacharges
-            // 
-            this.txtconsultacharges.ForeColor = System.Drawing.Color.Gray;
-            resources.ApplyResources(this.txtconsultacharges, "txtconsultacharges");
-            this.txtconsultacharges.Name = "txtconsultacharges";
-            this.txtconsultacharges.Enter += new System.EventHandler(this.txtconsultacharges_Enter);
-            this.txtconsultacharges.Leave += new System.EventHandler(this.txtconsultacharges_Leave);
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.BackColor = System.Drawing.Color.DarkKhaki;
+            this.button3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Name = "button3";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // Patient_Registration
             // 
@@ -660,7 +660,6 @@ namespace Ruby_Hospital
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MinimizeBox = false;
             this.Name = "Patient_Registration";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Patient_Registration_Load);

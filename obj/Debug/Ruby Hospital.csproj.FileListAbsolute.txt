@@ -45,3 +45,4 @@ C:\Users\MI Tech\Ruby Hospital\Ruby_Hospital\obj\Debug\Ruby Hospital.csproj.Core
 C:\Users\MI Tech\Ruby Hospital\Ruby_Hospital\obj\Debug\Ruby Hospital.csproj.CopyComplete
 C:\Users\MI Tech\Ruby Hospital\Ruby_Hospital\obj\Debug\Ruby Hospital.exe
 C:\Users\MI Tech\Ruby Hospital\Ruby_Hospital\obj\Debug\Ruby Hospital.pdb
+C:\Users\MI Tech\Ruby Hospital\Ruby_Hospital\obj\Debug\Ruby_Hospital.Referred_doctor.resources
