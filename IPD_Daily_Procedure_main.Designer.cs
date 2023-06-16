@@ -313,7 +313,6 @@ namespace Ruby_Hospital
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(708, 165);
             this.panel1.TabIndex = 79;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // textBox2
             // 
@@ -621,7 +620,6 @@ namespace Ruby_Hospital
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
-            this.metroTabPage3.Click += new System.EventHandler(this.metroTabPage3_Click);
             // 
             // label17
             // 
@@ -670,7 +668,6 @@ namespace Ruby_Hospital
             this.label9.Size = new System.Drawing.Size(24, 25);
             this.label9.TabIndex = 83;
             this.label9.Text = "0";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label11
             // 
@@ -682,7 +679,6 @@ namespace Ruby_Hospital
             this.label11.Size = new System.Drawing.Size(100, 25);
             this.label11.TabIndex = 82;
             this.label11.Text = "Total RS .";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // button8
             // 
@@ -691,13 +687,12 @@ namespace Ruby_Hospital
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(855, 382);
+            this.button8.Location = new System.Drawing.Point(855, 381);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(133, 33);
             this.button8.TabIndex = 80;
             this.button8.Text = "Verify ";
             this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -706,13 +701,12 @@ namespace Ruby_Hospital
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(1025, 384);
+            this.button9.Location = new System.Drawing.Point(1025, 383);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(133, 33);
             this.button9.TabIndex = 81;
             this.button9.Text = "Save";
             this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -727,7 +721,6 @@ namespace Ruby_Hospital
             this.button10.TabIndex = 79;
             this.button10.Text = "Clear All Tests";
             this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel5
             // 
@@ -748,6 +741,7 @@ namespace Ruby_Hospital
             // 
             // metroTabPage4
             // 
+            this.metroTabPage4.BackColor = System.Drawing.Color.Teal;
             this.metroTabPage4.HorizontalScrollbarBarColor = true;
             this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage4.HorizontalScrollbarSize = 10;
@@ -774,7 +768,6 @@ namespace Ruby_Hospital
             this.metroTabPage5.VerticalScrollbarBarColor = true;
             this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage5.VerticalScrollbarSize = 10;
-            this.metroTabPage5.Click += new System.EventHandler(this.metroTabPage5_Click);
             // 
             // panel8
             // 
@@ -856,7 +849,6 @@ namespace Ruby_Hospital
             this.label13.Size = new System.Drawing.Size(186, 21);
             this.label13.TabIndex = 81;
             this.label13.Text = "Current Total Amount:";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
