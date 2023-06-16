@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
 
 namespace Ruby_Hospital
 {
@@ -80,7 +81,7 @@ namespace Ruby_Hospital
             string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
             if (Regex.IsMatch(txtmail.Text, pattern))
             {
-                txtmail.Text = "";
+               // txtmail.Text = "";
                 txtmail.BackColor = Color.White;
                 errorProvider1.Clear();
             }
@@ -94,7 +95,7 @@ namespace Ruby_Hospital
             }
             if(txtmail.Text=="Enter email Id")
             {
-                txtmail.Text = "";
+              //  txtmail.Text = "";
                 txtmail.ForeColor = Color.Gray;
             }
         }
@@ -144,7 +145,7 @@ namespace Ruby_Hospital
         {
             if(txtmail.Text == "Enter email Id")
             {
-                txtmail.Text = "";
+                //txtmail.Text = "";
                 txtmail.ForeColor = Color.Black;
             }
         }
@@ -175,6 +176,49 @@ namespace Ruby_Hospital
                 txtpass.Text = "";
                 txtpass.ForeColor = Color.Gray;
             }
+        }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            //try
+            //{
+            if (txtcpass.Text == txtpass.Text)
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+                con.Open();
+                SqlCommand cmb = new SqlCommand(@"INSERT INTO SingUp_mst (Role,Name,UserName,Email,Password)
+                                                           Values(@Role,@Name,@UserName,@Email,@Password)", con);
+                cmb.Parameters.AddWithValue("@Role", txtRole.Text);
+                cmb.Parameters.AddWithValue("@Name", txtname.Text);
+                cmb.Parameters.AddWithValue("@UserName", txtusername.Text);
+                cmb.Parameters.AddWithValue("@Email", txtmail.Text);
+                cmb.Parameters.AddWithValue("@Password", txtpass.Text);
+                cmb.ExecuteNonQuery();
+                MessageBox.Show("User name and Password successfully registered..");
+                cleardata();
+                con.Close();
+            }
+            else
+            {
+                MessageBox.Show("Password and confirm password does not match... ");
+                txtcpass.Clear();
+            }
+            
+           // }
+           // catch
+          //  {
+
+         //   }
+            
+        }
+        public void cleardata()
+        {
+            txtRole.Text = "";
+            txtname.Clear();
+            txtusername.Clear();
+            txtmail.Clear();
+            txtpass.Clear();
+            txtcpass.Clear();
         }
     }
 }

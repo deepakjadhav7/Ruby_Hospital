@@ -29,7 +29,6 @@ namespace Ruby_Hospital
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Hospital Procedure");
             this.panel_head = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -72,6 +71,10 @@ namespace Ruby_Hospital
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
@@ -79,13 +82,8 @@ namespace Ruby_Hospital
             this.button10 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.button17 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -108,9 +106,7 @@ namespace Ruby_Hospital
             this.groupBox1.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.metroTabPage5.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,9 +130,9 @@ namespace Ruby_Hospital
             this.label10.Location = new System.Drawing.Point(0, 0);
             this.label10.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(291, 36);
+            this.label10.Size = new System.Drawing.Size(213, 36);
             this.label10.TabIndex = 2;
-            this.label10.Text = "IPD Daily Procedure";
+            this.label10.Text = "IPD Procedure";
             // 
             // label5
             // 
@@ -170,6 +166,7 @@ namespace Ruby_Hospital
             // 
             // metroTabControl1
             // 
+            this.metroTabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
@@ -180,12 +177,13 @@ namespace Ruby_Hospital
             this.metroTabControl1.Location = new System.Drawing.Point(57, 321);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(1482, 481);
+            this.metroTabControl1.Size = new System.Drawing.Size(1482, 469);
             this.metroTabControl1.TabIndex = 80;
             this.metroTabControl1.UseSelectable = true;
             // 
             // metroTabPage1
             // 
+            this.metroTabPage1.AllowDrop = true;
             this.metroTabPage1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.metroTabPage1.Controls.Add(this.button3);
             this.metroTabPage1.Controls.Add(this.button2);
@@ -197,9 +195,10 @@ namespace Ruby_Hospital
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 44);
+            this.metroTabPage1.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 47);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(1474, 433);
+            this.metroTabPage1.Size = new System.Drawing.Size(1474, 418);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Patient Transfer";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -250,9 +249,9 @@ namespace Ruby_Hospital
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(3, 194);
+            this.panel3.Location = new System.Drawing.Point(15, 194);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1474, 115);
+            this.panel3.Size = new System.Drawing.Size(1437, 115);
             this.panel3.TabIndex = 81;
             // 
             // panel2
@@ -264,7 +263,7 @@ namespace Ruby_Hospital
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(748, 18);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(739, 165);
+            this.panel2.Size = new System.Drawing.Size(704, 165);
             this.panel2.TabIndex = 80;
             // 
             // comboBox2
@@ -272,7 +271,7 @@ namespace Ruby_Hospital
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(298, 89);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(308, 31);
+            this.comboBox2.Size = new System.Drawing.Size(358, 31);
             this.comboBox2.TabIndex = 4;
             // 
             // comboBox1
@@ -280,24 +279,26 @@ namespace Ruby_Hospital
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(298, 42);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(308, 31);
+            this.comboBox1.Size = new System.Drawing.Size(358, 31);
             this.comboBox1.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(158, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 23);
+            this.label3.Size = new System.Drawing.Size(124, 22);
             this.label3.TabIndex = 1;
             this.label3.Text = "New Bed No";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(94, 45);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(196, 23);
+            this.label4.Size = new System.Drawing.Size(197, 22);
             this.label4.TabIndex = 2;
             this.label4.Text = "New Room Segment";
             // 
@@ -308,9 +309,9 @@ namespace Ruby_Hospital
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-12, 19);
+            this.panel1.Location = new System.Drawing.Point(15, 19);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(750, 165);
+            this.panel1.Size = new System.Drawing.Size(708, 165);
             this.panel1.TabIndex = 79;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -333,18 +334,20 @@ namespace Ruby_Hospital
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(147, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 23);
+            this.label2.Size = new System.Drawing.Size(115, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Old Bed No";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(83, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 23);
+            this.label1.Size = new System.Drawing.Size(188, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Old Room Segment";
             // 
@@ -360,9 +363,9 @@ namespace Ruby_Hospital
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.HorizontalScrollbarSize = 10;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 47);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(1474, 442);
+            this.metroTabPage2.Size = new System.Drawing.Size(1474, 418);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "Hosptial Drugs";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
@@ -377,7 +380,7 @@ namespace Ruby_Hospital
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(662, 393);
+            this.button7.Location = new System.Drawing.Point(663, 368);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(127, 42);
             this.button7.TabIndex = 38;
@@ -388,9 +391,9 @@ namespace Ruby_Hospital
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.dataGridView2);
-            this.panel4.Location = new System.Drawing.Point(58, 268);
+            this.panel4.Location = new System.Drawing.Point(40, 240);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1387, 112);
+            this.panel4.Size = new System.Drawing.Size(1387, 122);
             this.panel4.TabIndex = 35;
             // 
             // dataGridView2
@@ -400,7 +403,7 @@ namespace Ruby_Hospital
             this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.Size = new System.Drawing.Size(1387, 112);
+            this.dataGridView2.Size = new System.Drawing.Size(1387, 122);
             this.dataGridView2.TabIndex = 0;
             // 
             // groupBox1
@@ -419,16 +422,16 @@ namespace Ruby_Hospital
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Location = new System.Drawing.Point(58, 8);
+            this.groupBox1.Location = new System.Drawing.Point(40, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1387, 254);
+            this.groupBox1.Size = new System.Drawing.Size(1387, 226);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(213, 206);
+            this.textBox3.Location = new System.Drawing.Point(213, 168);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(77, 33);
             this.textBox3.TabIndex = 25;
@@ -438,7 +441,7 @@ namespace Ruby_Hospital
             this.label6.AutoSize = true;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(149, 213);
+            this.label6.Location = new System.Drawing.Point(149, 175);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 22);
             this.label6.TabIndex = 24;
@@ -452,7 +455,7 @@ namespace Ruby_Hospital
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(1006, 175);
+            this.button4.Location = new System.Drawing.Point(968, 163);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(127, 40);
             this.button4.TabIndex = 23;
@@ -531,7 +534,7 @@ namespace Ruby_Hospital
             this.textBox4.Location = new System.Drawing.Point(213, 107);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(518, 79);
+            this.textBox4.Size = new System.Drawing.Size(518, 36);
             this.textBox4.TabIndex = 2;
             // 
             // textBox5
@@ -547,7 +550,7 @@ namespace Ruby_Hospital
             this.label7.AutoSize = true;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(44, 112);
+            this.label7.Location = new System.Drawing.Point(36, 112);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(168, 22);
             this.label7.TabIndex = 0;
@@ -572,7 +575,7 @@ namespace Ruby_Hospital
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(737, 506);
+            this.button5.Location = new System.Drawing.Point(737, 494);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(10, 10);
             this.button5.TabIndex = 36;
@@ -587,7 +590,7 @@ namespace Ruby_Hospital
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(883, 506);
+            this.button6.Location = new System.Drawing.Point(883, 494);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(10, 10);
             this.button6.TabIndex = 37;
@@ -597,20 +600,22 @@ namespace Ruby_Hospital
             // metroTabPage3
             // 
             this.metroTabPage3.BackColor = System.Drawing.Color.White;
+            this.metroTabPage3.Controls.Add(this.label17);
+            this.metroTabPage3.Controls.Add(this.label12);
+            this.metroTabPage3.Controls.Add(this.comboBox4);
+            this.metroTabPage3.Controls.Add(this.comboBox3);
             this.metroTabPage3.Controls.Add(this.label9);
             this.metroTabPage3.Controls.Add(this.label11);
             this.metroTabPage3.Controls.Add(this.button8);
             this.metroTabPage3.Controls.Add(this.button9);
             this.metroTabPage3.Controls.Add(this.button10);
             this.metroTabPage3.Controls.Add(this.panel5);
-            this.metroTabPage3.Controls.Add(this.label12);
-            this.metroTabPage3.Controls.Add(this.panel7);
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.HorizontalScrollbarSize = 10;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 47);
             this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(1474, 442);
+            this.metroTabPage3.Size = new System.Drawing.Size(1474, 418);
             this.metroTabPage3.TabIndex = 2;
             this.metroTabPage3.Text = "Hospital Procedure";
             this.metroTabPage3.VerticalScrollbarBarColor = true;
@@ -618,14 +623,51 @@ namespace Ruby_Hospital
             this.metroTabPage3.VerticalScrollbarSize = 10;
             this.metroTabPage3.Click += new System.EventHandler(this.metroTabPage3_Click);
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(27, 156);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(203, 24);
+            this.label17.TabIndex = 87;
+            this.label17.Text = "Patient Information";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(24, 31);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(203, 24);
+            this.label12.TabIndex = 86;
+            this.label12.Text = "Patient Information";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(29, 183);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(377, 29);
+            this.comboBox4.TabIndex = 85;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(29, 59);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(377, 29);
+            this.comboBox3.TabIndex = 84;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(302, 400);
+            this.label9.Location = new System.Drawing.Point(271, 343);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(19, 21);
+            this.label9.Size = new System.Drawing.Size(24, 25);
             this.label9.TabIndex = 83;
             this.label9.Text = "0";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -634,9 +676,10 @@ namespace Ruby_Hospital
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(225, 400);
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(176, 343);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 21);
+            this.label11.Size = new System.Drawing.Size(100, 25);
             this.label11.TabIndex = 82;
             this.label11.Text = "Total RS .";
             this.label11.Click += new System.EventHandler(this.label11_Click);
@@ -648,7 +691,7 @@ namespace Ruby_Hospital
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(855, 389);
+            this.button8.Location = new System.Drawing.Point(855, 382);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(133, 33);
             this.button8.TabIndex = 80;
@@ -663,7 +706,7 @@ namespace Ruby_Hospital
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(1025, 389);
+            this.button9.Location = new System.Drawing.Point(1025, 384);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(133, 33);
             this.button9.TabIndex = 81;
@@ -678,7 +721,7 @@ namespace Ruby_Hospital
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(80, 389);
+            this.button10.Location = new System.Drawing.Point(31, 336);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(133, 33);
             this.button10.TabIndex = 79;
@@ -698,49 +741,19 @@ namespace Ruby_Hospital
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(20, 15);
+            this.panel6.Location = new System.Drawing.Point(16, 10);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(913, 319);
+            this.panel6.Size = new System.Drawing.Size(925, 320);
             this.panel6.TabIndex = 72;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Location = new System.Drawing.Point(93, 2);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(117, 21);
-            this.label12.TabIndex = 78;
-            this.label12.Text = "Procedure List";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
-            this.panel7.Controls.Add(this.treeView1);
-            this.panel7.Location = new System.Drawing.Point(95, 24);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(326, 345);
-            this.panel7.TabIndex = 76;
-            // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(9, 10);
-            this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Node0";
-            treeNode1.Text = "Hospital Procedure";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
-            this.treeView1.Size = new System.Drawing.Size(305, 320);
-            this.treeView1.TabIndex = 0;
             // 
             // metroTabPage4
             // 
             this.metroTabPage4.HorizontalScrollbarBarColor = true;
             this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage4.HorizontalScrollbarSize = 10;
-            this.metroTabPage4.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage4.Location = new System.Drawing.Point(4, 47);
             this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(1474, 442);
+            this.metroTabPage4.Size = new System.Drawing.Size(1474, 418);
             this.metroTabPage4.TabIndex = 3;
             this.metroTabPage4.Text = "Surgical Procedures";
             this.metroTabPage4.VerticalScrollbarBarColor = true;
@@ -749,42 +762,19 @@ namespace Ruby_Hospital
             // 
             // metroTabPage5
             // 
-            this.metroTabPage5.Controls.Add(this.panel9);
             this.metroTabPage5.Controls.Add(this.panel8);
             this.metroTabPage5.HorizontalScrollbarBarColor = true;
             this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage5.HorizontalScrollbarSize = 10;
-            this.metroTabPage5.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage5.Location = new System.Drawing.Point(4, 47);
             this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(1474, 442);
+            this.metroTabPage5.Size = new System.Drawing.Size(1474, 418);
             this.metroTabPage5.TabIndex = 4;
             this.metroTabPage5.Text = "Print Certificates";
             this.metroTabPage5.VerticalScrollbarBarColor = true;
             this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage5.VerticalScrollbarSize = 10;
             this.metroTabPage5.Click += new System.EventHandler(this.metroTabPage5_Click);
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
-            this.panel9.Controls.Add(this.button17);
-            this.panel9.Location = new System.Drawing.Point(139, 24);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(544, 391);
-            this.panel9.TabIndex = 39;
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(83, 170);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(393, 46);
-            this.button17.TabIndex = 37;
-            this.button17.Text = "Dama Consent ";
-            this.button17.UseVisualStyleBackColor = false;
             // 
             // panel8
             // 
@@ -793,18 +783,20 @@ namespace Ruby_Hospital
             this.panel8.Controls.Add(this.button14);
             this.panel8.Controls.Add(this.button13);
             this.panel8.Controls.Add(this.button12);
-            this.panel8.Location = new System.Drawing.Point(894, 24);
+            this.panel8.Location = new System.Drawing.Point(238, 15);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(544, 391);
+            this.panel8.Size = new System.Drawing.Size(972, 391);
             this.panel8.TabIndex = 38;
             // 
             // button11
             // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button11.BackColor = System.Drawing.Color.Tan;
+            this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(75, 282);
+            this.button11.Location = new System.Drawing.Point(305, 278);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(393, 46);
             this.button11.TabIndex = 36;
@@ -813,11 +805,13 @@ namespace Ruby_Hospital
             // 
             // button14
             // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button14.BackColor = System.Drawing.Color.Tan;
+            this.button14.FlatAppearance.BorderSize = 0;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(75, 55);
+            this.button14.Location = new System.Drawing.Point(305, 51);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(393, 46);
             this.button14.TabIndex = 33;
@@ -826,11 +820,13 @@ namespace Ruby_Hospital
             // 
             // button13
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button13.BackColor = System.Drawing.Color.Tan;
+            this.button13.FlatAppearance.BorderSize = 0;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(75, 131);
+            this.button13.Location = new System.Drawing.Point(305, 127);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(393, 46);
             this.button13.TabIndex = 34;
@@ -839,11 +835,13 @@ namespace Ruby_Hospital
             // 
             // button12
             // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button12.BackColor = System.Drawing.Color.Tan;
+            this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(75, 204);
+            this.button12.Location = new System.Drawing.Point(305, 200);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(393, 46);
             this.button12.TabIndex = 35;
@@ -853,7 +851,7 @@ namespace Ruby_Hospital
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(1249, 138);
+            this.label13.Location = new System.Drawing.Point(1287, 142);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(186, 21);
             this.label13.TabIndex = 81;
@@ -863,7 +861,7 @@ namespace Ruby_Hospital
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(1231, 169);
+            this.label14.Location = new System.Drawing.Point(1269, 173);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(207, 21);
             this.label14.TabIndex = 82;
@@ -872,7 +870,7 @@ namespace Ruby_Hospital
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(1437, 138);
+            this.label15.Location = new System.Drawing.Point(1475, 142);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(41, 21);
             this.label15.TabIndex = 83;
@@ -881,7 +879,7 @@ namespace Ruby_Hospital
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(1437, 169);
+            this.label16.Location = new System.Drawing.Point(1475, 173);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(41, 21);
             this.label16.TabIndex = 84;
@@ -922,9 +920,7 @@ namespace Ruby_Hospital
             this.metroTabPage3.ResumeLayout(false);
             this.metroTabPage3.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
             this.metroTabPage5.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -985,9 +981,6 @@ namespace Ruby_Hospital
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
@@ -996,8 +989,10 @@ namespace Ruby_Hospital
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }

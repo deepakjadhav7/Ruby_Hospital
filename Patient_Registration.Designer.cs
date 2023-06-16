@@ -97,7 +97,9 @@ namespace Ruby_Hospital
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
+
             this.btnGOTOIPD = new System.Windows.Forms.Button();
+
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -239,7 +241,9 @@ namespace Ruby_Hospital
             this.txtregicharges.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtregicharges, "txtregicharges");
             this.txtregicharges.Name = "txtregicharges";
+
             this.txtregicharges.ReadOnly = true;
+
             this.txtregicharges.Enter += new System.EventHandler(this.txtregicharges_Enter);
             this.txtregicharges.Leave += new System.EventHandler(this.txtregicharges_Leave);
             // 
@@ -341,7 +345,9 @@ namespace Ruby_Hospital
             this.txtage.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtage, "txtage");
             this.txtage.Name = "txtage";
+
             this.txtage.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtage_MouseClick);
+
             // 
             // txtmobilenumber
             // 
@@ -581,6 +587,7 @@ namespace Ruby_Hospital
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = false;
+            //this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnPrint
             // 
@@ -629,13 +636,14 @@ namespace Ruby_Hospital
             this.panel5.BackColor = System.Drawing.Color.Teal;
             this.panel5.Controls.Add(this.button4);
             this.panel5.Controls.Add(this.label16);
+
             this.panel5.Controls.Add(this.btnGOTOIPD);
             this.panel5.Controls.Add(this.btnPrint);
             this.panel5.Controls.Add(this.cmbReferred);
+
             this.panel5.Controls.Add(this.btnsave);
             this.panel5.Controls.Add(this.cmbDoctor);
             this.panel5.Controls.Add(this.label23);
-            this.panel5.Controls.Add(this.button2);
             this.panel5.Name = "panel5";
             // 
             // button4
@@ -648,6 +656,7 @@ namespace Ruby_Hospital
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = false;
             // 
+
             // btnGOTOIPD
             // 
             resources.ApplyResources(this.btnGOTOIPD, "btnGOTOIPD");
@@ -658,6 +667,7 @@ namespace Ruby_Hospital
             this.btnGOTOIPD.Name = "btnGOTOIPD";
             this.btnGOTOIPD.UseVisualStyleBackColor = true;
             this.btnGOTOIPD.Click += new System.EventHandler(this.btnGOTOIPD_Click);
+
             // 
             // Patient_Registration
             // 
@@ -669,7 +679,6 @@ namespace Ruby_Hospital
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MinimizeBox = false;
             this.Name = "Patient_Registration";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Patient_Registration_Load);
