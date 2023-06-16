@@ -58,6 +58,11 @@ namespace Ruby_Hospital
         private void button3_Click(object sender, EventArgs e)
         {
             savedata();
+            if(txtDesignation.Text=="Doctor")
+            {
+                doctors();
+            }
+         
         }
         public void savedata()
         {
@@ -66,9 +71,11 @@ namespace Ruby_Hospital
                   SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
                   con.Open();
 
-                  SqlCommand cmb = new SqlCommand(@"INSERT INTO Employee_registration (Employee_of,MR_M,Name,Gender,Current_Address,Nearest_Landmark,Permanent_Address,Mobile_Number,MaritalStatus,Experience,Alternate_Mobile_number,Date_Of_Birth,Department,Designation,Joining_Date,Probation,Status)
-                                    Values (@Employee_of,@MR_M,@Name,@Gender,@Current_Address,@Nearest_Landmark,@Permanent_Address,@Mobile_Number,@MaritalStatus,@Experience,@Alternate_Mobile_number,@Date_Of_Birth,@Department,@Designation,@Joining_Date,@Probation,@Status)", con);
+
+                  SqlCommand cmb = new SqlCommand(@"INSERT INTO Employee_registration (Employee_of,MR_M,Name,Gender,Current_Address,Post,Permanent_Address,Mobile_Number,MaritalStatus,Experience,Alternate_Mobile_number,Date_Of_Birth,Department,Designation,Joining_Date,Probation,Status)
+                                    Values (@Employee_of,@MR_M,@Name,@Gender,@Current_Address,@Post,@Permanent_Address,@Mobile_Number,@MaritalStatus,@Experience,@Alternate_Mobile_number,@Date_Of_Birth,@Department,@Designation,@Joining_Date,@Probation,@Status)", con);
                   if (rbtrubystarhospital.Checked == true)
+
                   {
                      cmb.Parameters.AddWithValue("@Employee_of", "Ruby Star Hospital");
                   }
@@ -80,7 +87,11 @@ namespace Ruby_Hospital
                   cmb.Parameters.AddWithValue("@Name", txtname.Text);
                   cmb.Parameters.AddWithValue("@Gender", txtgender.Text);
                   cmb.Parameters.AddWithValue("@Current_Address", txtcurrentAddress.Text);
+
+                 // cmb.Parameters.AddWithValue("@Post", txtpost.Text);
+
                 //  cmb.Parameters.AddWithValue("@Nearest_Landmark", txtpost.Text);
+
                   cmb.Parameters.AddWithValue("@Permanent_Address", txtPermanentAddress.Text);
                   cmb.Parameters.AddWithValue("@Mobile_Number", txtMobileNumber.Text);
                   cmb.Parameters.AddWithValue("@MaritalStatus", txtMaritalStatus.Text);
@@ -106,6 +117,27 @@ namespace Ruby_Hospital
             }
        
         }
+        public void doctors()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand cmb = new SqlCommand(@"Insert INTO Doctors (Dr_Name,Contact_Number,Is_Active)
+            values(@Dr_Name,@Contact_Number,@Is_Active)");
+            cmb.Parameters.AddWithValue("@Dr_Name", txtname.Text);
+            cmb.Parameters.AddWithValue("@Contact_Number", txtMobileNumber.Text);
+            if (checkStatus.Enabled = true)
+            {
+                cmb.Parameters.AddWithValue("@Is_Active", "Active");
+            }
+            else
+            {
+                cmb.Parameters.AddWithValue("@Is_Active", "Inactive");
+            }
+            cmb.ExecuteNonQuery();
+
+           // MessageBox.Show("Employee successfully Added...");
+            clearData();
+        }
         public void clearData()
         {
             txtAlternateNumber.Text = "";
@@ -116,7 +148,9 @@ namespace Ruby_Hospital
             txtExperience.Text = "";
             txtgender.Text = "";
             txtJoinDate.Text = "";
-           // txtpost.Text = "";
+
+            //txtpost.Text = "";
+
             txtMaritalStatus.Text = "";
             txtMobileNumber.Text = "";
             txtmr.Text = "";
@@ -132,7 +166,51 @@ namespace Ruby_Hospital
 
         private void button2_Click(object sender, EventArgs e)
         {
-            clearData();
+            try
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+                con.Open();
+
+                SqlCommand cmb = new SqlCommand(@"UPDATE INTO Employee_registration 
+                                    SET (Employee_of=@Employee_of,MR_M=@MR_M,Gender=@Gender,Current_Address=@Current_Address,Post=@Post,Permanent_Address=@Permanent_Address,MaritalStatus=@MaritalStatus,Experience=@Experience,Alternate_Mobile_number=@Alternate_Mobile_number,Date_Of_Birth=@Date_Of_Birth,Department=@Department,Designation=@Designation,Joining_Date=@Joining_Date,Probation=@Probation,Status=@Status Where Mobile_Number=@Mobile_Number and name=@name)
+                                    ", con);
+                if (rbtrubystarhospital.Checked = true)
+                {
+                    cmb.Parameters.AddWithValue("@Employee_of", "Ruby Star Hospital");
+                }
+                else
+                {
+                    cmb.Parameters.AddWithValue("@Employee_of", "Contractor");
+                }
+                cmb.Parameters.AddWithValue("@MR_M", txtmr.Text);
+                cmb.Parameters.AddWithValue("@Name", txtname.Text);
+                cmb.Parameters.AddWithValue("@Gender", txtgender.Text);
+                cmb.Parameters.AddWithValue("@Current_Address", txtcurrentAddress.Text);
+              //  cmb.Parameters.AddWithValue("@Post", txtpost.Text);
+                cmb.Parameters.AddWithValue("@Permanent_Address", txtPermanentAddress.Text);
+                cmb.Parameters.AddWithValue("@Mobile_Number", txtMobileNumber.Text);
+                cmb.Parameters.AddWithValue("@MaritalStatus", txtMaritalStatus.Text);
+                cmb.Parameters.AddWithValue("@Experience", txtExperience.Text);
+                cmb.Parameters.AddWithValue("@Alternate_Mobile_number", txtAlternateNumber.Text);
+                cmb.Parameters.AddWithValue("@Date_Of_Birth", txtDateOfBirth.Text);
+                cmb.Parameters.AddWithValue("@Department", txtDepartment.Text);
+                cmb.Parameters.AddWithValue("@Designation", txtDesignation.Text);
+                cmb.Parameters.AddWithValue("@Joining_Date", txtJoinDate.Text);
+                cmb.Parameters.AddWithValue("@Probation", txtprobationDate.Text);
+                if (checkStatus.Enabled = true)
+                {
+                    cmb.Parameters.AddWithValue("@Status", "Active");
+                }
+                cmb.ExecuteNonQuery();
+
+                MessageBox.Show("Employee Added Successfully ...");
+                clearData();
+            }
+            catch
+            {
+
+            }
+            
         }
 
         private void txtname_MouseClick(object sender, MouseEventArgs e)
@@ -147,9 +225,6 @@ namespace Ruby_Hospital
                 txtname.Text = "Fisrtname                    Middle                  Lastname";
         }
 
-        private void txtSearchBy_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
