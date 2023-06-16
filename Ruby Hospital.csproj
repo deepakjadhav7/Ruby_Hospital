@@ -106,6 +106,12 @@
     <Compile Include="Dashbord.Designer.cs">
       <DependentUpon>Dashbord.cs</DependentUpon>
     </Compile>
+    <Compile Include="exampleset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="exampleset.Designer.cs">
+      <DependentUpon>exampleset.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fill_IPD_Billing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashbord.resx">
       <DependentUpon>Dashbord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exampleset.resx">
+      <DependentUpon>exampleset.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fill_IPD_Billing.resx">
       <DependentUpon>Fill_IPD_Billing.cs</DependentUpon>

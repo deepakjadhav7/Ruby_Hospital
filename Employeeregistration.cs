@@ -147,6 +147,9 @@ namespace Ruby_Hospital
                 txtname.Text = "Fisrtname                    Middle                  Lastname";
         }
 
-       
+        private void txtSearchBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
