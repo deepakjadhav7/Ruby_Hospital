@@ -28,6 +28,7 @@ namespace Ruby_Hospital
             int h = Screen.PrimaryScreen.Bounds.Height;
             this.Location = new Point(0, 0);
             this.Size = new Size(w, h);
+            show();
         }
 
         private void radiocontractor_CheckedChanged(object sender, EventArgs e)
@@ -57,6 +58,7 @@ namespace Ruby_Hospital
 
         private void button3_Click(object sender, EventArgs e)
         {
+            show();
             savedata();
             if(txtDesignation.Text=="Doctor")
             {
@@ -158,7 +160,20 @@ namespace Ruby_Hospital
             txtPermanentAddress.Text = "";
             txtprobationDate.Text = "";
         }
+        public void show()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand cmb = new SqlCommand(@"Select Employee_Of,Name,Current_Address,Mobile_Number,Department,Designation,Status From Employee_registration",con);
+            SqlDataAdapter adt = new SqlDataAdapter(cmb);
+            DataTable o = new DataTable();
+            adt.Fill(o);
+            if(o.Rows.Count>0)
+            {
+                dataGridView1.DataSource = o;
+            }
 
+        }
         private void txtDateOfBirth_ValueChanged(object sender, EventArgs e)
         {
 
@@ -210,7 +225,9 @@ namespace Ruby_Hospital
             {
 
             }
-            
+            show();
+
+
         }
 
         private void txtname_MouseClick(object sender, MouseEventArgs e)

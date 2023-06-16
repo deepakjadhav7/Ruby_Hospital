@@ -135,10 +135,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 631</value>
+    <value>0, 523</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1604, 250</value>
+    <value>1370, 226</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
@@ -283,7 +283,7 @@
     <value>Top, Right</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1538, 7</value>
+    <value>1304, 7</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 34</value>
@@ -334,7 +334,7 @@
     <value>Top, Right</value>
   </data>
   <data name="txtpatient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1264, 8</value>
+    <value>1030, 8</value>
   </data>
   <data name="txtpatient.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -373,7 +373,7 @@
     <value>Contact</value>
   </data>
   <data name="txtpatientsearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1092, 8</value>
+    <value>858, 8</value>
   </data>
   <data name="txtpatientsearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 30</value>
@@ -403,7 +403,7 @@
     <value>Century Gothic, 15.75pt, style=Bold</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>923, 12</value>
+    <value>689, 12</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>164, 25</value>
@@ -925,7 +925,7 @@
     <value>12</value>
   </data>
   <data name="txtconsultacharges.Text" xml:space="preserve">
-    <value>50</value>
+    <value>Enter Consultation Charges</value>
   </data>
   <data name="&gt;&gt;txtconsultacharges.Name" xml:space="preserve">
     <value>txtconsultacharges</value>
@@ -955,7 +955,7 @@
     <value>11</value>
   </data>
   <data name="txtregicharges.Text" xml:space="preserve">
-    <value>Enter Registration Charges</value>
+    <value>50</value>
   </data>
   <data name="&gt;&gt;txtregicharges.Name" xml:space="preserve">
     <value>txtregicharges</value>
@@ -1844,9 +1844,12 @@
     <value>Century Gothic, 15pt</value>
   </data>
   <data name="txtprofix.Items" xml:space="preserve">
-    <value>Mr</value>
+    <value>Select</value>
   </data>
   <data name="txtprofix.Items1" xml:space="preserve">
+    <value>Mr</value>
+  </data>
+  <data name="txtprofix.Items2" xml:space="preserve">
     <value>Miss</value>
   </data>
   <data name="txtprofix.Location" type="System.Drawing.Point, System.Drawing">
@@ -2167,31 +2170,32 @@
   <data name="&gt;&gt;txtstate.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="txtdistrist.Items" xml:space="preserve">
+  <data name="txtdistrict.Items" xml:space="preserve">
     <value>Mr</value>
   </data>
-  <data name="txtdistrist.Items1" xml:space="preserve">
+  <data name="txtdistrict.Items1" xml:space="preserve">
     <value>Miss</value>
   </data>
-  <data name="txtdistrist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 252</value>
+
+  <data name="txtdistrict.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 252</value>
   </data>
-  <data name="txtdistrist.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtdistrict.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 29</value>
   </data>
-  <data name="txtdistrist.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtdistrict.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
-  <data name="&gt;&gt;txtdistrist.Name" xml:space="preserve">
-    <value>txtdistrist</value>
+  <data name="&gt;&gt;txtdistrict.Name" xml:space="preserve">
+    <value>txtdistrict</value>
   </data>
-  <data name="&gt;&gt;txtdistrist.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtdistrict.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtdistrist.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtdistrict.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;txtdistrist.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtdistrict.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="txttaluka.Items" xml:space="preserve">
@@ -2371,31 +2375,31 @@
   <data name="comboBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
-  <data name="comboBox1.Items" xml:space="preserve">
+  <data name="cmbReferred.Items" xml:space="preserve">
     <value>Mr</value>
   </data>
-  <data name="comboBox1.Items1" xml:space="preserve">
+  <data name="cmbReferred.Items1" xml:space="preserve">
     <value>Miss</value>
   </data>
-  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="cmbReferred.Location" type="System.Drawing.Point, System.Drawing">
     <value>566, 14</value>
   </data>
-  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="cmbReferred.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 29</value>
   </data>
-  <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="cmbReferred.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
-    <value>comboBox1</value>
+  <data name="&gt;&gt;cmbReferred.Name" xml:space="preserve">
+    <value>cmbReferred</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;cmbReferred.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cmbReferred.Parent" xml:space="preserve">
     <value>panel5</value>
   </data>
-  <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;cmbReferred.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="button2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -2437,43 +2441,43 @@
   <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="btnPrint.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
-  <data name="button1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="btnPrint.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnPrint.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnPrint.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 18pt, style=Bold</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
     <value>1127, 10</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnPrint.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 39</value>
   </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnPrint.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
+  <data name="btnPrint.Text" xml:space="preserve">
     <value>Print</value>
   </data>
-  <data name="button1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="btnPrint.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
   </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
+  <data name="&gt;&gt;btnPrint.Name" xml:space="preserve">
+    <value>btnPrint</value>
   </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnPrint.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnPrint.Parent" xml:space="preserve">
     <value>panel5</value>
   </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnPrint.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="btnsave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -2548,31 +2552,31 @@
   <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="txtdname.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="cmbDoctor.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
-  <data name="txtdname.Items" xml:space="preserve">
+  <data name="cmbDoctor.Items" xml:space="preserve">
     <value>Mr</value>
   </data>
-  <data name="txtdname.Items1" xml:space="preserve">
+  <data name="cmbDoctor.Items1" xml:space="preserve">
     <value>Miss</value>
   </data>
-  <data name="txtdname.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="cmbDoctor.Location" type="System.Drawing.Point, System.Drawing">
     <value>193, 13</value>
   </data>
-  <data name="txtdname.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="cmbDoctor.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 29</value>
   </data>
-  <data name="txtdname.TabIndex" type="System.Int32, mscorlib">
+  <data name="cmbDoctor.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
-  <data name="&gt;&gt;txtdname.Name" xml:space="preserve">
-    <value>txtdname</value>
+  <data name="&gt;&gt;cmbDoctor.Name" xml:space="preserve">
+    <value>cmbDoctor</value>
   </data>
-  <data name="&gt;&gt;txtdname.Type" xml:space="preserve">
+  <data name="&gt;&gt;cmbDoctor.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtdname.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cmbDoctor.Parent" xml:space="preserve">
     <value>panel5</value>
   </data>
   <data name="&gt;&gt;txtdname.ZOrder" xml:space="preserve">
@@ -2597,7 +2601,7 @@
     <value>GrowAndShrink</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1604, 881</value>
+    <value>1370, 749</value>
   </data>
   <data name="panel5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -2644,46 +2648,49 @@
   <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="button3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="btnGOTOIPD.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
-  <data name="button3.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="btnGOTOIPD.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="button3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnGOTOIPD.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button3.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnGOTOIPD.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 18pt, style=Bold</value>
   </data>
-  <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnGOTOIPD.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnGOTOIPD.Location" type="System.Drawing.Point, System.Drawing">
     <value>1290, 10</value>
   </data>
-  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnGOTOIPD.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 39</value>
   </data>
-  <data name="button3.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnGOTOIPD.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <data name="button3.Text" xml:space="preserve">
-    <value>Goto IPD</value>
+  <data name="btnGOTOIPD.Text" xml:space="preserve">
+    <value>Go to IPD</value>
   </data>
-  <data name="button3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="btnGOTOIPD.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
   </data>
-  <data name="&gt;&gt;button3.Name" xml:space="preserve">
-    <value>button3</value>
+  <data name="btnGOTOIPD.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;button3.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnGOTOIPD.Name" xml:space="preserve">
+    <value>btnGOTOIPD</value>
+  </data>
+  <data name="&gt;&gt;btnGOTOIPD.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnGOTOIPD.Parent" xml:space="preserve">
     <value>panel5</value>
   </data>
-  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnGOTOIPD.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
