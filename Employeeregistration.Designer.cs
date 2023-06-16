@@ -63,7 +63,7 @@ namespace Ruby_Hospital
             this.txtgender = new System.Windows.Forms.ComboBox();
             this.checkStatus = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtLandmark = new System.Windows.Forms.TextBox();
+            this.txtpost = new System.Windows.Forms.TextBox();
             this.txtExperience = new System.Windows.Forms.TextBox();
             this.txtprobationDate = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
@@ -224,7 +224,7 @@ namespace Ruby_Hospital
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(501, 271);
+            this.label15.Location = new System.Drawing.Point(491, 271);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(122, 21);
             this.label15.TabIndex = 7;
@@ -237,7 +237,7 @@ namespace Ruby_Hospital
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(463, 200);
+            this.label14.Location = new System.Drawing.Point(450, 193);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(163, 21);
             this.label14.TabIndex = 6;
@@ -249,7 +249,7 @@ namespace Ruby_Hospital
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(455, 324);
+            this.label13.Location = new System.Drawing.Point(445, 324);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(168, 21);
             this.label13.TabIndex = 5;
@@ -469,7 +469,7 @@ namespace Ruby_Hospital
             this.groupBox1.Controls.Add(this.txtmr);
             this.groupBox1.Controls.Add(this.txtcurrentAddress);
             this.groupBox1.Controls.Add(this.txtAlternateNumber);
-            this.groupBox1.Controls.Add(this.txtLandmark);
+            this.groupBox1.Controls.Add(this.txtpost);
             this.groupBox1.Controls.Add(this.txtExperience);
             this.groupBox1.Controls.Add(this.txtMobileNumber);
             this.groupBox1.Controls.Add(this.txtDesignation);
@@ -541,20 +541,20 @@ namespace Ruby_Hospital
             this.label8.TabIndex = 20;
             this.label8.Text = "Status";
             // 
-            // txtLandmark
+            // txtpost
             // 
-            this.txtLandmark.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLandmark.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLandmark.ForeColor = System.Drawing.Color.Gray;
-            this.txtLandmark.Location = new System.Drawing.Point(637, 133);
-            this.txtLandmark.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.txtLandmark.MaxLength = 10;
-            this.txtLandmark.Multiline = true;
-            this.txtLandmark.Name = "txtLandmark";
-            this.txtLandmark.Size = new System.Drawing.Size(267, 28);
-            this.txtLandmark.TabIndex = 8;
-            this.txtLandmark.Text = "Enter the Nearest Landmark";
-            this.txtLandmark.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtpost.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtpost.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpost.ForeColor = System.Drawing.Color.Gray;
+            this.txtpost.Location = new System.Drawing.Point(637, 133);
+            this.txtpost.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.txtpost.MaxLength = 10;
+            this.txtpost.Multiline = true;
+            this.txtpost.Name = "txtpost";
+            this.txtpost.Size = new System.Drawing.Size(267, 28);
+            this.txtpost.TabIndex = 8;
+            this.txtpost.Text = "Enter the Nearest Landmark";
+            this.txtpost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtExperience
             // 
@@ -598,11 +598,11 @@ namespace Ruby_Hospital
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(476, 140);
+            this.label10.Location = new System.Drawing.Point(564, 140);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(153, 21);
+            this.label10.Size = new System.Drawing.Size(49, 21);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Nearest Landmark";
+            this.label10.Text = "POST";
             // 
             // label17
             // 
@@ -706,18 +706,18 @@ namespace Ruby_Hospital
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(505, 796);
+            this.button2.Location = new System.Drawing.Point(557, 796);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(193, 40);
+            this.button2.Size = new System.Drawing.Size(146, 40);
             this.button2.TabIndex = 21;
-            this.button2.Text = "Create New";
+            this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.Goldenrod;
+            this.button3.BackColor = System.Drawing.Color.DarkGreen;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
@@ -855,7 +855,7 @@ namespace Ruby_Hospital
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.TextBox txtLandmark;
+        private System.Windows.Forms.TextBox txtpost;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label17;

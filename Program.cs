@@ -17,7 +17,7 @@ namespace Ruby_Hospital
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
            // Application.Run(new Assign_IPD_Drugs ());
-            Application.Run(new SingUp());
+            Application.Run(new OPD_List());
         }
     }
 }
