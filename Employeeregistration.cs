@@ -18,15 +18,9 @@ namespace Ruby_Hospital
             InitializeComponent();
         }
 
-        private void label15_Click(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void Employee_Load(object sender, EventArgs e)
         {
@@ -64,10 +58,7 @@ namespace Ruby_Hospital
         private void button3_Click(object sender, EventArgs e)
         {
             savedata();
-            if(txtpost.Text=="Doctor")
-            {
-                doctors();
-            }
+         
         }
         public void savedata()
         {
@@ -76,9 +67,11 @@ namespace Ruby_Hospital
                   SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
                   con.Open();
 
+
                   SqlCommand cmb = new SqlCommand(@"INSERT INTO Employee_registration (Employee_of,MR_M,Name,Gender,Current_Address,Post,Permanent_Address,Mobile_Number,MaritalStatus,Experience,Alternate_Mobile_number,Date_Of_Birth,Department,Designation,Joining_Date,Probation,Status)
                                     Values (@Employee_of,@MR_M,@Name,@Gender,@Current_Address,@Post,@Permanent_Address,@Mobile_Number,@MaritalStatus,@Experience,@Alternate_Mobile_number,@Date_Of_Birth,@Department,@Designation,@Joining_Date,@Probation,@Status)", con);
-                  if (rbtrubystarhospital.Checked = true)
+                  if (rbtrubystarhospital.Checked == true)
+
                   {
                      cmb.Parameters.AddWithValue("@Employee_of", "Ruby Star Hospital");
                   }
@@ -90,7 +83,11 @@ namespace Ruby_Hospital
                   cmb.Parameters.AddWithValue("@Name", txtname.Text);
                   cmb.Parameters.AddWithValue("@Gender", txtgender.Text);
                   cmb.Parameters.AddWithValue("@Current_Address", txtcurrentAddress.Text);
-                  cmb.Parameters.AddWithValue("@Post", txtpost.Text);
+
+                 // cmb.Parameters.AddWithValue("@Post", txtpost.Text);
+
+                //  cmb.Parameters.AddWithValue("@Nearest_Landmark", txtpost.Text);
+
                   cmb.Parameters.AddWithValue("@Permanent_Address", txtPermanentAddress.Text);
                   cmb.Parameters.AddWithValue("@Mobile_Number", txtMobileNumber.Text);
                   cmb.Parameters.AddWithValue("@MaritalStatus", txtMaritalStatus.Text);
@@ -101,7 +98,7 @@ namespace Ruby_Hospital
                   cmb.Parameters.AddWithValue("@Designation", txtDesignation.Text);
                   cmb.Parameters.AddWithValue("@Joining_Date", txtJoinDate.Text);
                   cmb.Parameters.AddWithValue("@Probation", txtprobationDate.Text);
-                  if (checkStatus.Enabled = true)
+                  if (checkStatus.Enabled == true)
                   {
                      cmb.Parameters.AddWithValue("@Status", "Active");
                   }
@@ -147,7 +144,9 @@ namespace Ruby_Hospital
             txtExperience.Text = "";
             txtgender.Text = "";
             txtJoinDate.Text = "";
-            txtpost.Text = "";
+
+            //txtpost.Text = "";
+
             txtMaritalStatus.Text = "";
             txtMobileNumber.Text = "";
             txtmr.Text = "";
@@ -183,7 +182,7 @@ namespace Ruby_Hospital
                 cmb.Parameters.AddWithValue("@Name", txtname.Text);
                 cmb.Parameters.AddWithValue("@Gender", txtgender.Text);
                 cmb.Parameters.AddWithValue("@Current_Address", txtcurrentAddress.Text);
-                cmb.Parameters.AddWithValue("@Post", txtpost.Text);
+              //  cmb.Parameters.AddWithValue("@Post", txtpost.Text);
                 cmb.Parameters.AddWithValue("@Permanent_Address", txtPermanentAddress.Text);
                 cmb.Parameters.AddWithValue("@Mobile_Number", txtMobileNumber.Text);
                 cmb.Parameters.AddWithValue("@MaritalStatus", txtMaritalStatus.Text);
@@ -221,5 +220,7 @@ namespace Ruby_Hospital
             if (txtname.Text == "")
                 txtname.Text = "Fisrtname                    Middle                  Lastname";
         }
+
+       
     }
 }

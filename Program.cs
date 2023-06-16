@@ -16,8 +16,13 @@ namespace Ruby_Hospital
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
            // Application.Run(new Assign_IPD_Drugs ());
             Application.Run(new OPD_List());
+=======
+            Application.Run(new IPD_Daily_Procedure_main());
+           
+>>>>>>> 679592043adaf96d6eaf45a16babd6cf39ce6c60
         }
     }
 }
