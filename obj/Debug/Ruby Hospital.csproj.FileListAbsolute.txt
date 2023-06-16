@@ -96,3 +96,4 @@ G:\Ruby_Hospital\obj\Debug\Ruby Hospital.csproj.CopyComplete
 G:\Ruby_Hospital\obj\Debug\Ruby Hospital.exe
 G:\Ruby_Hospital\obj\Debug\Ruby Hospital.pdb
 >>>>>>> 969de2ddf570c4fb204ae601cce75ebd18105cef
+G:\Ruby_Hospital\obj\Debug\Ruby_Hospital.Referred_doctor.resources

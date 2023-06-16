@@ -61,13 +61,13 @@ namespace Ruby_Hospital
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
             this.txtgender = new System.Windows.Forms.ComboBox();
-            this.checkStatus = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtExperience = new System.Windows.Forms.TextBox();
             this.txtprobationDate = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.checkStatus = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -209,7 +209,6 @@ namespace Ruby_Hospital
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(1230, 143);
-
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(122, 21);
             this.label15.TabIndex = 7;
@@ -232,7 +231,6 @@ namespace Ruby_Hospital
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(14, 140);
-
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(168, 21);
             this.label13.TabIndex = 5;
@@ -438,11 +436,9 @@ namespace Ruby_Hospital
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.txtgender);
-            this.groupBox1.Controls.Add(this.checkStatus);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.rbtcontractor);
             this.groupBox1.Controls.Add(this.rbtrubystarhospital);
-            this.groupBox1.Controls.Add(this.textBox8);
             this.groupBox1.Controls.Add(this.txtPermanentAddress);
             this.groupBox1.Controls.Add(this.txtmr);
             this.groupBox1.Controls.Add(this.txtcurrentAddress);
@@ -505,18 +501,6 @@ namespace Ruby_Hospital
             this.txtgender.Size = new System.Drawing.Size(188, 29);
             this.txtgender.TabIndex = 22;
             // 
-            // checkStatus
-            // 
-            this.checkStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkStatus.AutoSize = true;
-            this.checkStatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkStatus.Location = new System.Drawing.Point(995, 251);
-            this.checkStatus.Name = "checkStatus";
-            this.checkStatus.Size = new System.Drawing.Size(77, 23);
-            this.checkStatus.TabIndex = 21;
-            this.checkStatus.Text = "Active";
-            this.checkStatus.UseVisualStyleBackColor = true;
-            // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -528,23 +512,6 @@ namespace Ruby_Hospital
             this.label8.Size = new System.Drawing.Size(59, 21);
             this.label8.TabIndex = 20;
             this.label8.Text = "Status";
-            // 
-
-            // textBox8
-            // 
-            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.Gray;
-            this.textBox8.Location = new System.Drawing.Point(590, 246);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.textBox8.MaxLength = 10;
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(260, 28);
-            this.textBox8.TabIndex = 8;
-            this.textBox8.Text = "Aadhaar Number";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-
             // 
             // txtExperience
             // 
@@ -582,8 +549,6 @@ namespace Ruby_Hospital
             this.label16.TabIndex = 8;
             this.label16.Text = "Probation Till  ";
             // 
-
-
             // label17
             // 
             this.label17.AutoSize = true;
@@ -605,6 +570,18 @@ namespace Ruby_Hospital
             this.label18.Size = new System.Drawing.Size(144, 25);
             this.label18.TabIndex = 0;
             this.label18.Text = "Employee of ";
+            // 
+            // checkStatus
+            // 
+            this.checkStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkStatus.AutoSize = true;
+            this.checkStatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkStatus.Location = new System.Drawing.Point(995, 251);
+            this.checkStatus.Name = "checkStatus";
+            this.checkStatus.Size = new System.Drawing.Size(77, 23);
+            this.checkStatus.TabIndex = 21;
+            this.checkStatus.Text = "Active";
+            this.checkStatus.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -673,7 +650,6 @@ namespace Ruby_Hospital
             this.button2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(496, 801);
-
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(146, 40);
             this.button2.TabIndex = 21;
@@ -684,11 +660,8 @@ namespace Ruby_Hospital
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.DarkGreen;
-
             this.button3.BackColor = System.Drawing.Color.Goldenrod;
             this.button3.FlatAppearance.BorderSize = 0;
-
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
