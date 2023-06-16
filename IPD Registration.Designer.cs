@@ -34,6 +34,7 @@ namespace Ruby_Hospital
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbRelation = new System.Windows.Forms.ComboBox();
             this.txtRelativeMobileNo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtReativeName = new System.Windows.Forms.TextBox();
@@ -45,6 +46,7 @@ namespace Ruby_Hospital
             this.label10 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmb_BedNo = new System.Windows.Forms.ComboBox();
             this.rbtnonmlc = new System.Windows.Forms.RadioButton();
             this.rbtmlc = new System.Windows.Forms.RadioButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -65,8 +67,6 @@ namespace Ruby_Hospital
             this.label14 = new System.Windows.Forms.Label();
             this.txtPatientIPDID = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cmbRelation = new System.Windows.Forms.ComboBox();
-            this.cmb_BedNo = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -133,6 +133,16 @@ namespace Ruby_Hospital
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // cmbRelation
+            // 
+            this.cmbRelation.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRelation.FormattingEnabled = true;
+            this.cmbRelation.Location = new System.Drawing.Point(189, 94);
+            this.cmbRelation.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.cmbRelation.Name = "cmbRelation";
+            this.cmbRelation.Size = new System.Drawing.Size(210, 29);
+            this.cmbRelation.TabIndex = 18;
             // 
             // txtRelativeMobileNo
             // 
@@ -287,6 +297,18 @@ namespace Ruby_Hospital
             this.groupBox2.TabIndex = 27;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Addmission Details";
+            // 
+            // cmb_BedNo
+            // 
+            this.cmb_BedNo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_BedNo.FormattingEnabled = true;
+            this.cmb_BedNo.Items.AddRange(new object[] {
+            "1"});
+            this.cmb_BedNo.Location = new System.Drawing.Point(483, 73);
+            this.cmb_BedNo.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.cmb_BedNo.Name = "cmb_BedNo";
+            this.cmb_BedNo.Size = new System.Drawing.Size(178, 29);
+            this.cmb_BedNo.TabIndex = 19;
             // 
             // rbtnonmlc
             // 
@@ -523,28 +545,6 @@ namespace Ruby_Hospital
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
-            // 
-            // cmbRelation
-            // 
-            this.cmbRelation.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbRelation.FormattingEnabled = true;
-            this.cmbRelation.Location = new System.Drawing.Point(189, 94);
-            this.cmbRelation.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.cmbRelation.Name = "cmbRelation";
-            this.cmbRelation.Size = new System.Drawing.Size(210, 29);
-            this.cmbRelation.TabIndex = 18;
-            // 
-            // cmb_BedNo
-            // 
-            this.cmb_BedNo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_BedNo.FormattingEnabled = true;
-            this.cmb_BedNo.Items.AddRange(new object[] {
-            "1"});
-            this.cmb_BedNo.Location = new System.Drawing.Point(483, 73);
-            this.cmb_BedNo.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.cmb_BedNo.Name = "cmb_BedNo";
-            this.cmb_BedNo.Size = new System.Drawing.Size(178, 29);
-            this.cmb_BedNo.TabIndex = 19;
             // 
             // IPD_Registration
             // 

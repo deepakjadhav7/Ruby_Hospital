@@ -214,6 +214,53 @@ namespace Ruby_Hospital
             }
         }
 
+        public void UpdateRegistration()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand cmd = new SqlCommand(@"Update Patient_Registration set (Prefixes=@Prefixes,Name=@Name,Gender=@Gende,DOB=@DOB,Age=@Age,Marital_Status=@Marital_Status,Mobile_Number=@Mobile_Number,
+                                               Email=@Email,Adhaar_ID=@Adhaar_ID,Weight=@Weight,Purpose=@Purpose,Alternate_Mobile=@Alternate_Mobile,Nationality=@Nationality,Remark=@Remark,AROGYA_Card=@AROGYA_Card,Registration_Charges=@Registration_Charges,Consultation_Charges=@Consultation_Charges,
+                                               Address=@Address,State=@State,District=@District,Taluka=@Taluka,City=@City,Doctors_Name=@Doctors_Name,Referred_By=@Referred_By)  where Patient_ID=@Patient_ID)", con);
+
+
+            cmd.Parameters.AddWithValue("@Patient_ID", "RSHJ001");
+            cmd.Parameters.AddWithValue("@Prefixes", txtprofix.Text);
+            cmd.Parameters.AddWithValue("@Name", txtname.Text);
+            if (btnmale.Checked == true)
+            {
+                cmd.Parameters.AddWithValue("@Gender", "Male");
+            }
+            else
+            {
+                cmd.Parameters.AddWithValue("@Gender", "Female");
+            }
+
+            cmd.Parameters.AddWithValue("@DOB", txtdate.Text);
+            cmd.Parameters.AddWithValue("@Age", txtage.Text);
+            cmd.Parameters.AddWithValue("@Marital_Status", cbmmaritalstatus.Text);
+            cmd.Parameters.AddWithValue("@Mobile_Number", txtmobilenumber.Text);
+            cmd.Parameters.AddWithValue("@Email", txtmail.Text);
+            cmd.Parameters.AddWithValue("@Adhaar_ID", txtaadhaar.Text);
+            cmd.Parameters.AddWithValue("@Weight", txtweight.Text);
+            cmd.Parameters.AddWithValue("@Purpose", txtpurpose.Text);
+            cmd.Parameters.AddWithValue("@Alternate_Mobile", txtalternateno.Text);
+            cmd.Parameters.AddWithValue("@Nationality", txtnationality.Text);
+            cmd.Parameters.AddWithValue("@Remark", txtremark.Text);
+            cmd.Parameters.AddWithValue("@AROGYA_Card", txtarogyacard.Text);
+            cmd.Parameters.AddWithValue("@Registration_Charges", txtregicharges.Text);
+            cmd.Parameters.AddWithValue("@Consultation_Charges", txtconsultacharges.Text);
+            cmd.Parameters.AddWithValue("@Address", txtaddress.Text);
+            cmd.Parameters.AddWithValue("@State", txtstate.Text);
+            cmd.Parameters.AddWithValue("@District", txtdistrict.Text);
+            cmd.Parameters.AddWithValue("@Taluka", txttaluka.Text);
+            cmd.Parameters.AddWithValue("@City", txtcity.Text);
+            cmd.Parameters.AddWithValue("@Doctors_Name", cmbDoctor.Text);
+            cmd.Parameters.AddWithValue("@Referred_By", cmbReferred.Text);
+
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+        }
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
@@ -231,6 +278,7 @@ namespace Ruby_Hospital
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            btnsave.Visible = false;
 
         }
 
