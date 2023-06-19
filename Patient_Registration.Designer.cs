@@ -97,9 +97,7 @@ namespace Ruby_Hospital
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-
             this.btnGOTOIPD = new System.Windows.Forms.Button();
-
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -241,9 +239,7 @@ namespace Ruby_Hospital
             this.txtregicharges.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtregicharges, "txtregicharges");
             this.txtregicharges.Name = "txtregicharges";
-
             this.txtregicharges.ReadOnly = true;
-
             this.txtregicharges.Enter += new System.EventHandler(this.txtregicharges_Enter);
             this.txtregicharges.Leave += new System.EventHandler(this.txtregicharges_Leave);
             // 
@@ -345,9 +341,7 @@ namespace Ruby_Hospital
             this.txtage.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtage, "txtage");
             this.txtage.Name = "txtage";
-
             this.txtage.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtage_MouseClick);
-
             // 
             // txtmobilenumber
             // 
@@ -521,15 +515,14 @@ namespace Ruby_Hospital
             resources.GetString("txtstate.Items1")});
             resources.ApplyResources(this.txtstate, "txtstate");
             this.txtstate.Name = "txtstate";
+            this.txtstate.TextChanged += new System.EventHandler(this.txtstate_TextChanged);
             // 
             // txtdistrict
             // 
             this.txtdistrict.FormattingEnabled = true;
-            this.txtdistrict.Items.AddRange(new object[] {
-            resources.GetString("txtdistrict.Items"),
-            resources.GetString("txtdistrict.Items1")});
             resources.ApplyResources(this.txtdistrict, "txtdistrict");
             this.txtdistrict.Name = "txtdistrict";
+            this.txtdistrict.TextChanged += new System.EventHandler(this.txtdistrict_TextChanged);
             // 
             // txttaluka
             // 
@@ -571,11 +564,8 @@ namespace Ruby_Hospital
             // 
             // cmbReferred
             // 
-            resources.ApplyResources(this.cmbReferred, "cmbReferred");
             this.cmbReferred.FormattingEnabled = true;
-            this.cmbReferred.Items.AddRange(new object[] {
-            resources.GetString("cmbReferred.Items"),
-            resources.GetString("cmbReferred.Items1")});
+            resources.ApplyResources(this.cmbReferred, "cmbReferred");
             this.cmbReferred.Name = "cmbReferred";
             // 
             // button2
@@ -587,7 +577,6 @@ namespace Ruby_Hospital
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = false;
-            //this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnPrint
             // 
@@ -620,9 +609,6 @@ namespace Ruby_Hospital
             // 
             resources.ApplyResources(this.cmbDoctor, "cmbDoctor");
             this.cmbDoctor.FormattingEnabled = true;
-            this.cmbDoctor.Items.AddRange(new object[] {
-            resources.GetString("cmbDoctor.Items"),
-            resources.GetString("cmbDoctor.Items1")});
             this.cmbDoctor.Name = "cmbDoctor";
             this.cmbDoctor.Leave += new System.EventHandler(this.comboBox9_Leave);
             // 
@@ -636,11 +622,9 @@ namespace Ruby_Hospital
             this.panel5.BackColor = System.Drawing.Color.Teal;
             this.panel5.Controls.Add(this.button4);
             this.panel5.Controls.Add(this.label16);
-
             this.panel5.Controls.Add(this.btnGOTOIPD);
             this.panel5.Controls.Add(this.btnPrint);
             this.panel5.Controls.Add(this.cmbReferred);
-
             this.panel5.Controls.Add(this.btnsave);
             this.panel5.Controls.Add(this.cmbDoctor);
             this.panel5.Controls.Add(this.label23);
@@ -656,7 +640,6 @@ namespace Ruby_Hospital
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = false;
             // 
-
             // btnGOTOIPD
             // 
             resources.ApplyResources(this.btnGOTOIPD, "btnGOTOIPD");
@@ -667,7 +650,6 @@ namespace Ruby_Hospital
             this.btnGOTOIPD.Name = "btnGOTOIPD";
             this.btnGOTOIPD.UseVisualStyleBackColor = true;
             this.btnGOTOIPD.Click += new System.EventHandler(this.btnGOTOIPD_Click);
-
             // 
             // Patient_Registration
             // 
