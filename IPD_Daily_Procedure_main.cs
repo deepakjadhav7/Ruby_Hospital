@@ -46,6 +46,9 @@ namespace Ruby_Hospital
             //this.Size = new Size(w, h);
         }
 
-        
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

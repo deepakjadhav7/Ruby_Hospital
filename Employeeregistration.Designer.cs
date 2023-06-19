@@ -509,10 +509,10 @@ namespace Ruby_Hospital
             // 
             this.checkStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkStatus.AutoSize = true;
-            this.checkStatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkStatus.Location = new System.Drawing.Point(995, 251);
+            this.checkStatus.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkStatus.Location = new System.Drawing.Point(997, 250);
             this.checkStatus.Name = "checkStatus";
-            this.checkStatus.Size = new System.Drawing.Size(77, 23);
+            this.checkStatus.Size = new System.Drawing.Size(91, 26);
             this.checkStatus.TabIndex = 21;
             this.checkStatus.Text = "Active";
             this.checkStatus.UseVisualStyleBackColor = true;

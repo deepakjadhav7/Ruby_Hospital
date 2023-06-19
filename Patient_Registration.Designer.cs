@@ -98,6 +98,7 @@ namespace Ruby_Hospital
             this.panel5 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -749,5 +750,6 @@ namespace Ruby_Hospital
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

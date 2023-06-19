@@ -104,11 +104,12 @@ namespace Ruby_Hospital
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button4.BackColor = System.Drawing.Color.Brown;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(818, 700);
+            this.button4.Location = new System.Drawing.Point(807, 679);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(127, 40);
             this.button4.TabIndex = 14;
@@ -231,11 +232,12 @@ namespace Ruby_Hospital
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button3.BackColor = System.Drawing.Color.Goldenrod;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(655, 700);
+            this.button3.Location = new System.Drawing.Point(644, 679);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(127, 40);
             this.button3.TabIndex = 13;
