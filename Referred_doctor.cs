@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -45,19 +46,19 @@ namespace Ruby_Hospital
 
         private void txtdigree_Enter(object sender, EventArgs e)
         {
-           if(txtdigree.Text == "Degree")
+           if(txtdegree.Text == "Degree")
             {
-                txtdigree.Text = "";
-                txtdigree.ForeColor = Color.Black;
+                txtdegree.Text = "";
+                txtdegree.ForeColor = Color.Black;
             }
         }
 
         private void txtdigree_Leave(object sender, EventArgs e)
         {
-            if (txtdigree.Text == "")
+            if (txtdegree.Text == "")
             {
-                txtdigree.Text = "Degree";
-                txtdigree.ForeColor = Color.Gray;
+                txtdegree.Text = "Degree";
+                txtdegree.ForeColor = Color.Gray;
             }
         }
 
@@ -123,6 +124,35 @@ namespace Ruby_Hospital
             {
                 e.Handled =  true;
 
+            }
+        }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+                con.Open();
+                SqlCommand cmd = new SqlCommand(@"Insert into Referred_Doctor (Referred_Name,Degree,Mobile_no,Address,Status)Values (@Referred_Name,@Degree,@Mobile_no,@Address,@Status)", con);
+                cmd.Parameters.AddWithValue("@Referred_Name", txtdrrename.Text);
+                cmd.Parameters.AddWithValue("@Degree", txtdegree.Text);
+                cmd.Parameters.AddWithValue("@Mobile_no", txtdrremobileno.Text);
+                cmd.Parameters.AddWithValue("@Address", txtdrrgeaddress.Text);
+                if (chbactive.Checked == true)
+                {
+                    cmd.Parameters.AddWithValue("@Status", "Active");
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@Status", "InActive");
+                }
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Record Added Successfully..");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
     }
