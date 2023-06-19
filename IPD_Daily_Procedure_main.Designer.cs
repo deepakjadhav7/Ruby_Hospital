@@ -362,9 +362,9 @@ namespace Ruby_Hospital
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.HorizontalScrollbarSize = 10;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 47);
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(1474, 418);
+            this.metroTabPage2.Size = new System.Drawing.Size(1474, 427);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "Hosptial Drugs";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
@@ -379,7 +379,7 @@ namespace Ruby_Hospital
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(663, 368);
+            this.button7.Location = new System.Drawing.Point(663, 372);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(127, 42);
             this.button7.TabIndex = 38;
@@ -574,7 +574,7 @@ namespace Ruby_Hospital
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(737, 494);
+            this.button5.Location = new System.Drawing.Point(737, 498);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(10, 10);
             this.button5.TabIndex = 36;
@@ -589,7 +589,7 @@ namespace Ruby_Hospital
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(883, 494);
+            this.button6.Location = new System.Drawing.Point(883, 498);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(10, 10);
             this.button6.TabIndex = 37;
@@ -612,9 +612,9 @@ namespace Ruby_Hospital
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.HorizontalScrollbarSize = 10;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 47);
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(1474, 418);
+            this.metroTabPage3.Size = new System.Drawing.Size(1474, 427);
             this.metroTabPage3.TabIndex = 2;
             this.metroTabPage3.Text = "Hospital Procedure";
             this.metroTabPage3.VerticalScrollbarBarColor = true;
@@ -745,9 +745,9 @@ namespace Ruby_Hospital
             this.metroTabPage4.HorizontalScrollbarBarColor = true;
             this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage4.HorizontalScrollbarSize = 10;
-            this.metroTabPage4.Location = new System.Drawing.Point(4, 47);
+            this.metroTabPage4.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(1474, 418);
+            this.metroTabPage4.Size = new System.Drawing.Size(1474, 427);
             this.metroTabPage4.TabIndex = 3;
             this.metroTabPage4.Text = "Surgical Procedures";
             this.metroTabPage4.VerticalScrollbarBarColor = true;
@@ -760,9 +760,9 @@ namespace Ruby_Hospital
             this.metroTabPage5.HorizontalScrollbarBarColor = true;
             this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage5.HorizontalScrollbarSize = 10;
-            this.metroTabPage5.Location = new System.Drawing.Point(4, 47);
+            this.metroTabPage5.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(1474, 418);
+            this.metroTabPage5.Size = new System.Drawing.Size(1474, 427);
             this.metroTabPage5.TabIndex = 4;
             this.metroTabPage5.Text = "Print Certificates";
             this.metroTabPage5.VerticalScrollbarBarColor = true;

@@ -194,7 +194,7 @@ namespace Ruby_Hospital
                 cmb.Parameters.AddWithValue("@Email", txtmail.Text);
                 cmb.Parameters.AddWithValue("@Password", txtpass.Text);
                 cmb.ExecuteNonQuery();
-                MessageBox.Show("User name and Password successfully registered..");
+                MessageBox.Show("User registered successfully ..");
                 cleardata();
                 con.Close();
             }

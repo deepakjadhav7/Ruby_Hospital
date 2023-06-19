@@ -129,6 +129,7 @@ namespace Ruby_Hospital
             this.Location = new Point(0, 0);
             this.Size = new Size(w, h);
 
+
             #region Auto Complete Property
             System.Collections.ArrayList ListArray = new ArrayList();
             SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
@@ -146,6 +147,62 @@ namespace Ruby_Hospital
             txtpatient.AutoCompleteSource = AutoCompleteSource.CustomSource;
             txtpatient.AutoCompleteCustomSource = namesCollection;
             #endregion
+
+            FetchDoctor();
+            Referred_Doctor();
+            State();
+            District();
+        }
+        public void State()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand cmb = new SqlCommand(@"Select * From States", con);
+            SqlDataAdapter adt = new SqlDataAdapter(cmb);
+            DataTable dt = new DataTable();
+            adt.Fill(dt);
+            if(dt.Rows.Count>0)
+            {
+                txtstate.DataSource = dt;
+                txtstate.DisplayMember = "State";
+                txtstate.ValueMember = "SID";
+            }
+
+        }
+        public void District()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand cmb = new SqlCommand(@"Select * From District where (SID=@SID) ", con);
+            cmb.Parameters.AddWithValue("@SID", txtstate.SelectedIndex);
+            cmb.ExecuteNonQuery();
+            SqlDataAdapter adt = new SqlDataAdapter(cmb);
+            DataTable dt = new DataTable();
+            adt.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                txtdistrict.DataSource = dt;
+                txtdistrict.DisplayMember = "District";
+                txtdistrict.ValueMember = "DID";
+            }
+        }
+        public void Taluka()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand cmb = new SqlCommand(@"Select * From Taluka where (DID=@DID) ", con);
+            cmb.Parameters.AddWithValue("@DID", txtdistrict.SelectedIndex);
+            cmb.ExecuteNonQuery();
+            SqlDataAdapter adt = new SqlDataAdapter(cmb);
+            DataTable dt = new DataTable();
+            adt.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                txttaluka.DataSource = dt;
+                txttaluka.DisplayMember = "Taluka";
+                txttaluka.ValueMember = "TID";
+            }
+
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
@@ -610,9 +667,59 @@ namespace Ruby_Hospital
             o.Show();
         }
 
+
         private void txtconsultacharges_MouseClick(object sender, MouseEventArgs e)
         {
             txtconsultacharges.Clear();
+        }
+
+        public void FetchDoctor()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand com = new SqlCommand(@"Select * From Doctors", con);
+            SqlDataAdapter adt = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            adt.Fill(dt);
+            if(dt.Rows.Count>0)
+            {
+                cmbDoctor.DataSource = dt;
+                cmbDoctor.DisplayMember = "Dr_Name";
+                cmbDoctor.ValueMember = "DR_ID";
+            }
+            con.Close();
+
+        }
+        public void Referred_Doctor()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand com = new SqlCommand(@"Select * From Referred_Doctor", con);
+            SqlDataAdapter adt = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            adt.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                cmbReferred.DataSource = dt;
+                cmbReferred.DisplayMember = "Referred_Name";
+                cmbReferred.ValueMember = "ReferredID";
+            }
+            con.Close();
+        }
+
+        private void txtdistrict_TextChanged(object sender, EventArgs e)
+        {
+            //if(txtstate.Text.Trim)
+            //{
+
+            //}
+            Taluka();
+        }
+
+        private void txtstate_TextChanged(object sender, EventArgs e)
+        {
+            District();
+
         }
     }
 }

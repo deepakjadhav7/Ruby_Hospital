@@ -28,6 +28,7 @@ namespace Ruby_Hospital
             int h = Screen.PrimaryScreen.Bounds.Height;
             this.Location = new Point(0, 0);
             this.Size = new Size(w, h);
+            show();
         }
 
         private void radiocontractor_CheckedChanged(object sender, EventArgs e)
@@ -57,12 +58,16 @@ namespace Ruby_Hospital
 
         private void button3_Click(object sender, EventArgs e)
         {
-            savedata();
-            if(txtDesignation.Text=="Doctor")
+            show();
+            if (txtDesignation.Text == "Doctor")
             {
                 doctors();
+                savedata();        
             }
-         
+            else
+            {
+                savedata();
+            }
         }
         public void savedata()
         {
@@ -72,8 +77,8 @@ namespace Ruby_Hospital
                   con.Open();
 
 
-                  SqlCommand cmb = new SqlCommand(@"INSERT INTO Employee_registration (Employee_of,MR_M,Name,Gender,Current_Address,Post,Permanent_Address,Mobile_Number,MaritalStatus,Experience,Alternate_Mobile_number,Date_Of_Birth,Department,Designation,Joining_Date,Probation,Status)
-                                    Values (@Employee_of,@MR_M,@Name,@Gender,@Current_Address,@Post,@Permanent_Address,@Mobile_Number,@MaritalStatus,@Experience,@Alternate_Mobile_number,@Date_Of_Birth,@Department,@Designation,@Joining_Date,@Probation,@Status)", con);
+                  SqlCommand cmb = new SqlCommand(@"INSERT INTO Employee_registration (Employee_of,MR_M,Name,Gender,Current_Address,Permanent_Address,Mobile_Number,MaritalStatus,Experience,Alternate_Mobile_number,Date_Of_Birth,Department,Designation,Joining_Date,Probation,Status)
+                                    Values (@Employee_of,@MR_M,@Name,@Gender,@Current_Address,@Permanent_Address,@Mobile_Number,@MaritalStatus,@Experience,@Alternate_Mobile_number,@Date_Of_Birth,@Department,@Designation,@Joining_Date,@Probation,@Status)", con);
                   if (rbtrubystarhospital.Checked == true)
 
                   {
@@ -107,13 +112,13 @@ namespace Ruby_Hospital
                      cmb.Parameters.AddWithValue("@Status", "Active");
                   }
                   cmb.ExecuteNonQuery();
-
-                  MessageBox.Show("Employee successfully Added...");
+                show();
+                MessageBox.Show("Employee successfully Added...");
                   clearData();
             }
-            catch
+            catch(Exception ex)
             {
-
+                MessageBox.Show(ex.ToString());
             }
        
         }
@@ -122,7 +127,7 @@ namespace Ruby_Hospital
             SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
             con.Open();
             SqlCommand cmb = new SqlCommand(@"Insert INTO Doctors (Dr_Name,Contact_Number,Is_Active)
-            values(@Dr_Name,@Contact_Number,@Is_Active)");
+            values(@Dr_Name,@Contact_Number,@Is_Active)",con);
             cmb.Parameters.AddWithValue("@Dr_Name", txtname.Text);
             cmb.Parameters.AddWithValue("@Contact_Number", txtMobileNumber.Text);
             if (checkStatus.Enabled = true)
@@ -136,7 +141,7 @@ namespace Ruby_Hospital
             cmb.ExecuteNonQuery();
 
            // MessageBox.Show("Employee successfully Added...");
-            clearData();
+           // clearData();
         }
         public void clearData()
         {
@@ -158,7 +163,20 @@ namespace Ruby_Hospital
             txtPermanentAddress.Text = "";
             txtprobationDate.Text = "";
         }
+        public void show()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand cmb = new SqlCommand(@"Select Employee_Of,Name,Current_Address,Mobile_Number,Department,Designation,Status From Employee_registration",con);
+            SqlDataAdapter adt = new SqlDataAdapter(cmb);
+            DataTable o = new DataTable();
+            adt.Fill(o);
+            if(o.Rows.Count>0)
+            {
+                dataGridView1.DataSource = o;
+            }
 
+        }
         private void txtDateOfBirth_ValueChanged(object sender, EventArgs e)
         {
 
@@ -166,8 +184,8 @@ namespace Ruby_Hospital
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
-            {
+           // try
+           // {
                 SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
                 con.Open();
 
@@ -205,12 +223,14 @@ namespace Ruby_Hospital
 
                 MessageBox.Show("Employee Added Successfully ...");
                 clearData();
-            }
-            catch
-            {
+           // }
+           // catch
+           // {
 
-            }
-            
+           // }
+            show();
+
+
         }
 
         private void txtname_MouseClick(object sender, MouseEventArgs e)

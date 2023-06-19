@@ -17,7 +17,7 @@ namespace Ruby_Hospital
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-           //Application.Run(new IPD_Daily_Procedure_grid());
+
             Application.Run(new Patient_Registration());
 
         }

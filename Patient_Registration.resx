@@ -715,7 +715,7 @@
     <value>11</value>
   </data>
   <data name="txtremark.Location" type="System.Drawing.Point, System.Drawing">
-    <value>620, 355</value>
+    <value>615, 355</value>
   </data>
   <data name="txtremark.MaxLength" type="System.Int32, mscorlib">
     <value>100</value>
@@ -745,7 +745,7 @@
     <value>12</value>
   </data>
   <data name="txtalternateno.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 263</value>
+    <value>615, 263</value>
   </data>
   <data name="txtalternateno.MaxLength" type="System.Int32, mscorlib">
     <value>10</value>
@@ -775,7 +775,7 @@
     <value>13</value>
   </data>
   <data name="txtweight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 177</value>
+    <value>615, 177</value>
   </data>
   <data name="txtweight.MaxLength" type="System.Int32, mscorlib">
     <value>3</value>
@@ -805,7 +805,7 @@
     <value>14</value>
   </data>
   <data name="txtage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 132</value>
+    <value>615, 132</value>
   </data>
   <data name="txtage.MaxLength" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1217,13 +1217,13 @@
     <value>29</value>
   </data>
   <data name="txtnationality.Items" xml:space="preserve">
-    <value>Mr</value>
+    <value>Indian</value>
   </data>
   <data name="txtnationality.Items1" xml:space="preserve">
-    <value>Miss</value>
+    <value>Non-Indian</value>
   </data>
   <data name="txtnationality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>622, 310</value>
+    <value>617, 310</value>
   </data>
   <data name="txtnationality.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 29</value>
@@ -1253,7 +1253,7 @@
     <value>Only Test</value>
   </data>
   <data name="txtpurpose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>622, 221</value>
+    <value>617, 221</value>
   </data>
   <data name="txtpurpose.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 29</value>
@@ -1522,12 +1522,6 @@
   <data name="&gt;&gt;txtstate.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="txtdistrict.Items" xml:space="preserve">
-    <value>Mr</value>
-  </data>
-  <data name="txtdistrict.Items1" xml:space="preserve">
-    <value>Miss</value>
-  </data>
   <data name="txtdistrict.Location" type="System.Drawing.Point, System.Drawing">
     <value>123, 252</value>
   </data>
@@ -1747,11 +1741,26 @@
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="cmbReferred.Items" xml:space="preserve">
-    <value>Mr</value>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>564, 448</value>
   </data>
-  <data name="cmbReferred.Items1" xml:space="preserve">
-    <value>Miss</value>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Address details</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="cmbReferred.Location" type="System.Drawing.Point, System.Drawing">
     <value>566, 14</value>
@@ -1921,12 +1930,6 @@
   <data name="cmbDoctor.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
-  <data name="cmbDoctor.Items" xml:space="preserve">
-    <value>Mr</value>
-  </data>
-  <data name="cmbDoctor.Items1" xml:space="preserve">
-    <value>Miss</value>
-  </data>
   <data name="cmbDoctor.Location" type="System.Drawing.Point, System.Drawing">
     <value>193, 13</value>
   </data>
@@ -1971,6 +1974,84 @@
   </data>
   <data name="panel5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
+  </data>
+  <data name="&gt;&gt;button4.Name" xml:space="preserve">
+    <value>button4</value>
+  </data>
+  <data name="&gt;&gt;button4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnGOTOIPD.Name" xml:space="preserve">
+    <value>btnGOTOIPD</value>
+  </data>
+  <data name="&gt;&gt;btnGOTOIPD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGOTOIPD.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;btnGOTOIPD.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 547</value>
+  </data>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1604, 59</value>
+  </data>
+  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1620, 920</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>798, 612</value>
+  </data>
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>  </value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
+    <value>errorProvider1</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Patient_Registration</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="button4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -2058,59 +2139,5 @@
   </data>
   <data name="&gt;&gt;btnGOTOIPD.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 547</value>
-  </data>
-  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1604, 59</value>
-  </data>
-  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 12pt</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
-  </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1620, 920</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>798, 612</value>
-  </data>
-  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>  </value>
-  </data>
-  <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
-    <value>errorProvider1</value>
-  </data>
-  <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Patient_Registration</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
