@@ -32,7 +32,16 @@ namespace Ruby_Hospital
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Patient_Registration));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnGOTOIPD = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label16 = new System.Windows.Forms.Label();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.cmbReferred = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.cmbDoctor = new System.Windows.Forms.ComboBox();
+            this.btnsave = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -41,6 +50,7 @@ namespace Ruby_Hospital
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txtconsultacharges = new System.Windows.Forms.TextBox();
             this.txtregicharges = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -59,6 +69,7 @@ namespace Ruby_Hospital
             this.txtage = new System.Windows.Forms.TextBox();
             this.txtmobilenumber = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtname = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -76,30 +87,19 @@ namespace Ruby_Hospital
             this.cbmmaritalstatus = new System.Windows.Forms.ComboBox();
             this.txtprofix = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtstate = new System.Windows.Forms.ComboBox();
             this.txtdistrict = new System.Windows.Forms.ComboBox();
             this.txttaluka = new System.Windows.Forms.ComboBox();
-            this.txtcity = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.cmbReferred = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.btnsave = new System.Windows.Forms.Button();
-            this.label23 = new System.Windows.Forms.Label();
-            this.cmbDoctor = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.btnGOTOIPD = new System.Windows.Forms.Button();
-            this.label26 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txtcity = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -127,12 +127,87 @@ namespace Ruby_Hospital
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button4
+            // 
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.BackColor = System.Drawing.Color.DarkKhaki;
+            this.button4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Name = "button4";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Teal;
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.Name = "panel5";
+            // 
+            // btnGOTOIPD
+            // 
+            resources.ApplyResources(this.btnGOTOIPD, "btnGOTOIPD");
+            this.btnGOTOIPD.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btnGOTOIPD.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.btnGOTOIPD.FlatAppearance.BorderSize = 0;
+            this.btnGOTOIPD.ForeColor = System.Drawing.Color.White;
+            this.btnGOTOIPD.Name = "btnGOTOIPD";
+            this.btnGOTOIPD.UseVisualStyleBackColor = true;
+            this.btnGOTOIPD.Click += new System.EventHandler(this.btnGOTOIPD_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
+            // 
+            // label16
+            // 
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Name = "label16";
+            // 
+            // btnPrint
+            // 
+            resources.ApplyResources(this.btnPrint, "btnPrint");
+            this.btnPrint.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.UseVisualStyleBackColor = false;
+            // 
+            // cmbReferred
+            // 
+            resources.ApplyResources(this.cmbReferred, "cmbReferred");
+            this.cmbReferred.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbReferred.FormattingEnabled = true;
+            this.cmbReferred.Name = "cmbReferred";
+            // 
+            // label23
+            // 
+            resources.ApplyResources(this.label23, "label23");
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Name = "label23";
+            // 
+            // cmbDoctor
+            // 
+            resources.ApplyResources(this.cmbDoctor, "cmbDoctor");
+            this.cmbDoctor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDoctor.FormattingEnabled = true;
+            this.cmbDoctor.Name = "cmbDoctor";
+            this.cmbDoctor.Leave += new System.EventHandler(this.comboBox9_Leave);
+            // 
+            // btnsave
+            // 
+            resources.ApplyResources(this.btnsave, "btnsave");
+            this.btnsave.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnsave.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.btnsave.FlatAppearance.BorderSize = 0;
+            this.btnsave.ForeColor = System.Drawing.Color.White;
+            this.btnsave.Name = "btnsave";
+            this.btnsave.UseVisualStyleBackColor = false;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
             // panel2
             // 
@@ -240,6 +315,12 @@ namespace Ruby_Hospital
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // checkBox1
+            // 
+            resources.ApplyResources(this.checkBox1, "checkBox1");
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // txtconsultacharges
             // 
@@ -384,6 +465,11 @@ namespace Ruby_Hospital
             resources.ApplyResources(this.label17, "label17");
             this.label17.Name = "label17";
             // 
+            // label26
+            // 
+            resources.ApplyResources(this.label26, "label26");
+            this.label26.Name = "label26";
+            // 
             // label10
             // 
             resources.ApplyResources(this.label10, "label10");
@@ -453,20 +539,24 @@ namespace Ruby_Hospital
             // txtnationality
             // 
             resources.ApplyResources(this.txtnationality, "txtnationality");
+            this.txtnationality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtnationality.FormattingEnabled = true;
             this.txtnationality.Items.AddRange(new object[] {
             resources.GetString("txtnationality.Items"),
-            resources.GetString("txtnationality.Items1")});
+            resources.GetString("txtnationality.Items1"),
+            resources.GetString("txtnationality.Items2")});
             this.txtnationality.Name = "txtnationality";
             // 
             // txtpurpose
             // 
             resources.ApplyResources(this.txtpurpose, "txtpurpose");
+            this.txtpurpose.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtpurpose.FormattingEnabled = true;
             this.txtpurpose.Items.AddRange(new object[] {
             resources.GetString("txtpurpose.Items"),
             resources.GetString("txtpurpose.Items1"),
-            resources.GetString("txtpurpose.Items2")});
+            resources.GetString("txtpurpose.Items2"),
+            resources.GetString("txtpurpose.Items3")});
             this.txtpurpose.Name = "txtpurpose";
             // 
             // cbmmaritalstatus
@@ -499,22 +589,16 @@ namespace Ruby_Hospital
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
-            // label16
-            // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Name = "label16";
-            // 
             // groupBox2
             // 
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
+            this.groupBox2.Controls.Add(this.txtcity);
             this.groupBox2.Controls.Add(this.txtaddress);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txtstate);
             this.groupBox2.Controls.Add(this.txtdistrict);
             this.groupBox2.Controls.Add(this.txttaluka);
-            this.groupBox2.Controls.Add(this.txtcity);
             this.groupBox2.Controls.Add(this.label22);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label21);
@@ -559,15 +643,6 @@ namespace Ruby_Hospital
             resources.GetString("txttaluka.Items1")});
             this.txttaluka.Name = "txttaluka";
             // 
-            // txtcity
-            // 
-            resources.ApplyResources(this.txtcity, "txtcity");
-            this.txtcity.FormattingEnabled = true;
-            this.txtcity.Items.AddRange(new object[] {
-            resources.GetString("txtcity.Items"),
-            resources.GetString("txtcity.Items1")});
-            this.txtcity.Name = "txtcity";
-            // 
             // label22
             // 
             resources.ApplyResources(this.label22, "label22");
@@ -588,12 +663,6 @@ namespace Ruby_Hospital
             resources.ApplyResources(this.label20, "label20");
             this.label20.Name = "label20";
             // 
-            // cmbReferred
-            // 
-            resources.ApplyResources(this.cmbReferred, "cmbReferred");
-            this.cmbReferred.FormattingEnabled = true;
-            this.cmbReferred.Name = "cmbReferred";
-            // 
             // button2
             // 
             resources.ApplyResources(this.button2, "button2");
@@ -604,82 +673,14 @@ namespace Ruby_Hospital
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // btnPrint
-            // 
-            resources.ApplyResources(this.btnPrint, "btnPrint");
-            this.btnPrint.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnPrint.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.btnPrint.FlatAppearance.BorderSize = 0;
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.UseVisualStyleBackColor = false;
-            // 
-            // btnsave
-            // 
-            resources.ApplyResources(this.btnsave, "btnsave");
-            this.btnsave.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnsave.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.btnsave.FlatAppearance.BorderSize = 0;
-            this.btnsave.ForeColor = System.Drawing.Color.White;
-            this.btnsave.Name = "btnsave";
-            this.btnsave.UseVisualStyleBackColor = false;
-            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
-            // 
-            // label23
-            // 
-            resources.ApplyResources(this.label23, "label23");
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Name = "label23";
-            // 
-            // cmbDoctor
-            // 
-            resources.ApplyResources(this.cmbDoctor, "cmbDoctor");
-            this.cmbDoctor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDoctor.FormattingEnabled = true;
-            this.cmbDoctor.Name = "cmbDoctor";
-            this.cmbDoctor.Leave += new System.EventHandler(this.comboBox9_Leave);
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // panel5
+            // txtcity
             // 
-            this.panel5.BackColor = System.Drawing.Color.Teal;
-            resources.ApplyResources(this.panel5, "panel5");
-            this.panel5.Name = "panel5";
-            // 
-            // button4
-            // 
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.BackColor = System.Drawing.Color.DarkKhaki;
-            this.button4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // btnGOTOIPD
-            // 
-            resources.ApplyResources(this.btnGOTOIPD, "btnGOTOIPD");
-            this.btnGOTOIPD.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnGOTOIPD.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.btnGOTOIPD.FlatAppearance.BorderSize = 0;
-            this.btnGOTOIPD.ForeColor = System.Drawing.Color.White;
-            this.btnGOTOIPD.Name = "btnGOTOIPD";
-            this.btnGOTOIPD.UseVisualStyleBackColor = true;
-            this.btnGOTOIPD.Click += new System.EventHandler(this.btnGOTOIPD_Click);
-            // 
-            // label26
-            // 
-            resources.ApplyResources(this.label26, "label26");
-            this.label26.Name = "label26";
-            // 
-            // checkBox1
-            // 
-            resources.ApplyResources(this.checkBox1, "checkBox1");
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.txtcity, "txtcity");
+            this.txtcity.Name = "txtcity";
             // 
             // Patient_Registration
             // 
@@ -755,7 +756,6 @@ namespace Ruby_Hospital
         private System.Windows.Forms.ComboBox txtstate;
         private System.Windows.Forms.ComboBox txtdistrict;
         private System.Windows.Forms.ComboBox txttaluka;
-        private System.Windows.Forms.ComboBox txtcity;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
@@ -780,5 +780,6 @@ namespace Ruby_Hospital
         private System.Windows.Forms.Button btnGOTOIPD;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox txtcity;
     }
 }
