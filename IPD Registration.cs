@@ -24,6 +24,8 @@ namespace Ruby_Hospital
             int h = Screen.PrimaryScreen.Bounds.Height;
             this.Location = new Point(0, 0);
             this.Size = new Size(w, h);
+            FetchDoctor();
+            Referred_Doctor();
 
         }
 
@@ -113,6 +115,7 @@ namespace Ruby_Hospital
         {
 
         }
+<<<<<<< HEAD
 
         private void txtPatientIPDID_Enter(object sender, EventArgs e)
         {
@@ -168,6 +171,40 @@ namespace Ruby_Hospital
                 txtPatientIPDID.Text = "123456789";
                 txtPatientIPDID.ForeColor = Color.Gray;
             }
+=======
+        public void FetchDoctor()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand com = new SqlCommand(@"Select * From Doctors", con);
+            SqlDataAdapter adt = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            adt.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                cmbConsultant.DataSource = dt;
+                cmbConsultant.DisplayMember = "Dr_Name";
+                cmbConsultant.ValueMember = "DR_ID";
+            }
+            con.Close();
+
+        }
+        public void Referred_Doctor()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand com = new SqlCommand(@"Select * From Referred_Doctor", con);
+            SqlDataAdapter adt = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            adt.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                cmbReferredBy.DataSource = dt;
+                cmbReferredBy.DisplayMember = "Referred_Name";
+                cmbReferredBy.ValueMember = "ReferredID";
+            }
+            con.Close();
+>>>>>>> beb185a99ced36cc27adfb7276ec0ea0630aeaf4
         }
     }
 }

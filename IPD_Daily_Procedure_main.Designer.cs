@@ -319,6 +319,7 @@ namespace Ruby_Hospital
             // 
             // label6
             // 
+<<<<<<< HEAD
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(94, 45);
@@ -387,6 +388,26 @@ namespace Ruby_Hospital
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "    Hospital Drugs    ";
             this.tabPage2.UseVisualStyleBackColor = true;
+=======
+            this.metroTabPage2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.metroTabPage2.Controls.Add(this.button7);
+            this.metroTabPage2.Controls.Add(this.panel4);
+            this.metroTabPage2.Controls.Add(this.groupBox1);
+            this.metroTabPage2.Controls.Add(this.button5);
+            this.metroTabPage2.Controls.Add(this.button6);
+            this.metroTabPage2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.HorizontalScrollbarSize = 10;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(1474, 427);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "Hosptial Drugs";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.VerticalScrollbarSize = 10;
+>>>>>>> beb185a99ced36cc27adfb7276ec0ea0630aeaf4
             // 
             // button7
             // 
@@ -396,7 +417,11 @@ namespace Ruby_Hospital
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
             this.button7.Location = new System.Drawing.Point(667, 378);
+=======
+            this.button7.Location = new System.Drawing.Point(663, 372);
+>>>>>>> beb185a99ced36cc27adfb7276ec0ea0630aeaf4
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(127, 42);
             this.button7.TabIndex = 41;
@@ -585,6 +610,7 @@ namespace Ruby_Hospital
             // 
             // tabPage3
             // 
+<<<<<<< HEAD
             this.tabPage3.Controls.Add(this.label17);
             this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Controls.Add(this.comboBox5);
@@ -602,6 +628,60 @@ namespace Ruby_Hospital
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "    Hospital Procedures    ";
             this.tabPage3.UseVisualStyleBackColor = true;
+=======
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button5.BackColor = System.Drawing.Color.DarkGreen;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(737, 498);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(10, 10);
+            this.button5.TabIndex = 36;
+            this.button5.Text = "Save";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button6.BackColor = System.Drawing.Color.Brown;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(883, 498);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(10, 10);
+            this.button6.TabIndex = 37;
+            this.button6.Text = "Exit";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // metroTabPage3
+            // 
+            this.metroTabPage3.BackColor = System.Drawing.Color.White;
+            this.metroTabPage3.Controls.Add(this.label17);
+            this.metroTabPage3.Controls.Add(this.label12);
+            this.metroTabPage3.Controls.Add(this.comboBox4);
+            this.metroTabPage3.Controls.Add(this.comboBox3);
+            this.metroTabPage3.Controls.Add(this.label9);
+            this.metroTabPage3.Controls.Add(this.label11);
+            this.metroTabPage3.Controls.Add(this.button8);
+            this.metroTabPage3.Controls.Add(this.button9);
+            this.metroTabPage3.Controls.Add(this.button10);
+            this.metroTabPage3.Controls.Add(this.panel5);
+            this.metroTabPage3.HorizontalScrollbarBarColor = true;
+            this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.HorizontalScrollbarSize = 10;
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage3.Name = "metroTabPage3";
+            this.metroTabPage3.Size = new System.Drawing.Size(1474, 427);
+            this.metroTabPage3.TabIndex = 2;
+            this.metroTabPage3.Text = "Hospital Procedure";
+            this.metroTabPage3.VerticalScrollbarBarColor = true;
+            this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.VerticalScrollbarSize = 10;
+>>>>>>> beb185a99ced36cc27adfb7276ec0ea0630aeaf4
             // 
             // label17
             // 
@@ -690,6 +770,7 @@ namespace Ruby_Hospital
             // 
             // button11
             // 
+<<<<<<< HEAD
             this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -701,6 +782,52 @@ namespace Ruby_Hospital
             this.button11.TabIndex = 89;
             this.button11.Text = "Clear All Tests";
             this.button11.UseVisualStyleBackColor = false;
+=======
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Location = new System.Drawing.Point(436, 24);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(958, 345);
+            this.panel5.TabIndex = 77;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(16, 10);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(925, 320);
+            this.panel6.TabIndex = 72;
+            // 
+            // metroTabPage4
+            // 
+            this.metroTabPage4.BackColor = System.Drawing.Color.Teal;
+            this.metroTabPage4.HorizontalScrollbarBarColor = true;
+            this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage4.HorizontalScrollbarSize = 10;
+            this.metroTabPage4.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage4.Name = "metroTabPage4";
+            this.metroTabPage4.Size = new System.Drawing.Size(1474, 427);
+            this.metroTabPage4.TabIndex = 3;
+            this.metroTabPage4.Text = "Surgical Procedures";
+            this.metroTabPage4.VerticalScrollbarBarColor = true;
+            this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage4.VerticalScrollbarSize = 10;
+            // 
+            // metroTabPage5
+            // 
+            this.metroTabPage5.Controls.Add(this.panel8);
+            this.metroTabPage5.HorizontalScrollbarBarColor = true;
+            this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.HorizontalScrollbarSize = 10;
+            this.metroTabPage5.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage5.Name = "metroTabPage5";
+            this.metroTabPage5.Size = new System.Drawing.Size(1474, 427);
+            this.metroTabPage5.TabIndex = 4;
+            this.metroTabPage5.Text = "Print Certificates";
+            this.metroTabPage5.VerticalScrollbarBarColor = true;
+            this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.VerticalScrollbarSize = 10;
+>>>>>>> beb185a99ced36cc27adfb7276ec0ea0630aeaf4
             // 
             // panel8
             // 

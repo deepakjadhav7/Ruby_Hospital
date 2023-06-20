@@ -39,17 +39,17 @@ namespace Ruby_Hospital
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtdrrename = new System.Windows.Forms.TextBox();
-            this.txtdigree = new System.Windows.Forms.TextBox();
-            this.txtdrremobileno = new System.Windows.Forms.TextBox();
-            this.txtdrrgeaddress = new System.Windows.Forms.TextBox();
             this.chbactive = new System.Windows.Forms.CheckBox();
+            this.txtdrrgeaddress = new System.Windows.Forms.TextBox();
+            this.txtdrremobileno = new System.Windows.Forms.TextBox();
+            this.txtdegree = new System.Windows.Forms.TextBox();
+            this.txtdrrename = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnsave = new System.Windows.Forms.Button();
             this.panel_head.SuspendLayout();
@@ -68,7 +68,7 @@ namespace Ruby_Hospital
             this.panel_head.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_head.Location = new System.Drawing.Point(0, 0);
             this.panel_head.Name = "panel_head";
-            this.panel_head.Size = new System.Drawing.Size(1604, 40);
+            this.panel_head.Size = new System.Drawing.Size(1370, 40);
             this.panel_head.TabIndex = 69;
             // 
             // label10
@@ -146,7 +146,7 @@ namespace Ruby_Hospital
             this.groupBox1.Controls.Add(this.chbactive);
             this.groupBox1.Controls.Add(this.txtdrrgeaddress);
             this.groupBox1.Controls.Add(this.txtdrremobileno);
-            this.groupBox1.Controls.Add(this.txtdigree);
+            this.groupBox1.Controls.Add(this.txtdegree);
             this.groupBox1.Controls.Add(this.txtdrrename);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -161,87 +161,28 @@ namespace Ruby_Hospital
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Basic Information";
             // 
-            // label1
+            // chbactive
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(221, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name ";
+            this.chbactive.AutoSize = true;
+            this.chbactive.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbactive.Location = new System.Drawing.Point(322, 294);
+            this.chbactive.Name = "chbactive";
+            this.chbactive.Size = new System.Drawing.Size(15, 14);
+            this.chbactive.TabIndex = 85;
+            this.chbactive.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // txtdrrgeaddress
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(231, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 21);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Degree";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(211, 160);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 21);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Mobile No";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(227, 212);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 21);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Address";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(221, 287);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 21);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Is Active";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(277, 57);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 21);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Dr.";
-            // 
-            // txtdrrename
-            // 
-            this.txtdrrename.ForeColor = System.Drawing.Color.Gray;
-            this.txtdrrename.Location = new System.Drawing.Point(314, 54);
-            this.txtdrrename.MaxLength = 30;
-            this.txtdrrename.Multiline = true;
-            this.txtdrrename.Name = "txtdrrename";
-            this.txtdrrename.Size = new System.Drawing.Size(366, 29);
-            this.txtdrrename.TabIndex = 81;
-            this.txtdrrename.Text = "Enter the Doctor Name";
-            this.txtdrrename.Enter += new System.EventHandler(this.txtdrrename_Enter);
-            this.txtdrrename.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdrrename_KeyPress);
-            this.txtdrrename.Leave += new System.EventHandler(this.txtdrrename_Leave);
-            // 
-            // txtdigree
-            // 
-            this.txtdigree.ForeColor = System.Drawing.Color.Gray;
-            this.txtdigree.Location = new System.Drawing.Point(314, 106);
-            this.txtdigree.MaxLength = 10;
-            this.txtdigree.Multiline = true;
-            this.txtdigree.Name = "txtdigree";
-            this.txtdigree.Size = new System.Drawing.Size(366, 29);
-            this.txtdigree.TabIndex = 82;
-            this.txtdigree.Text = "Degree";
-            this.txtdigree.Enter += new System.EventHandler(this.txtdigree_Enter);
-            this.txtdigree.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdigree_KeyPress);
-            this.txtdigree.Leave += new System.EventHandler(this.txtdigree_Leave);
+            this.txtdrrgeaddress.ForeColor = System.Drawing.Color.Gray;
+            this.txtdrrgeaddress.Location = new System.Drawing.Point(314, 209);
+            this.txtdrrgeaddress.MaxLength = 50;
+            this.txtdrrgeaddress.Multiline = true;
+            this.txtdrrgeaddress.Name = "txtdrrgeaddress";
+            this.txtdrrgeaddress.Size = new System.Drawing.Size(366, 58);
+            this.txtdrrgeaddress.TabIndex = 84;
+            this.txtdrrgeaddress.Text = "Address";
+            this.txtdrrgeaddress.Enter += new System.EventHandler(this.txtdrrgeaddress_Enter);
+            this.txtdrrgeaddress.Leave += new System.EventHandler(this.txtdrrgeaddress_Leave);
             // 
             // txtdrremobileno
             // 
@@ -257,27 +198,87 @@ namespace Ruby_Hospital
             this.txtdrremobileno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdrremobileno_KeyPress);
             this.txtdrremobileno.Leave += new System.EventHandler(this.txtdrremobileno_Leave);
             // 
-            // txtdrrgeaddress
+            // txtdegree
             // 
-            this.txtdrrgeaddress.ForeColor = System.Drawing.Color.Gray;
-            this.txtdrrgeaddress.Location = new System.Drawing.Point(314, 209);
-            this.txtdrrgeaddress.MaxLength = 50;
-            this.txtdrrgeaddress.Multiline = true;
-            this.txtdrrgeaddress.Name = "txtdrrgeaddress";
-            this.txtdrrgeaddress.Size = new System.Drawing.Size(366, 58);
-            this.txtdrrgeaddress.TabIndex = 84;
-            this.txtdrrgeaddress.Text = "Address";
-            this.txtdrrgeaddress.Enter += new System.EventHandler(this.txtdrrgeaddress_Enter);
-            this.txtdrrgeaddress.Leave += new System.EventHandler(this.txtdrrgeaddress_Leave);
+            this.txtdegree.ForeColor = System.Drawing.Color.Gray;
+            this.txtdegree.Location = new System.Drawing.Point(314, 106);
+            this.txtdegree.MaxLength = 10;
+            this.txtdegree.Multiline = true;
+            this.txtdegree.Name = "txtdegree";
+            this.txtdegree.Size = new System.Drawing.Size(366, 29);
+            this.txtdegree.TabIndex = 82;
+            this.txtdegree.Text = "Degree";
+            this.txtdegree.Enter += new System.EventHandler(this.txtdigree_Enter);
+            this.txtdegree.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdigree_KeyPress);
+            this.txtdegree.Leave += new System.EventHandler(this.txtdigree_Leave);
             // 
-            // chbactive
+            // txtdrrename
             // 
-            this.chbactive.AutoSize = true;
-            this.chbactive.Location = new System.Drawing.Point(314, 291);
-            this.chbactive.Name = "chbactive";
-            this.chbactive.Size = new System.Drawing.Size(15, 14);
-            this.chbactive.TabIndex = 85;
-            this.chbactive.UseVisualStyleBackColor = true;
+            this.txtdrrename.ForeColor = System.Drawing.Color.Gray;
+            this.txtdrrename.Location = new System.Drawing.Point(314, 54);
+            this.txtdrrename.MaxLength = 30;
+            this.txtdrrename.Multiline = true;
+            this.txtdrrename.Name = "txtdrrename";
+            this.txtdrrename.Size = new System.Drawing.Size(366, 29);
+            this.txtdrrename.TabIndex = 81;
+            this.txtdrrename.Text = "Enter the Doctor Name";
+            this.txtdrrename.Enter += new System.EventHandler(this.txtdrrename_Enter);
+            this.txtdrrename.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdrrename_KeyPress);
+            this.txtdrrename.Leave += new System.EventHandler(this.txtdrrename_Leave);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(277, 57);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 21);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Dr.";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(221, 287);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 21);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Is Active";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(227, 212);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 21);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Address";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(211, 160);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 21);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Mobile No";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(231, 109);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 21);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Degree";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(221, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 21);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name ";
             // 
             // pictureBox4
             // 
@@ -307,12 +308,13 @@ namespace Ruby_Hospital
             this.btnsave.Text = "Save";
             this.btnsave.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnsave.UseVisualStyleBackColor = false;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
             // Referred_doctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1604, 881);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.groupBox1);
@@ -324,7 +326,7 @@ namespace Ruby_Hospital
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Referred_doctor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Referred_doctor";
@@ -357,7 +359,7 @@ namespace Ruby_Hospital
         private System.Windows.Forms.CheckBox chbactive;
         private System.Windows.Forms.TextBox txtdrrgeaddress;
         private System.Windows.Forms.TextBox txtdrremobileno;
-        private System.Windows.Forms.TextBox txtdigree;
+        private System.Windows.Forms.TextBox txtdegree;
         private System.Windows.Forms.TextBox txtdrrename;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;

@@ -232,6 +232,7 @@ namespace Ruby_Hospital
             this.txtconsultacharges.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtconsultacharges, "txtconsultacharges");
             this.txtconsultacharges.Name = "txtconsultacharges";
+          
             this.txtconsultacharges.Enter += new System.EventHandler(this.txtconsultacharges_Enter);
             this.txtconsultacharges.Leave += new System.EventHandler(this.txtconsultacharges_Leave);
             // 
@@ -351,10 +352,10 @@ namespace Ruby_Hospital
             resources.ApplyResources(this.txtage, "txtage");
             this.txtage.Name = "txtage";
             this.txtage.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtage_MouseClick);
+
             this.txtage.Enter += new System.EventHandler(this.txtage_Enter_1);
             this.txtage.Leave += new System.EventHandler(this.txtage_Leave);
-            // 
-            // txtmobilenumber
+
             // 
             this.txtmobilenumber.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtmobilenumber, "txtmobilenumber");
@@ -527,15 +528,14 @@ namespace Ruby_Hospital
             resources.GetString("txtstate.Items1")});
             resources.ApplyResources(this.txtstate, "txtstate");
             this.txtstate.Name = "txtstate";
+           
             // 
             // txtdistrict
             // 
             this.txtdistrict.FormattingEnabled = true;
-            this.txtdistrict.Items.AddRange(new object[] {
-            resources.GetString("txtdistrict.Items"),
-            resources.GetString("txtdistrict.Items1")});
             resources.ApplyResources(this.txtdistrict, "txtdistrict");
             this.txtdistrict.Name = "txtdistrict";
+           
             // 
             // txttaluka
             // 
@@ -578,9 +578,9 @@ namespace Ruby_Hospital
             // cmbReferred
             // 
             this.cmbReferred.FormattingEnabled = true;
-            this.cmbReferred.Items.AddRange(new object[] {
-            resources.GetString("cmbReferred.Items"),
-            resources.GetString("cmbReferred.Items1")});
+
+
+
             resources.ApplyResources(this.cmbReferred, "cmbReferred");
             this.cmbReferred.Name = "cmbReferred";
             // 
@@ -625,9 +625,6 @@ namespace Ruby_Hospital
             // 
             resources.ApplyResources(this.cmbDoctor, "cmbDoctor");
             this.cmbDoctor.FormattingEnabled = true;
-            this.cmbDoctor.Items.AddRange(new object[] {
-            resources.GetString("cmbDoctor.Items"),
-            resources.GetString("cmbDoctor.Items1")});
             this.cmbDoctor.Name = "cmbDoctor";
             this.cmbDoctor.Leave += new System.EventHandler(this.comboBox9_Leave);
             // 
