@@ -115,7 +115,7 @@ namespace Ruby_Hospital
         {
 
         }
-<<<<<<< HEAD
+
 
         private void txtPatientIPDID_Enter(object sender, EventArgs e)
         {
@@ -171,7 +171,8 @@ namespace Ruby_Hospital
                 txtPatientIPDID.Text = "123456789";
                 txtPatientIPDID.ForeColor = Color.Gray;
             }
-=======
+        }
+
         public void FetchDoctor()
         {
             SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
@@ -204,7 +205,7 @@ namespace Ruby_Hospital
                 cmbReferredBy.ValueMember = "ReferredID";
             }
             con.Close();
->>>>>>> beb185a99ced36cc27adfb7276ec0ea0630aeaf4
+
         }
     }
 }

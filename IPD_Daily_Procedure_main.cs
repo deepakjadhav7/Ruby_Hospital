@@ -15,7 +15,7 @@ namespace Ruby_Hospital
         public IPD_Daily_Procedure_main()
         {
             InitializeComponent();
-            AdjustFormSize();
+          //  AdjustFormSize();
         }
 
 
@@ -46,6 +46,9 @@ namespace Ruby_Hospital
             //this.Size = new Size(w, h);
         }
 
-        
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

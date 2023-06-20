@@ -98,6 +98,8 @@ namespace Ruby_Hospital
             this.panel5 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.btnGOTOIPD = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -106,14 +108,22 @@ namespace Ruby_Hospital
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.btnGOTOIPD);
             this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.btnPrint);
+            this.panel1.Controls.Add(this.cmbReferred);
+            this.panel1.Controls.Add(this.label23);
+            this.panel1.Controls.Add(this.cmbDoctor);
+            this.panel1.Controls.Add(this.btnsave);
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -186,7 +196,9 @@ namespace Ruby_Hospital
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
+            this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.txtconsultacharges);
             this.groupBox1.Controls.Add(this.txtregicharges);
             this.groupBox1.Controls.Add(this.label25);
@@ -205,6 +217,7 @@ namespace Ruby_Hospital
             this.groupBox1.Controls.Add(this.txtage);
             this.groupBox1.Controls.Add(this.txtmobilenumber);
             this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.label26);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtname);
             this.groupBox1.Controls.Add(this.label15);
@@ -222,7 +235,6 @@ namespace Ruby_Hospital
             this.groupBox1.Controls.Add(this.cbmmaritalstatus);
             this.groupBox1.Controls.Add(this.txtprofix);
             this.groupBox1.Controls.Add(this.label3);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -232,7 +244,6 @@ namespace Ruby_Hospital
             this.txtconsultacharges.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtconsultacharges, "txtconsultacharges");
             this.txtconsultacharges.Name = "txtconsultacharges";
-          
             this.txtconsultacharges.Enter += new System.EventHandler(this.txtconsultacharges_Enter);
             this.txtconsultacharges.Leave += new System.EventHandler(this.txtconsultacharges_Leave);
             // 
@@ -290,8 +301,8 @@ namespace Ruby_Hospital
             // 
             // txtarogyacard
             // 
-            this.txtarogyacard.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtarogyacard, "txtarogyacard");
+            this.txtarogyacard.ForeColor = System.Drawing.Color.Gray;
             this.txtarogyacard.Name = "txtarogyacard";
             this.txtarogyacard.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtarogyacard_MouseClick);
             this.txtarogyacard.Enter += new System.EventHandler(this.txtarogyacard_Enter);
@@ -318,8 +329,8 @@ namespace Ruby_Hospital
             // 
             // txtremark
             // 
-            this.txtremark.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtremark, "txtremark");
+            this.txtremark.ForeColor = System.Drawing.Color.Gray;
             this.txtremark.Name = "txtremark";
             this.txtremark.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtremark_MouseClick);
             this.txtremark.Enter += new System.EventHandler(this.txtremark_Enter);
@@ -328,8 +339,8 @@ namespace Ruby_Hospital
             // 
             // txtalternateno
             // 
-            this.txtalternateno.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtalternateno, "txtalternateno");
+            this.txtalternateno.ForeColor = System.Drawing.Color.Gray;
             this.txtalternateno.Name = "txtalternateno";
             this.txtalternateno.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtalternateno_MouseClick);
             this.txtalternateno.Enter += new System.EventHandler(this.txtalternateno_Enter);
@@ -338,8 +349,8 @@ namespace Ruby_Hospital
             // 
             // txtweight
             // 
-            this.txtweight.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtweight, "txtweight");
+            this.txtweight.ForeColor = System.Drawing.Color.Gray;
             this.txtweight.Name = "txtweight";
             this.txtweight.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtweight_MouseClick);
             this.txtweight.Enter += new System.EventHandler(this.txtweight_Enter);
@@ -348,14 +359,14 @@ namespace Ruby_Hospital
             // 
             // txtage
             // 
-            this.txtage.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtage, "txtage");
+            this.txtage.ForeColor = System.Drawing.Color.Gray;
             this.txtage.Name = "txtage";
             this.txtage.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtage_MouseClick);
-
             this.txtage.Enter += new System.EventHandler(this.txtage_Enter_1);
             this.txtage.Leave += new System.EventHandler(this.txtage_Leave);
-
+            // 
+            // txtmobilenumber
             // 
             this.txtmobilenumber.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtmobilenumber, "txtmobilenumber");
@@ -378,8 +389,8 @@ namespace Ruby_Hospital
             // 
             // txtname
             // 
-            this.txtname.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtname, "txtname");
+            this.txtname.ForeColor = System.Drawing.Color.Gray;
             this.txtname.Name = "txtname";
             this.txtname.Click += new System.EventHandler(this.txtname_Click);
             this.txtname.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtname_MouseClick);
@@ -439,21 +450,21 @@ namespace Ruby_Hospital
             // 
             // txtnationality
             // 
+            resources.ApplyResources(this.txtnationality, "txtnationality");
             this.txtnationality.FormattingEnabled = true;
             this.txtnationality.Items.AddRange(new object[] {
             resources.GetString("txtnationality.Items"),
             resources.GetString("txtnationality.Items1")});
-            resources.ApplyResources(this.txtnationality, "txtnationality");
             this.txtnationality.Name = "txtnationality";
             // 
             // txtpurpose
             // 
+            resources.ApplyResources(this.txtpurpose, "txtpurpose");
             this.txtpurpose.FormattingEnabled = true;
             this.txtpurpose.Items.AddRange(new object[] {
             resources.GetString("txtpurpose.Items"),
             resources.GetString("txtpurpose.Items1"),
             resources.GetString("txtpurpose.Items2")});
-            resources.ApplyResources(this.txtpurpose, "txtpurpose");
             this.txtpurpose.Name = "txtpurpose";
             // 
             // cbmmaritalstatus
@@ -510,8 +521,8 @@ namespace Ruby_Hospital
             // 
             // txtaddress
             // 
-            this.txtaddress.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtaddress, "txtaddress");
+            this.txtaddress.ForeColor = System.Drawing.Color.Gray;
             this.txtaddress.Name = "txtaddress";
             this.txtaddress.Enter += new System.EventHandler(this.txtaddress_Enter);
             // 
@@ -522,37 +533,35 @@ namespace Ruby_Hospital
             // 
             // txtstate
             // 
+            resources.ApplyResources(this.txtstate, "txtstate");
             this.txtstate.FormattingEnabled = true;
             this.txtstate.Items.AddRange(new object[] {
             resources.GetString("txtstate.Items"),
             resources.GetString("txtstate.Items1")});
-            resources.ApplyResources(this.txtstate, "txtstate");
             this.txtstate.Name = "txtstate";
-           
             // 
             // txtdistrict
             // 
-            this.txtdistrict.FormattingEnabled = true;
             resources.ApplyResources(this.txtdistrict, "txtdistrict");
+            this.txtdistrict.FormattingEnabled = true;
             this.txtdistrict.Name = "txtdistrict";
-           
             // 
             // txttaluka
             // 
+            resources.ApplyResources(this.txttaluka, "txttaluka");
             this.txttaluka.FormattingEnabled = true;
             this.txttaluka.Items.AddRange(new object[] {
             resources.GetString("txttaluka.Items"),
             resources.GetString("txttaluka.Items1")});
-            resources.ApplyResources(this.txttaluka, "txttaluka");
             this.txttaluka.Name = "txttaluka";
             // 
             // txtcity
             // 
+            resources.ApplyResources(this.txtcity, "txtcity");
             this.txtcity.FormattingEnabled = true;
             this.txtcity.Items.AddRange(new object[] {
             resources.GetString("txtcity.Items"),
             resources.GetString("txtcity.Items1")});
-            resources.ApplyResources(this.txtcity, "txtcity");
             this.txtcity.Name = "txtcity";
             // 
             // label22
@@ -577,11 +586,8 @@ namespace Ruby_Hospital
             // 
             // cmbReferred
             // 
-            this.cmbReferred.FormattingEnabled = true;
-
-
-
             resources.ApplyResources(this.cmbReferred, "cmbReferred");
+            this.cmbReferred.FormattingEnabled = true;
             this.cmbReferred.Name = "cmbReferred";
             // 
             // button2
@@ -634,16 +640,8 @@ namespace Ruby_Hospital
             // 
             // panel5
             // 
-            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.BackColor = System.Drawing.Color.Teal;
-            this.panel5.Controls.Add(this.button4);
-            this.panel5.Controls.Add(this.label16);
-            this.panel5.Controls.Add(this.btnGOTOIPD);
-            this.panel5.Controls.Add(this.btnPrint);
-            this.panel5.Controls.Add(this.cmbReferred);
-            this.panel5.Controls.Add(this.btnsave);
-            this.panel5.Controls.Add(this.cmbDoctor);
-            this.panel5.Controls.Add(this.label23);
+            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             // 
             // button4
@@ -667,20 +665,30 @@ namespace Ruby_Hospital
             this.btnGOTOIPD.UseVisualStyleBackColor = true;
             this.btnGOTOIPD.Click += new System.EventHandler(this.btnGOTOIPD_Click);
             // 
+            // label26
+            // 
+            resources.ApplyResources(this.label26, "label26");
+            this.label26.Name = "label26";
+            // 
+            // checkBox1
+            // 
+            resources.ApplyResources(this.checkBox1, "checkBox1");
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Patient_Registration
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Patient_Registration";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Patient_Registration_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -691,8 +699,6 @@ namespace Ruby_Hospital
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -767,6 +773,7 @@ namespace Ruby_Hospital
         private System.Windows.Forms.Button button4;
 
         private System.Windows.Forms.Button btnGOTOIPD;
-
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label26;
     }
 }
