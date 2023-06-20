@@ -172,41 +172,42 @@ namespace Ruby_Hospital
                 txtPatientIPDID.ForeColor = Color.Gray;
             }
         }
-            public void FetchDoctor()
-            {
-                SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
-                con.Open();
-                SqlCommand com = new SqlCommand(@"Select * From Doctors", con);
-                SqlDataAdapter adt = new SqlDataAdapter(com);
-                DataTable dt = new DataTable();
-                adt.Fill(dt);
-                if (dt.Rows.Count > 0)
-                {
-                    cmbConsultant.DataSource = dt;
-                    cmbConsultant.DisplayMember = "Dr_Name";
-                    cmbConsultant.ValueMember = "DR_ID";
-                }
-                con.Close();
 
-            }
-            public void Referred_Doctor()
+        public void FetchDoctor()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand com = new SqlCommand(@"Select * From Doctors", con);
+            SqlDataAdapter adt = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            adt.Fill(dt);
+            if (dt.Rows.Count > 0)
             {
-                SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
-                con.Open();
-                SqlCommand com = new SqlCommand(@"Select * From Referred_Doctor", con);
-                SqlDataAdapter adt = new SqlDataAdapter(com);
-                DataTable dt = new DataTable();
-                adt.Fill(dt);
-                if (dt.Rows.Count > 0)
-                {
-                    cmbReferredBy.DataSource = dt;
-                    cmbReferredBy.DisplayMember = "Referred_Name";
-                    cmbReferredBy.ValueMember = "ReferredID";
-                }
-                con.Close();
-
+                cmbConsultant.DataSource = dt;
+                cmbConsultant.DisplayMember = "Dr_Name";
+                cmbConsultant.ValueMember = "DR_ID";
             }
+            con.Close();
+
+        }
+        public void Referred_Doctor()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand com = new SqlCommand(@"Select * From Referred_Doctor", con);
+            SqlDataAdapter adt = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            adt.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                cmbReferredBy.DataSource = dt;
+                cmbReferredBy.DisplayMember = "Referred_Name";
+                cmbReferredBy.ValueMember = "ReferredID";
+            }
+            con.Close();
+
         }
     }
+}
 
 
