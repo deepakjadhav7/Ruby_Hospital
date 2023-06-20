@@ -129,7 +129,10 @@ namespace Ruby_Hospital
             this.Location = new Point(0, 0);
             this.Size = new Size(w, h);
 
-
+            cbmmaritalstatus.SelectedIndex = 0;
+            txtpurpose.SelectedIndex = 0;
+            txtnationality.SelectedIndex = 0;
+            txtpatientsearch.SelectedIndex = 0;
             #region Auto Complete Property
             System.Collections.ArrayList ListArray = new ArrayList();
             SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
@@ -214,6 +217,8 @@ namespace Ruby_Hospital
         {
             try
             {
+               
+
 
                 SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
                 con.Open();
@@ -686,6 +691,20 @@ namespace Ruby_Hospital
                 cmbDoctor.DataSource = dt;
                 cmbDoctor.DisplayMember = "Dr_Name";
                 cmbDoctor.ValueMember = "DR_ID";
+                
+                DataRow drr3;
+                drr3 = dt.NewRow();
+                drr3["DR_ID"] = "0";
+                drr3["Dr_Name"] = "$---Select---$";
+                dt.Rows.Add(drr3);
+                dt.DefaultView.Sort = "DR_ID asc";
+
+
+                //dt1.DefaultView.Sort = "PurposeId asc";
+                cmbDoctor.DataSource = dt;
+                cmbDoctor.DisplayMember = "Dr_Name";
+                cmbDoctor.ValueMember = "DR_ID";
+                cmbDoctor.Text = "$--Select Doctor--$";
             }
             con.Close();
 
@@ -703,6 +722,20 @@ namespace Ruby_Hospital
                 cmbReferred.DataSource = dt;
                 cmbReferred.DisplayMember = "Referred_Name";
                 cmbReferred.ValueMember = "ReferredID";
+
+                DataRow drr1;
+                drr1 = dt.NewRow();
+                drr1["ReferredID"] = "0";
+                drr1["Referred_Name"] = "$---Select---$";
+                dt.Rows.Add(drr1);
+                dt.DefaultView.Sort = "ReferredID asc";
+
+
+                //dt1.DefaultView.Sort = "PurposeId asc";
+                cmbDoctor.DataSource = dt;
+                cmbDoctor.DisplayMember = "Referred_Name";
+                cmbDoctor.ValueMember = "ReferredID";
+                cmbDoctor.Text = "$--Select Doctor--$";
             }
             con.Close();
         }

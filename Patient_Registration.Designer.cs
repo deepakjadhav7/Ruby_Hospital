@@ -164,11 +164,13 @@ namespace Ruby_Hospital
             // txtpatientsearch
             // 
             resources.ApplyResources(this.txtpatientsearch, "txtpatientsearch");
+            this.txtpatientsearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtpatientsearch.FormattingEnabled = true;
             this.txtpatientsearch.Items.AddRange(new object[] {
             resources.GetString("txtpatientsearch.Items"),
             resources.GetString("txtpatientsearch.Items1"),
-            resources.GetString("txtpatientsearch.Items2")});
+            resources.GetString("txtpatientsearch.Items2"),
+            resources.GetString("txtpatientsearch.Items3")});
             this.txtpatientsearch.Name = "txtpatientsearch";
             this.txtpatientsearch.SelectedIndexChanged += new System.EventHandler(this.txtpatientsearch_SelectedIndexChanged);
             // 
@@ -428,44 +430,50 @@ namespace Ruby_Hospital
             // 
             // txtnationality
             // 
+            this.txtnationality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtnationality.FormattingEnabled = true;
             this.txtnationality.Items.AddRange(new object[] {
             resources.GetString("txtnationality.Items"),
-            resources.GetString("txtnationality.Items1")});
+            resources.GetString("txtnationality.Items1"),
+            resources.GetString("txtnationality.Items2")});
             resources.ApplyResources(this.txtnationality, "txtnationality");
             this.txtnationality.Name = "txtnationality";
             // 
             // txtpurpose
             // 
+            this.txtpurpose.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtpurpose.FormattingEnabled = true;
             this.txtpurpose.Items.AddRange(new object[] {
             resources.GetString("txtpurpose.Items"),
             resources.GetString("txtpurpose.Items1"),
-            resources.GetString("txtpurpose.Items2")});
+            resources.GetString("txtpurpose.Items2"),
+            resources.GetString("txtpurpose.Items3")});
             resources.ApplyResources(this.txtpurpose, "txtpurpose");
             this.txtpurpose.Name = "txtpurpose";
             // 
             // cbmmaritalstatus
             // 
+            this.cbmmaritalstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmmaritalstatus.FormattingEnabled = true;
             this.cbmmaritalstatus.Items.AddRange(new object[] {
             resources.GetString("cbmmaritalstatus.Items"),
             resources.GetString("cbmmaritalstatus.Items1"),
             resources.GetString("cbmmaritalstatus.Items2"),
             resources.GetString("cbmmaritalstatus.Items3"),
-            resources.GetString("cbmmaritalstatus.Items4")});
+            resources.GetString("cbmmaritalstatus.Items4"),
+            resources.GetString("cbmmaritalstatus.Items5")});
             resources.ApplyResources(this.cbmmaritalstatus, "cbmmaritalstatus");
             this.cbmmaritalstatus.Name = "cbmmaritalstatus";
             this.cbmmaritalstatus.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // txtprofix
             // 
+            this.txtprofix.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.txtprofix, "txtprofix");
             this.txtprofix.FormattingEnabled = true;
             this.txtprofix.Items.AddRange(new object[] {
             resources.GetString("txtprofix.Items"),
-            resources.GetString("txtprofix.Items1"),
-            resources.GetString("txtprofix.Items2")});
+            resources.GetString("txtprofix.Items1")});
             this.txtprofix.Name = "txtprofix";
             // 
             // label3
@@ -510,6 +518,7 @@ namespace Ruby_Hospital
             // 
             // txtstate
             // 
+            this.txtstate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtstate.FormattingEnabled = true;
             this.txtstate.Items.AddRange(new object[] {
             resources.GetString("txtstate.Items"),
@@ -520,6 +529,7 @@ namespace Ruby_Hospital
             // 
             // txtdistrict
             // 
+            this.txtdistrict.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtdistrict.FormattingEnabled = true;
             resources.ApplyResources(this.txtdistrict, "txtdistrict");
             this.txtdistrict.Name = "txtdistrict";
@@ -527,6 +537,7 @@ namespace Ruby_Hospital
             // 
             // txttaluka
             // 
+            this.txttaluka.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txttaluka.FormattingEnabled = true;
             this.txttaluka.Items.AddRange(new object[] {
             resources.GetString("txttaluka.Items"),
@@ -565,8 +576,8 @@ namespace Ruby_Hospital
             // 
             // cmbReferred
             // 
+            this.cmbReferred.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbReferred.FormattingEnabled = true;
-
             resources.ApplyResources(this.cmbReferred, "cmbReferred");
             this.cmbReferred.Name = "cmbReferred";
             // 
@@ -610,6 +621,7 @@ namespace Ruby_Hospital
             // cmbDoctor
             // 
             resources.ApplyResources(this.cmbDoctor, "cmbDoctor");
+            this.cmbDoctor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDoctor.FormattingEnabled = true;
             this.cmbDoctor.Name = "cmbDoctor";
             this.cmbDoctor.Leave += new System.EventHandler(this.comboBox9_Leave);
