@@ -304,7 +304,7 @@
     <value>0</value>
   </data>
   <data name="metroTabPage1.Text" xml:space="preserve">
-    <value>Diagnosis</value>
+    <value>    Diagnosis    </value>
   </data>
   <data name="&gt;&gt;metroTabPage1.Name" xml:space="preserve">
     <value>metroTabPage1</value>
@@ -328,7 +328,7 @@
     <value>3</value>
   </data>
   <data name="metroTabPage4.Text" xml:space="preserve">
-    <value>Tretment Given</value>
+    <value>    Tretment Given    </value>
   </data>
   <data name="&gt;&gt;metroTabPage4.Name" xml:space="preserve">
     <value>metroTabPage4</value>
@@ -352,7 +352,7 @@
     <value>4</value>
   </data>
   <data name="metroTabPage5.Text" xml:space="preserve">
-    <value>Drugs On Discharge</value>
+    <value>    Drugs On Discharge    </value>
   </data>
   <data name="&gt;&gt;metroTabPage5.Name" xml:space="preserve">
     <value>metroTabPage5</value>
@@ -387,6 +387,9 @@
   <data name="&gt;&gt;metroTabControl1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -394,7 +397,7 @@
     <value>Century Gothic, 15.75pt, style=Bold</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>781, 20</value>
+    <value>1003, 15</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 25</value>
@@ -438,8 +441,11 @@
   <data name="&gt;&gt;dateTimePicker2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="dateTimePicker1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="dateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>748, 59</value>
+    <value>970, 54</value>
   </data>
   <data name="dateTimePicker1.Size" type="System.Drawing.Size, System.Drawing">
     <value>305, 27</value>
@@ -510,6 +516,9 @@
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="label6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -517,7 +526,7 @@
     <value>Century Gothic, 12pt, style=Bold</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>622, 62</value>
+    <value>844, 57</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 19</value>
@@ -571,10 +580,10 @@
     <value>6</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>239, 674</value>
+    <value>101, 674</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1135, 100</value>
+    <value>1418, 100</value>
   </data>
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>

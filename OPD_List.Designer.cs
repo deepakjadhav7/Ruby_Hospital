@@ -40,7 +40,7 @@ namespace Ruby_Hospital
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.OPDdatagridview = new System.Windows.Forms.DataGridView();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -52,7 +52,7 @@ namespace Ruby_Hospital
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OPDdatagridview)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -148,22 +148,23 @@ namespace Ruby_Hospital
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.OPDdatagridview);
             this.panel1.Location = new System.Drawing.Point(134, 247);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1325, 407);
             this.panel1.TabIndex = 24;
             // 
-            // dataGridView1
+            // OPDdatagridview
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1325, 407);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.OPDdatagridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.OPDdatagridview.BackgroundColor = System.Drawing.Color.White;
+            this.OPDdatagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OPDdatagridview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OPDdatagridview.Location = new System.Drawing.Point(0, 0);
+            this.OPDdatagridview.Name = "OPDdatagridview";
+            this.OPDdatagridview.Size = new System.Drawing.Size(1325, 407);
+            this.OPDdatagridview.TabIndex = 0;
+            this.OPDdatagridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // comboBox2
             // 
@@ -250,7 +251,7 @@ namespace Ruby_Hospital
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OPDdatagridview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,7 +269,7 @@ namespace Ruby_Hospital
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView OPDdatagridview;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox3;

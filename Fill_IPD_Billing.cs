@@ -55,5 +55,10 @@ namespace Ruby_Hospital
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

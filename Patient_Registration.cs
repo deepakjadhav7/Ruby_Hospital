@@ -133,9 +133,134 @@ namespace Ruby_Hospital
 
         private void btnsave_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+                SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+                con.Open();
+                SqlCommand cmd = new SqlCommand(@"Insert Into Patient_Registration (Patient_ID,Prefixes,Name,Gender,DOB,Age,Marital_Status,Mobile_Number,
+                                               Email,Adhaar_ID,Weight,Purpose,Alternate_Mobile,Nationality,Remark,AROGYA_Card,Registration_Charges,Consultation_Charges,
+                                               Address,State,District,Taluka,City,Doctors_Name,Referred_By) Values (@Patient_ID,@Prefixes,@Name,@Gender,@DOB,@Age,@Marital_Status,@Mobile_Number,
+                                               @Email,@Adhaar_ID,@Weight,@Purpose,@Alternate_Mobile,@Nationality,@Remark,@AROGYA_Card,@Registration_Charges,@Consultation_Charges,
+                                               @Address,@State,@District,@Taluka,@City,@Doctors_Name,@Referred_By)", con);
+
+
+                cmd.Parameters.AddWithValue("@Patient_ID", "RSHJ001");
+                cmd.Parameters.AddWithValue("@Prefixes", txtprofix.Text);
+                cmd.Parameters.AddWithValue("@Name", txtname.Text);
+                if (btnmale.Checked == true)
+                {
+                    cmd.Parameters.AddWithValue("@Gender", "Male");
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@Gender", "Female");
+                }
+
+                cmd.Parameters.AddWithValue("@DOB", txtdate.Text);
+                cmd.Parameters.AddWithValue("@Age", txtage.Text);
+                cmd.Parameters.AddWithValue("@Marital_Status", cbmmaritalstatus.Text);
+                cmd.Parameters.AddWithValue("@Mobile_Number", txtmobilenumber.Text);
+                cmd.Parameters.AddWithValue("@Email", txtmail.Text);
+                cmd.Parameters.AddWithValue("@Adhaar_ID", txtaadhaar.Text);
+                cmd.Parameters.AddWithValue("@Weight", txtweight.Text);
+                cmd.Parameters.AddWithValue("@Purpose", txtpurpose.Text);
+                cmd.Parameters.AddWithValue("@Alternate_Mobile", txtalternateno.Text);
+                cmd.Parameters.AddWithValue("@Nationality", txtnationality.Text);
+                cmd.Parameters.AddWithValue("@Remark", txtremark.Text);
+
+                cmd.Parameters.AddWithValue("@AROGYA_Card", txtarogyacard.Text);
+                cmd.Parameters.AddWithValue("@Registration_Charges", txtregicharges.Text);
+                cmd.Parameters.AddWithValue("@Consultation_Charges", txtconsultacharges.Text);
+                cmd.Parameters.AddWithValue("@Address", txtaddress.Text);
+                cmd.Parameters.AddWithValue("@State", txtstate.Text);
+                cmd.Parameters.AddWithValue("@District", txtdistrict.Text);
+                cmd.Parameters.AddWithValue("@Taluka", txttaluka.Text);
+                cmd.Parameters.AddWithValue("@City", txtcity.Text);
+                cmd.Parameters.AddWithValue("@Doctors_Name", cmbDoctor.Text);
+                cmd.Parameters.AddWithValue("@Referred_By", cmbReferred.Text);
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                
+                if (txtpurpose.Text == "IPD")
+                {
+                   
+                    MessageBox.Show("Record Added Successfully to IPD...");
+                    btnGOTOIPD.Visible = true;
+                    btnsave.Visible = false;
+                    btnPrint.Visible = false;
+                }
+
+                if (txtpurpose.Text == "Only Test")
+                {
+
+                    MessageBox.Show("Record Added Successfully ...");
+                    btnGOTOIPD.Visible = false;
+                    btnsave.Visible = false;
+                    btnPrint.Visible = false;
+                }
+                else
+                {
+                    
+                    MessageBox.Show("Patient  Added successfully...");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
+        public void UpdateRegistration()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand cmd = new SqlCommand(@"Update Patient_Registration set (Prefixes=@Prefixes,Name=@Name,Gender=@Gende,DOB=@DOB,Age=@Age,Marital_Status=@Marital_Status,Mobile_Number=@Mobile_Number,
+                                               Email=@Email,Adhaar_ID=@Adhaar_ID,Weight=@Weight,Purpose=@Purpose,Alternate_Mobile=@Alternate_Mobile,Nationality=@Nationality,Remark=@Remark,AROGYA_Card=@AROGYA_Card,Registration_Charges=@Registration_Charges,Consultation_Charges=@Consultation_Charges,
+                                               Address=@Address,State=@State,District=@District,Taluka=@Taluka,City=@City,Doctors_Name=@Doctors_Name,Referred_By=@Referred_By)  where Patient_ID=@Patient_ID)", con);
+
+
+            cmd.Parameters.AddWithValue("@Patient_ID", "RSHJ001");
+            cmd.Parameters.AddWithValue("@Prefixes", txtprofix.Text);
+            cmd.Parameters.AddWithValue("@Name", txtname.Text);
+            if (btnmale.Checked == true)
+            {
+                cmd.Parameters.AddWithValue("@Gender", "Male");
+            }
+            else
+            {
+                cmd.Parameters.AddWithValue("@Gender", "Female");
+            }
+
+            cmd.Parameters.AddWithValue("@DOB", txtdate.Text);
+            cmd.Parameters.AddWithValue("@Age", txtage.Text);
+            cmd.Parameters.AddWithValue("@Marital_Status", cbmmaritalstatus.Text);
+            cmd.Parameters.AddWithValue("@Mobile_Number", txtmobilenumber.Text);
+            cmd.Parameters.AddWithValue("@Email", txtmail.Text);
+            cmd.Parameters.AddWithValue("@Adhaar_ID", txtaadhaar.Text);
+            cmd.Parameters.AddWithValue("@Weight", txtweight.Text);
+            cmd.Parameters.AddWithValue("@Purpose", txtpurpose.Text);
+            cmd.Parameters.AddWithValue("@Alternate_Mobile", txtalternateno.Text);
+            cmd.Parameters.AddWithValue("@Nationality", txtnationality.Text);
+            cmd.Parameters.AddWithValue("@Remark", txtremark.Text);
+            cmd.Parameters.AddWithValue("@AROGYA_Card", txtarogyacard.Text);
+            cmd.Parameters.AddWithValue("@Registration_Charges", txtregicharges.Text);
+            cmd.Parameters.AddWithValue("@Consultation_Charges", txtconsultacharges.Text);
+            cmd.Parameters.AddWithValue("@Address", txtaddress.Text);
+            cmd.Parameters.AddWithValue("@State", txtstate.Text);
+            cmd.Parameters.AddWithValue("@District", txtdistrict.Text);
+            cmd.Parameters.AddWithValue("@Taluka", txttaluka.Text);
+            cmd.Parameters.AddWithValue("@City", txtcity.Text);
+            cmd.Parameters.AddWithValue("@Doctors_Name", cmbDoctor.Text);
+            cmd.Parameters.AddWithValue("@Referred_By", cmbReferred.Text);
+
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+        }
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
@@ -153,6 +278,7 @@ namespace Ruby_Hospital
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            btnsave.Visible = false;
 
         }
 
@@ -275,7 +401,7 @@ namespace Ruby_Hospital
 
         private void txtconsultacharges_Enter(object sender, EventArgs e)
         {
-            if (txtconsultacharges.Text == "50" )
+            if (txtconsultacharges.Text == "Enter Consultation Charges")
             {
                 txtconsultacharges.Text = "";
                 txtconsultacharges.ForeColor = Color.Black;
@@ -286,7 +412,7 @@ namespace Ruby_Hospital
         {
             if (txtconsultacharges.Text == "") 
             {
-                txtconsultacharges.Text = "50";
+                txtconsultacharges.Text = "Enter Consultation Charges";
                 txtconsultacharges.ForeColor = Color.Gray;
             }
         }
@@ -314,10 +440,149 @@ namespace Ruby_Hospital
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void txtdate_ValueChanged(object sender, EventArgs e)
         {
-            Referred_doctor rd = new Referred_doctor();
-            rd.Show();
+            int AgeYear = DateTime.Today.Year - txtdate.Value.Year;
+            txtage.Text = AgeYear.ToString();
+        }
+
+        private void txtname_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtname_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtname.Clear();
+        }
+
+        private void txtmobilenumber_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtmobilenumber.Clear();
+        }
+
+        private void txtarogyacard_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtarogyacard.Clear();
+        }
+
+        private void txtage_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtage.Clear();
+        }
+
+        private void txtweight_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtweight.Clear();
+        }
+
+        private void txtalternateno_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtalternateno.Clear();
+        }
+
+        private void txtremark_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtremark.Clear();
+        }
+
+        private void txtaddress_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtaddress.Clear();
+        }
+
+        private void btnGOTOIPD_Click(object sender, EventArgs e)
+        {
+            IPD_Registration o = new IPD_Registration();
+            o.Show();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtage_Enter_1(object sender, EventArgs e)
+        {
+            if(txtage.Text=="Enter the Age")
+            {
+                txtage.Text = "";
+                txtage.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtage_Leave(object sender, EventArgs e)
+        {
+            if (txtage.Text == "")
+            {
+                txtage.Text = "Enter the Age";
+                txtage.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtweight_Enter(object sender, EventArgs e)
+        {
+            if(txtweight.Text =="Enter the Weight")
+            {
+                txtweight.Text = "";
+                txtweight.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtweight_Leave(object sender, EventArgs e)
+        {
+            if (txtweight.Text == "")
+            {
+                txtweight.Text = "Enter the Weight";
+                txtweight.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtalternateno_Enter(object sender, EventArgs e)
+        {
+            if(txtalternateno.Text=="1234567890")
+            {
+                txtalternateno.Text = "";
+                txtalternateno.ForeColor = Color.Black;
+            }
+
+        }
+        
+        private void txtremark_Enter(object sender, EventArgs e)
+        {
+            if(txtremark.Text=="Enter the Remark")
+            {
+                txtremark.Text = "";
+                txtremark.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtalternateno_Leave(object sender, EventArgs e)
+        {
+            if (txtalternateno.Text == "")
+            {
+                txtalternateno.Text = "1234567890";
+                txtalternateno.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtremark_Leave(object sender, EventArgs e)
+        {
+            if (txtremark.Text == "")
+            {
+                txtremark.Text = "Enter the Remark";
+                
+                txtremark.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtaddress_Enter(object sender, EventArgs e)
+        {
+            if(txtaddress.Text=="Enter the Address")
+            {
+                txtaddress.Text = "";
+                txtaddress.ForeColor = Color.Black;
+            }
         }
     }
 }

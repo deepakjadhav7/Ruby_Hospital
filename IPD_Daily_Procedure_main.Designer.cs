@@ -29,6 +29,7 @@ namespace Ruby_Hospital
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IPD_Daily_Procedure_main));
             this.panel_head = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@ namespace Ruby_Hospital
             this.label16 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -90,7 +92,6 @@ namespace Ruby_Hospital
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel_head.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -214,6 +215,7 @@ namespace Ruby_Hospital
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.White;
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.button5);
@@ -226,7 +228,14 @@ namespace Ruby_Hospital
             this.tabPage1.Size = new System.Drawing.Size(1474, 433);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "    Patient Transfer      ";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Location = new System.Drawing.Point(0, 246);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1474, 89);
+            this.panel2.TabIndex = 91;
             // 
             // button4
             // 
@@ -434,7 +443,6 @@ namespace Ruby_Hospital
             this.groupBox1.Size = new System.Drawing.Size(1387, 226);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // textBox5
             // 
@@ -539,7 +547,7 @@ namespace Ruby_Hospital
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(213, 107);
+            this.textBox6.Location = new System.Drawing.Point(213, 103);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(518, 36);
@@ -548,7 +556,7 @@ namespace Ruby_Hospital
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(213, 49);
+            this.textBox7.Location = new System.Drawing.Point(213, 45);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(518, 33);
             this.textBox7.TabIndex = 1;
@@ -804,14 +812,6 @@ namespace Ruby_Hospital
             this.button12.Text = "Medical  Certificate";
             this.button12.UseVisualStyleBackColor = false;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Location = new System.Drawing.Point(-4, 246);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1475, 89);
-            this.panel2.TabIndex = 91;
-            // 
             // IPD_Daily_Procedure_main
             // 
             this.ClientSize = new System.Drawing.Size(1604, 881);
@@ -825,6 +825,7 @@ namespace Ruby_Hospital
             this.Controls.Add(this.panel_head);
             this.Controls.Add(this.pictureBox2);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "IPD_Daily_Procedure_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

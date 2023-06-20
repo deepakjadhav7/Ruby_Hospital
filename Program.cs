@@ -16,8 +16,14 @@ namespace Ruby_Hospital
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new IPD_Registration());
+
+            Application.Run(new OPD_ECG_and_Radiology_list());
            
+
+       
+           
+
+
         }
     }
 }

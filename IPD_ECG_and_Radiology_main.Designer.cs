@@ -206,9 +206,9 @@ namespace Ruby_Hospital
             this.label5.ForeColor = System.Drawing.Color.Red;
             this.label5.Location = new System.Drawing.Point(221, 794);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 23);
+            this.label5.Size = new System.Drawing.Size(48, 23);
             this.label5.TabIndex = 79;
-            this.label5.Text = "o.oo";
+            this.label5.Text = "0.00";
             // 
             // button1
             // 
