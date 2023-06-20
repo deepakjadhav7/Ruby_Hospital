@@ -231,6 +231,7 @@ namespace Ruby_Hospital
             this.txtconsultacharges.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtconsultacharges, "txtconsultacharges");
             this.txtconsultacharges.Name = "txtconsultacharges";
+            this.txtconsultacharges.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtconsultacharges_MouseClick);
             this.txtconsultacharges.Enter += new System.EventHandler(this.txtconsultacharges_Enter);
             this.txtconsultacharges.Leave += new System.EventHandler(this.txtconsultacharges_Leave);
             // 
@@ -629,6 +630,7 @@ namespace Ruby_Hospital
             this.panel5.Controls.Add(this.cmbDoctor);
             this.panel5.Controls.Add(this.label23);
             this.panel5.Name = "panel5";
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.NN);
             // 
             // button4
             // 

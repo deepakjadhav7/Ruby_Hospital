@@ -39,14 +39,14 @@ namespace Ruby_Hospital
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtOtherDetails = new System.Windows.Forms.TextBox();
+            this.txtPolice_station = new System.Windows.Forms.TextBox();
+            this.txtHealthCondition = new System.Windows.Forms.TextBox();
+            this.txtLandmark = new System.Windows.Forms.TextBox();
+            this.txtname_Opposite = new System.Windows.Forms.TextBox();
+            this.txtLocation = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -55,6 +55,7 @@ namespace Ruby_Hospital
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.txtPatientId = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -154,14 +155,14 @@ namespace Ruby_Hospital
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.txtOtherDetails);
+            this.groupBox1.Controls.Add(this.txtPolice_station);
+            this.groupBox1.Controls.Add(this.txtHealthCondition);
+            this.groupBox1.Controls.Add(this.txtLandmark);
+            this.groupBox1.Controls.Add(this.txtname_Opposite);
+            this.groupBox1.Controls.Add(this.txtLocation);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label9);
@@ -189,101 +190,107 @@ namespace Ruby_Hospital
             this.dateTimePicker1.TabIndex = 0;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // textBox1
+            // txtOtherDetails
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(244, 375);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.textBox1.MaxLength = 10;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(260, 76);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "Enter more Detiils ";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtOtherDetails.BackColor = System.Drawing.Color.White;
+            this.txtOtherDetails.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOtherDetails.ForeColor = System.Drawing.Color.Gray;
+            this.txtOtherDetails.Location = new System.Drawing.Point(244, 375);
+            this.txtOtherDetails.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.txtOtherDetails.MaxLength = 10;
+            this.txtOtherDetails.Multiline = true;
+            this.txtOtherDetails.Name = "txtOtherDetails";
+            this.txtOtherDetails.Size = new System.Drawing.Size(260, 76);
+            this.txtOtherDetails.TabIndex = 7;
+            this.txtOtherDetails.Text = "Enter more Detiils ";
+            this.txtOtherDetails.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtOtherDetails.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtOtherDetails_MouseClick);
+            this.txtOtherDetails.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox2
+            // txtPolice_station
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Location = new System.Drawing.Point(244, 329);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.textBox2.MaxLength = 10;
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(260, 27);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.Text = "Police  station  Name";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtPolice_station.BackColor = System.Drawing.Color.White;
+            this.txtPolice_station.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPolice_station.ForeColor = System.Drawing.Color.Gray;
+            this.txtPolice_station.Location = new System.Drawing.Point(244, 329);
+            this.txtPolice_station.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.txtPolice_station.MaxLength = 10;
+            this.txtPolice_station.Multiline = true;
+            this.txtPolice_station.Name = "txtPolice_station";
+            this.txtPolice_station.Size = new System.Drawing.Size(260, 27);
+            this.txtPolice_station.TabIndex = 6;
+            this.txtPolice_station.Text = "Police  station  Name";
+            this.txtPolice_station.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPolice_station.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPolice_station_MouseClick);
+            this.txtPolice_station.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox7
+            // txtHealthCondition
             // 
-            this.textBox7.BackColor = System.Drawing.Color.White;
-            this.textBox7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.Gray;
-            this.textBox7.Location = new System.Drawing.Point(243, 276);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.textBox7.MaxLength = 10;
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(260, 27);
-            this.textBox7.TabIndex = 5;
-            this.textBox7.Text = "Conditon ";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtHealthCondition.BackColor = System.Drawing.Color.White;
+            this.txtHealthCondition.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHealthCondition.ForeColor = System.Drawing.Color.Gray;
+            this.txtHealthCondition.Location = new System.Drawing.Point(243, 276);
+            this.txtHealthCondition.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.txtHealthCondition.MaxLength = 10;
+            this.txtHealthCondition.Multiline = true;
+            this.txtHealthCondition.Name = "txtHealthCondition";
+            this.txtHealthCondition.Size = new System.Drawing.Size(260, 27);
+            this.txtHealthCondition.TabIndex = 5;
+            this.txtHealthCondition.Text = "Conditon ";
+            this.txtHealthCondition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtHealthCondition.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtHealthCondition_MouseClick);
+            this.txtHealthCondition.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox5
+            // txtLandmark
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Gray;
-            this.textBox5.Location = new System.Drawing.Point(243, 224);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.textBox5.MaxLength = 10;
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(260, 27);
-            this.textBox5.TabIndex = 4;
-            this.textBox5.Text = "Enter the Landmark";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtLandmark.BackColor = System.Drawing.Color.White;
+            this.txtLandmark.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLandmark.ForeColor = System.Drawing.Color.Gray;
+            this.txtLandmark.Location = new System.Drawing.Point(243, 224);
+            this.txtLandmark.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.txtLandmark.MaxLength = 10;
+            this.txtLandmark.Multiline = true;
+            this.txtLandmark.Name = "txtLandmark";
+            this.txtLandmark.Size = new System.Drawing.Size(260, 27);
+            this.txtLandmark.TabIndex = 4;
+            this.txtLandmark.Text = "Enter the Landmark";
+            this.txtLandmark.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLandmark.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtLandmark_MouseClick);
+            this.txtLandmark.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox3
+            // txtname_Opposite
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Gray;
-            this.textBox3.Location = new System.Drawing.Point(243, 170);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.textBox3.MaxLength = 10;
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(260, 27);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Text = "Enter the Name ";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtname_Opposite.BackColor = System.Drawing.Color.White;
+            this.txtname_Opposite.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtname_Opposite.ForeColor = System.Drawing.Color.Gray;
+            this.txtname_Opposite.Location = new System.Drawing.Point(243, 170);
+            this.txtname_Opposite.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.txtname_Opposite.MaxLength = 10;
+            this.txtname_Opposite.Multiline = true;
+            this.txtname_Opposite.Name = "txtname_Opposite";
+            this.txtname_Opposite.Size = new System.Drawing.Size(260, 27);
+            this.txtname_Opposite.TabIndex = 3;
+            this.txtname_Opposite.Text = "Enter the Name ";
+            this.txtname_Opposite.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtname_Opposite.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtname_Opposite_MouseClick);
+            this.txtname_Opposite.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox6
+            // txtLocation
             // 
-            this.textBox6.BackColor = System.Drawing.Color.White;
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.Gray;
-            this.textBox6.Location = new System.Drawing.Point(243, 69);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.textBox6.MaxLength = 10;
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(260, 27);
-            this.textBox6.TabIndex = 1;
-            this.textBox6.Text = "Enter the Location";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtLocation.BackColor = System.Drawing.Color.White;
+            this.txtLocation.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocation.ForeColor = System.Drawing.Color.Gray;
+            this.txtLocation.Location = new System.Drawing.Point(243, 69);
+            this.txtLocation.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.txtLocation.MaxLength = 10;
+            this.txtLocation.Multiline = true;
+            this.txtLocation.Name = "txtLocation";
+            this.txtLocation.Size = new System.Drawing.Size(260, 27);
+            this.txtLocation.TabIndex = 1;
+            this.txtLocation.Text = "Enter the Location";
+            this.txtLocation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLocation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtLocation_MouseClick);
+            this.txtLocation.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label10
             // 
@@ -296,21 +303,22 @@ namespace Ruby_Hospital
             this.label10.TabIndex = 0;
             this.label10.Text = "Health Conditon ";
             // 
-            // textBox4
+            // txtName
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Gray;
-            this.textBox4.Location = new System.Drawing.Point(243, 116);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
-            this.textBox4.MaxLength = 10;
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(260, 27);
-            this.textBox4.TabIndex = 2;
-            this.textBox4.Text = "Enter the Name ";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtName.BackColor = System.Drawing.Color.White;
+            this.txtName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.Gray;
+            this.txtName.Location = new System.Drawing.Point(243, 116);
+            this.txtName.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.txtName.MaxLength = 10;
+            this.txtName.Multiline = true;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(260, 27);
+            this.txtName.TabIndex = 2;
+            this.txtName.Text = "Enter the Name ";
+            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtName_MouseClick);
+            this.txtName.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label8
             // 
@@ -400,11 +408,28 @@ namespace Ruby_Hospital
             this.pictureBox3.TabIndex = 28;
             this.pictureBox3.TabStop = false;
             // 
+            // txtPatientId
+            // 
+            this.txtPatientId.BackColor = System.Drawing.Color.White;
+            this.txtPatientId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPatientId.ForeColor = System.Drawing.Color.Gray;
+            this.txtPatientId.Location = new System.Drawing.Point(350, 115);
+            this.txtPatientId.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
+            this.txtPatientId.MaxLength = 10;
+            this.txtPatientId.Multiline = true;
+            this.txtPatientId.Name = "txtPatientId";
+            this.txtPatientId.Size = new System.Drawing.Size(260, 27);
+            this.txtPatientId.TabIndex = 8;
+            this.txtPatientId.Text = "RSHJ0001";
+            this.txtPatientId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPatientId.Visible = false;
+            // 
             // MLC_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(695, 707);
+            this.Controls.Add(this.txtPatientId);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -440,23 +465,24 @@ namespace Ruby_Hospital
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtOtherDetails;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtPolice_station;
+        private System.Windows.Forms.TextBox txtname_Opposite;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtLandmark;
+        private System.Windows.Forms.TextBox txtLocation;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtHealthCondition;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtPatientId;
     }
 }

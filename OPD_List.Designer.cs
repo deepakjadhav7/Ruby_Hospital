@@ -64,7 +64,7 @@ namespace Ruby_Hospital
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1604, 40);
+            this.panel2.Size = new System.Drawing.Size(1370, 40);
             this.panel2.TabIndex = 16;
             // 
             // label1
@@ -124,6 +124,7 @@ namespace Ruby_Hospital
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(347, 31);
             this.textBox1.TabIndex = 21;
+            //this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox3
             // 
@@ -221,7 +222,7 @@ namespace Ruby_Hospital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1604, 881);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label4);

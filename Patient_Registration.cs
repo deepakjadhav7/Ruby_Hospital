@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using System.Collections;
 
 namespace Ruby_Hospital
 {
     public partial class Patient_Registration : Form
     {
+        //SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["SpecalistHospitalSystem.Properties.Settings.Db_BNHConnectionString"].ConnectionString);
+        AutoCompleteStringCollection namesCollection = new AutoCompleteStringCollection();
+        String selectedby;
         public Patient_Registration()
         {
             InitializeComponent();
@@ -124,6 +128,26 @@ namespace Ruby_Hospital
             int h = Screen.PrimaryScreen.Bounds.Height;
             this.Location = new Point(0, 0);
             this.Size = new Size(w, h);
+
+
+            #region Auto Complete Property
+            System.Collections.ArrayList ListArray = new ArrayList();
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Select * from Patient_Registration", con);
+
+            SqlDataAdapter adt = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adt.Fill(dt);
+            
+            for (int i = 0; i < dt.Rows.Count; i++)
+                namesCollection.Add(dt.Rows[i]["Name"].ToString());
+
+            txtpatient.AutoCompleteMode = AutoCompleteMode.Suggest;
+            txtpatient.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txtpatient.AutoCompleteCustomSource = namesCollection;
+            #endregion
+
             FetchDoctor();
             Referred_Doctor();
             State();
@@ -178,6 +202,7 @@ namespace Ruby_Hospital
                 txttaluka.DisplayMember = "Taluka";
                 txttaluka.ValueMember = "TID";
             }
+
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
@@ -255,19 +280,52 @@ namespace Ruby_Hospital
                     btnsave.Visible = false;
                     btnPrint.Visible = false;
                 }
-                else
-                {
-                    
-                    MessageBox.Show("Patient  Added successfully...");
-                }
+               
 
+                if (txtpurpose.Text == "OPD")
+                {
+
+                    MessageBox.Show("Record Added Successfully");
+                    OPDRegistration();
+                    btnGOTOIPD.Visible = true;
+                    btnsave.Visible = false;
+                    btnPrint.Visible = false;
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
         }
+        public void OPDRegistration()
+        {
+            try
+            {
 
+                SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+                con.Open();
+                SqlCommand cmd = new SqlCommand(@"Insert into OPD_Patient_Registration (PatientId,Summary,Treatement,ChargesId,XRay,OPDSurgicalProcedureID,ConsultantID,ReferredId,VisitDate,IsCheck,FollowUpDate,PatientOPDIdWithSr)Values(@PatientId,@Summary,@Treatement,@ChargesId,@XRay,@OPDSurgicalProcedureID,@ConsultantID,@ReferredId,@VisitDate,@IsCheck,@FollowUpDate,@PatientOPDIdWithSr)", con);
+                cmd.Parameters.AddWithValue("@PatientId", "01");
+                cmd.Parameters.AddWithValue("@Summary", "");
+                cmd.Parameters.AddWithValue("@Treatement", "");
+                cmd.Parameters.AddWithValue("@ChargesId", "");
+                cmd.Parameters.AddWithValue("@XRay", "");
+                cmd.Parameters.AddWithValue("@OPDSurgicalProcedureID", "");
+                cmd.Parameters.AddWithValue("@ConsultantID", cmbDoctor.Text);
+                cmd.Parameters.AddWithValue("@ReferredId", cmbReferred.Text);
+                cmd.Parameters.AddWithValue("@VisitDate", System.DateTime.Now);
+                cmd.Parameters.AddWithValue("@IsCheck", 0);
+                cmd.Parameters.AddWithValue("@FollowUpDate", System.DateTime.Now);
+                cmd.Parameters.AddWithValue("@PatientOPDIdWithSr", "OPD/RSHJ0001");
+                cmd.ExecuteNonQuery();
+
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
         public void UpdateRegistration()
         {
             SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
@@ -334,8 +392,66 @@ namespace Ruby_Hospital
         {
             btnsave.Visible = false;
 
-        }
+            try
+            {
+                if (txtpatientsearch.Text == "Name")
+                {
+                   
 
+
+                    if (txtpatient.Text == "" )
+                    {
+                        MessageBox.Show("Please Enter Patient Name!!!");
+                    }
+                    else
+                    {
+                        String PatientName = txtpatient.Text;
+                        SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+                        con.Open();
+                        //Select * from Patient_Registration where Name LIKE '%PatientName%'
+                        SqlCommand cmd = new SqlCommand("Select * from Patient_Registration where Name LIKE '" + txtpatient.Text + "%'", con);
+                        SqlDataAdapter adt = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        adt.Fill(dt);
+
+                        if (dt.Rows.Count > 0)
+                        {
+                            txtprofix.DataBindings.Add("Text", dt, "Prefixes");
+                            txtname.DataBindings.Add("Text", dt, "Name");
+
+                            txtdate.DataBindings.Add("Text", dt, "DOB");
+                            txtage.DataBindings.Add("Text", dt, "Age");
+                            cbmmaritalstatus.DataBindings.Add("Text", dt, "Marital_Status");
+                            txtmobilenumber.DataBindings.Add("Text", dt, "Mobile_Number");
+                            txtmail.DataBindings.Add("Text", dt, "Email");
+                            txtaadhaar.DataBindings.Add("Text", dt, "Adhaar_ID");
+                            txtweight.DataBindings.Add("Text", dt, "Weight");
+                            txtpurpose.DataBindings.Add("Text", dt, "Purpose");
+                            txtalternateno.DataBindings.Add("Text", dt, "Alternate_Mobile");
+                            txtnationality.DataBindings.Add("Text", dt, "Nationality");
+                            txtremark.DataBindings.Add("Text", dt, "Remark");
+                            txtregicharges.DataBindings.Add("Text", dt, "Registration_Charges");
+                            txtconsultacharges.DataBindings.Add("Text", dt, "Consultation_Charges");
+                            txtaddress.DataBindings.Add("Text", dt, "Address");
+                            txtstate.DataBindings.Add("Text", dt, "State");
+                            txtdistrict.DataBindings.Add("Text", dt, "District");
+                            txttaluka.DataBindings.Add("Text", dt, "Taluka");
+                            txtcity.DataBindings.Add("Text", dt, "City");
+                            cmbDoctor.DataBindings.Add("Text", dt, "Doctors_Name");
+                            cmbReferred.DataBindings.Add("Text", dt, "Referred_By");
+
+                            //DataBindings();
+                        }
+
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+          
         private void txtpatient_TextChanged(object sender, EventArgs e)
         {
 
@@ -455,7 +571,7 @@ namespace Ruby_Hospital
 
         private void txtconsultacharges_Enter(object sender, EventArgs e)
         {
-            if (txtconsultacharges.Text == "50" )
+            if (txtconsultacharges.Text == "" )
             {
                 txtconsultacharges.Text = "";
                 txtconsultacharges.ForeColor = Color.Black;
@@ -466,7 +582,7 @@ namespace Ruby_Hospital
         {
             if (txtconsultacharges.Text == "") 
             {
-                txtconsultacharges.Text = "50";
+               
                 txtconsultacharges.ForeColor = Color.Gray;
             }
         }
@@ -550,6 +666,13 @@ namespace Ruby_Hospital
             IPD_Registration o = new IPD_Registration();
             o.Show();
         }
+
+
+        private void txtconsultacharges_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtconsultacharges.Clear();
+        }
+
         public void FetchDoctor()
         {
             SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
@@ -596,6 +719,12 @@ namespace Ruby_Hospital
         private void txtstate_TextChanged(object sender, EventArgs e)
         {
             District();
+
+        }
+
+        private void NN(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
