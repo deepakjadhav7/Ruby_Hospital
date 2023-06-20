@@ -115,6 +115,63 @@ namespace Ruby_Hospital
         {
 
         }
+//<<<<<<< HEAD
+
+//        private void txtPatientIPDID_Enter(object sender, EventArgs e)
+//        {
+//            if(txtPatientIPDID.Text=="123456789")
+//            {
+//                txtPatientIPDID.Text = "";
+//                txtPatientIPDID.ForeColor = Color.Black;
+//            }
+//        }
+
+//        private void txtReativeName_Enter(object sender, EventArgs e)
+//        {
+//            if (txtReativeName.Text == "Firstname                                    Middlename                                 Lastname")
+//            {
+//                txtReativeName.Text = "";
+//                txtReativeName.ForeColor = Color.Black;
+//            }
+//        }
+
+//        private void txtReativeName_Leave(object sender, EventArgs e)
+//        {
+//            if (txtReativeName.Text == "") 
+//            {
+//                txtReativeName.Text = "Firstname                                    Middlename                                 Lastname";
+//                txtReativeName.ForeColor = Color.Gray;
+//            }
+//        }
+
+//        private void txtRelativeMobileNo_Enter(object sender, EventArgs e)
+//        {
+//            if(txtRelativeMobileNo.Text =="123456789")
+//            {
+//                txtRelativeMobileNo.Text = "";
+//                txtRelativeMobileNo.ForeColor = Color.Black;
+
+//            }
+//        }
+
+//        private void txtRelativeMobileNo_Leave(object sender, EventArgs e)
+//        {
+//            if (txtRelativeMobileNo.Text == "")
+//            {
+//                txtRelativeMobileNo.Text = "123456789";
+//                txtRelativeMobileNo.ForeColor = Color.Gray;
+
+//            }
+//        }
+
+//        private void txtPatientIPDID_Leave(object sender, EventArgs e)
+//        {
+//            if (txtPatientIPDID.Text == "")
+//            {
+//                txtPatientIPDID.Text = "123456789";
+//                txtPatientIPDID.ForeColor = Color.Gray;
+//            }
+//=======
         public void FetchDoctor()
         {
             SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
@@ -147,6 +204,7 @@ namespace Ruby_Hospital
                 cmbReferredBy.ValueMember = "ReferredID";
             }
             con.Close();
+//>>>>>>> beb185a99ced36cc27adfb7276ec0ea0630aeaf4
         }
     }
 }

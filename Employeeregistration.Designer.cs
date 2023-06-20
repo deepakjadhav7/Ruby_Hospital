@@ -60,6 +60,9 @@ namespace Ruby_Hospital
             this.rbtrubystarhospital = new System.Windows.Forms.RadioButton();
             this.rbtcontractor = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbtninactive = new System.Windows.Forms.RadioButton();
+            this.rbtnactive = new System.Windows.Forms.RadioButton();
+            this.txtuid = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.txtgender = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -276,7 +279,7 @@ namespace Ruby_Hospital
             this.txtJoinDate.Location = new System.Drawing.Point(992, 193);
             this.txtJoinDate.Name = "txtJoinDate";
             this.txtJoinDate.Size = new System.Drawing.Size(230, 27);
-            this.txtJoinDate.TabIndex = 10;
+            this.txtJoinDate.TabIndex = 17;
             // 
             // txtname
             // 
@@ -324,7 +327,7 @@ namespace Ruby_Hospital
             this.txtDesignation.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
             this.txtDesignation.Name = "txtDesignation";
             this.txtDesignation.Size = new System.Drawing.Size(228, 29);
-            this.txtDesignation.TabIndex = 16;
+            this.txtDesignation.TabIndex = 18;
             // 
             // txtMobileNumber
             // 
@@ -336,7 +339,7 @@ namespace Ruby_Hospital
             this.txtMobileNumber.Multiline = true;
             this.txtMobileNumber.Name = "txtMobileNumber";
             this.txtMobileNumber.Size = new System.Drawing.Size(228, 28);
-            this.txtMobileNumber.TabIndex = 8;
+            this.txtMobileNumber.TabIndex = 7;
             this.txtMobileNumber.Text = "123456789";
             this.txtMobileNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMobileNumber.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -351,7 +354,7 @@ namespace Ruby_Hospital
             this.txtAlternateNumber.Multiline = true;
             this.txtAlternateNumber.Name = "txtAlternateNumber";
             this.txtAlternateNumber.Size = new System.Drawing.Size(228, 28);
-            this.txtAlternateNumber.TabIndex = 14;
+            this.txtAlternateNumber.TabIndex = 10;
             this.txtAlternateNumber.Text = "Alternate Mobile No";
             this.txtAlternateNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -366,7 +369,7 @@ namespace Ruby_Hospital
             this.txtcurrentAddress.Multiline = true;
             this.txtcurrentAddress.Name = "txtcurrentAddress";
             this.txtcurrentAddress.Size = new System.Drawing.Size(632, 28);
-            this.txtcurrentAddress.TabIndex = 7;
+            this.txtcurrentAddress.TabIndex = 8;
             this.txtcurrentAddress.Text = "Enter the Address";
             this.txtcurrentAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -399,7 +402,7 @@ namespace Ruby_Hospital
             this.txtPermanentAddress.Multiline = true;
             this.txtPermanentAddress.Name = "txtPermanentAddress";
             this.txtPermanentAddress.Size = new System.Drawing.Size(632, 28);
-            this.txtPermanentAddress.TabIndex = 13;
+            this.txtPermanentAddress.TabIndex = 11;
             this.txtPermanentAddress.Text = "Permanent Address";
             this.txtPermanentAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -407,13 +410,11 @@ namespace Ruby_Hospital
             // 
             this.rbtrubystarhospital.AutoSize = true;
             this.rbtrubystarhospital.BackColor = System.Drawing.Color.Transparent;
-            this.rbtrubystarhospital.Checked = true;
             this.rbtrubystarhospital.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtrubystarhospital.Location = new System.Drawing.Point(192, 29);
             this.rbtrubystarhospital.Name = "rbtrubystarhospital";
             this.rbtrubystarhospital.Size = new System.Drawing.Size(168, 25);
             this.rbtrubystarhospital.TabIndex = 3;
-            this.rbtrubystarhospital.TabStop = true;
             this.rbtrubystarhospital.Text = "Ruby Star Hospital";
             this.rbtrubystarhospital.UseVisualStyleBackColor = false;
             // 
@@ -435,6 +436,9 @@ namespace Ruby_Hospital
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox1.Controls.Add(this.rbtninactive);
+            this.groupBox1.Controls.Add(this.rbtnactive);
+            this.groupBox1.Controls.Add(this.txtuid);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.txtgender);
             this.groupBox1.Controls.Add(this.label8);
@@ -474,6 +478,41 @@ namespace Ruby_Hospital
             this.groupBox1.Size = new System.Drawing.Size(1561, 306);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Active";
+            // 
+            // rbtninactive
+            // 
+            this.rbtninactive.AutoSize = true;
+            this.rbtninactive.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtninactive.Location = new System.Drawing.Point(1097, 249);
+            this.rbtninactive.Name = "rbtninactive";
+            this.rbtninactive.Size = new System.Drawing.Size(94, 25);
+            this.rbtninactive.TabIndex = 26;
+            this.rbtninactive.Text = "Inactive";
+            this.rbtninactive.UseVisualStyleBackColor = true;
+            // 
+            // rbtnactive
+            // 
+            this.rbtnactive.AutoSize = true;
+            this.rbtnactive.Checked = true;
+            this.rbtnactive.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnactive.Location = new System.Drawing.Point(996, 249);
+            this.rbtnactive.Name = "rbtnactive";
+            this.rbtnactive.Size = new System.Drawing.Size(81, 25);
+            this.rbtnactive.TabIndex = 25;
+            this.rbtnactive.TabStop = true;
+            this.rbtnactive.Text = "Active";
+            this.rbtnactive.UseVisualStyleBackColor = true;
+            // 
+            // txtuid
+            // 
+            this.txtuid.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtuid.ForeColor = System.Drawing.Color.Gray;
+            this.txtuid.Location = new System.Drawing.Point(590, 247);
+            this.txtuid.Name = "txtuid";
+            this.txtuid.Size = new System.Drawing.Size(260, 27);
+            this.txtuid.TabIndex = 19;
+            this.txtuid.Text = "Enter  Your UID ";
             // 
             // label19
             // 
@@ -500,7 +539,7 @@ namespace Ruby_Hospital
             this.txtgender.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
             this.txtgender.Name = "txtgender";
             this.txtgender.Size = new System.Drawing.Size(188, 29);
-            this.txtgender.TabIndex = 22;
+            this.txtgender.TabIndex = 6;
             // 
             // label8
             // 
@@ -525,9 +564,8 @@ namespace Ruby_Hospital
             this.txtExperience.Multiline = true;
             this.txtExperience.Name = "txtExperience";
             this.txtExperience.Size = new System.Drawing.Size(260, 28);
-            this.txtExperience.TabIndex = 8;
+            this.txtExperience.TabIndex = 16;
             this.txtExperience.Text = "Enter  The Working Experience\r\n";
-            this.txtExperience.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtprobationDate
             // 
@@ -653,7 +691,7 @@ namespace Ruby_Hospital
             this.button2.Location = new System.Drawing.Point(379, 735);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(146, 40);
-            this.button2.TabIndex = 21;
+            this.button2.TabIndex = 27;
             this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -666,10 +704,12 @@ namespace Ruby_Hospital
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(604, 735);
+
+            this.button3.Location = new System.Drawing.Point(693, 801);
+
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(127, 40);
-            this.button3.TabIndex = 17;
+            this.button3.TabIndex = 28;
             this.button3.Text = "Save";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -685,7 +725,7 @@ namespace Ruby_Hospital
             this.button5.Location = new System.Drawing.Point(757, 735);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(127, 40);
-            this.button5.TabIndex = 18;
+            this.button5.TabIndex = 29;
             this.button5.Text = "Print ";
             this.button5.UseVisualStyleBackColor = false;
             // 
@@ -785,7 +825,7 @@ namespace Ruby_Hospital
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox8;
+      
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtExperience;
@@ -796,5 +836,8 @@ namespace Ruby_Hospital
         private System.Windows.Forms.ComboBox txtgender;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtuid;
+        private System.Windows.Forms.RadioButton rbtninactive;
+        private System.Windows.Forms.RadioButton rbtnactive;
     }
 }

@@ -98,6 +98,8 @@ namespace Ruby_Hospital
             this.panel5 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.btnGOTOIPD = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -187,6 +189,8 @@ namespace Ruby_Hospital
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.txtconsultacharges);
             this.groupBox1.Controls.Add(this.txtregicharges);
             this.groupBox1.Controls.Add(this.label25);
@@ -225,6 +229,7 @@ namespace Ruby_Hospital
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtconsultacharges
             // 
@@ -270,7 +275,9 @@ namespace Ruby_Hospital
             // btnmale
             // 
             resources.ApplyResources(this.btnmale, "btnmale");
+            this.btnmale.Checked = true;
             this.btnmale.Name = "btnmale";
+            this.btnmale.TabStop = true;
             this.btnmale.UseVisualStyleBackColor = true;
             // 
             // label5
@@ -319,7 +326,9 @@ namespace Ruby_Hospital
             resources.ApplyResources(this.txtremark, "txtremark");
             this.txtremark.Name = "txtremark";
             this.txtremark.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtremark_MouseClick);
+            this.txtremark.Enter += new System.EventHandler(this.txtremark_Enter);
             this.txtremark.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtremark_KeyPress);
+            this.txtremark.Leave += new System.EventHandler(this.txtremark_Leave);
             // 
             // txtalternateno
             // 
@@ -327,7 +336,9 @@ namespace Ruby_Hospital
             resources.ApplyResources(this.txtalternateno, "txtalternateno");
             this.txtalternateno.Name = "txtalternateno";
             this.txtalternateno.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtalternateno_MouseClick);
+            this.txtalternateno.Enter += new System.EventHandler(this.txtalternateno_Enter);
             this.txtalternateno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtalternateno_KeyPress);
+            this.txtalternateno.Leave += new System.EventHandler(this.txtalternateno_Leave);
             // 
             // txtweight
             // 
@@ -335,7 +346,9 @@ namespace Ruby_Hospital
             resources.ApplyResources(this.txtweight, "txtweight");
             this.txtweight.Name = "txtweight";
             this.txtweight.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtweight_MouseClick);
+            this.txtweight.Enter += new System.EventHandler(this.txtweight_Enter);
             this.txtweight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtweight_KeyPress);
+            this.txtweight.Leave += new System.EventHandler(this.txtweight_Leave);
             // 
             // txtage
             // 
@@ -343,6 +356,8 @@ namespace Ruby_Hospital
             resources.ApplyResources(this.txtage, "txtage");
             this.txtage.Name = "txtage";
             this.txtage.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtage_MouseClick);
+            this.txtage.Enter += new System.EventHandler(this.txtage_Enter_1);
+            this.txtage.Leave += new System.EventHandler(this.txtage_Leave);
             // 
             // txtmobilenumber
             // 
@@ -502,6 +517,7 @@ namespace Ruby_Hospital
             this.txtaddress.ForeColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.txtaddress, "txtaddress");
             this.txtaddress.Name = "txtaddress";
+            this.txtaddress.Enter += new System.EventHandler(this.txtaddress_Enter);
             // 
             // label11
             // 
@@ -516,14 +532,12 @@ namespace Ruby_Hospital
             resources.GetString("txtstate.Items1")});
             resources.ApplyResources(this.txtstate, "txtstate");
             this.txtstate.Name = "txtstate";
-            this.txtstate.TextChanged += new System.EventHandler(this.txtstate_TextChanged);
             // 
             // txtdistrict
             // 
             this.txtdistrict.FormattingEnabled = true;
             resources.ApplyResources(this.txtdistrict, "txtdistrict");
             this.txtdistrict.Name = "txtdistrict";
-            this.txtdistrict.TextChanged += new System.EventHandler(this.txtdistrict_TextChanged);
             // 
             // txttaluka
             // 
@@ -653,6 +667,16 @@ namespace Ruby_Hospital
             this.btnGOTOIPD.UseVisualStyleBackColor = true;
             this.btnGOTOIPD.Click += new System.EventHandler(this.btnGOTOIPD_Click);
             // 
+            // textBox1
+            // 
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
+            // 
+            // textBox2
+            // 
+            resources.ApplyResources(this.textBox2, "textBox2");
+            this.textBox2.Name = "textBox2";
+            // 
             // Patient_Registration
             // 
             resources.ApplyResources(this, "$this");
@@ -751,6 +775,9 @@ namespace Ruby_Hospital
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button button4;
+
         private System.Windows.Forms.Button btnGOTOIPD;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -130,7 +130,7 @@ namespace Ruby_Hospital
             values(@Dr_Name,@Contact_Number,@Is_Active)",con);
             cmb.Parameters.AddWithValue("@Dr_Name", txtname.Text);
             cmb.Parameters.AddWithValue("@Contact_Number", txtMobileNumber.Text);
-            if (checkStatus.Enabled = true)
+            if (checkStatus.Enabled == true)
             {
                 cmb.Parameters.AddWithValue("@Is_Active", "Active");
             }
@@ -192,7 +192,7 @@ namespace Ruby_Hospital
                 SqlCommand cmb = new SqlCommand(@"UPDATE INTO Employee_registration 
                                     SET (Employee_of=@Employee_of,MR_M=@MR_M,Gender=@Gender,Current_Address=@Current_Address,Post=@Post,Permanent_Address=@Permanent_Address,MaritalStatus=@MaritalStatus,Experience=@Experience,Alternate_Mobile_number=@Alternate_Mobile_number,Date_Of_Birth=@Date_Of_Birth,Department=@Department,Designation=@Designation,Joining_Date=@Joining_Date,Probation=@Probation,Status=@Status Where Mobile_Number=@Mobile_Number and name=@name)
                                     ", con);
-                if (rbtrubystarhospital.Checked = true)
+                if (rbtrubystarhospital.Checked == true)
                 {
                     cmb.Parameters.AddWithValue("@Employee_of", "Ruby Star Hospital");
                 }
@@ -215,7 +215,7 @@ namespace Ruby_Hospital
                 cmb.Parameters.AddWithValue("@Designation", txtDesignation.Text);
                 cmb.Parameters.AddWithValue("@Joining_Date", txtJoinDate.Text);
                 cmb.Parameters.AddWithValue("@Probation", txtprobationDate.Text);
-                if (checkStatus.Enabled = true)
+                if (checkStatus.Enabled == true)
                 {
                     cmb.Parameters.AddWithValue("@Status", "Active");
                 }

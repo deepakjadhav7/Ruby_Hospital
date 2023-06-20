@@ -124,10 +124,10 @@ namespace Ruby_Hospital
 
         private void Patient_Registration_Load(object sender, EventArgs e)
         {
-            int w = Screen.PrimaryScreen.Bounds.Width;
-            int h = Screen.PrimaryScreen.Bounds.Height;
-            this.Location = new Point(0, 0);
-            this.Size = new Size(w, h);
+            //int w = Screen.PrimaryScreen.Bounds.Width;
+            //int h = Screen.PrimaryScreen.Bounds.Height;
+            //this.Location = new Point(0, 0);
+            //this.Size = new Size(w, h);
 
 
             #region Auto Complete Property
@@ -571,7 +571,9 @@ namespace Ruby_Hospital
 
         private void txtconsultacharges_Enter(object sender, EventArgs e)
         {
+
             if (txtconsultacharges.Text == "" )
+
             {
                 txtconsultacharges.Text = "";
                 txtconsultacharges.ForeColor = Color.Black;
@@ -582,7 +584,6 @@ namespace Ruby_Hospital
         {
             if (txtconsultacharges.Text == "") 
             {
-               
                 txtconsultacharges.ForeColor = Color.Gray;
             }
         }
@@ -665,6 +666,96 @@ namespace Ruby_Hospital
         {
             IPD_Registration o = new IPD_Registration();
             o.Show();
+        }
+
+
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtage_Enter_1(object sender, EventArgs e)
+        {
+            if(txtage.Text=="Enter the Age")
+            {
+                txtage.Text = "";
+                txtage.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtage_Leave(object sender, EventArgs e)
+        {
+            if (txtage.Text == "")
+            {
+                txtage.Text = "Enter the Age";
+                txtage.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtweight_Enter(object sender, EventArgs e)
+        {
+            if(txtweight.Text =="Enter the Weight")
+            {
+                txtweight.Text = "";
+                txtweight.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtweight_Leave(object sender, EventArgs e)
+        {
+            if (txtweight.Text == "")
+            {
+                txtweight.Text = "Enter the Weight";
+                txtweight.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtalternateno_Enter(object sender, EventArgs e)
+        {
+            if(txtalternateno.Text=="1234567890")
+            {
+                txtalternateno.Text = "";
+                txtalternateno.ForeColor = Color.Black;
+            }
+
+        }
+        
+        private void txtremark_Enter(object sender, EventArgs e)
+        {
+            if(txtremark.Text=="Enter the Remark")
+            {
+                txtremark.Text = "";
+                txtremark.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtalternateno_Leave(object sender, EventArgs e)
+        {
+            if (txtalternateno.Text == "")
+            {
+                txtalternateno.Text = "1234567890";
+                txtalternateno.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtremark_Leave(object sender, EventArgs e)
+        {
+            if (txtremark.Text == "")
+            {
+                txtremark.Text = "Enter the Remark";
+                
+                txtremark.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtaddress_Enter(object sender, EventArgs e)
+        {
+            if (txtaddress.Text == "Enter the Address")
+            {
+                txtaddress.Text = "";
+                txtaddress.ForeColor = Color.Black;
+            }
         }
 
 

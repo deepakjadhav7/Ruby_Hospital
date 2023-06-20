@@ -19,6 +19,12 @@ namespace Ruby_Hospital
 
 
             Application.Run(new Patient_Registration());
+           
+
+       
+           
+
+
 
         }
     }
