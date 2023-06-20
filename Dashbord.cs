@@ -16,7 +16,13 @@ namespace Ruby_Hospital
         {
             InitializeComponent();
             constomizedesing();
-           
+
+            this.AutoSize = true;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+
         }
 
         private void movepanel(Control btn)
@@ -184,8 +190,7 @@ namespace Ruby_Hospital
         private void btnreport_Click(object sender, EventArgs e)
         {
             panel_admin_misReport.Visible = true;
-            MSI_REPORT ms = new MSI_REPORT();
-            ms.Show();
+         
           
         }
 

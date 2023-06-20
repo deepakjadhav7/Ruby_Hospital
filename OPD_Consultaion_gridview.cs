@@ -39,12 +39,12 @@ namespace Ruby_Hospital
                 return;
             string columnName = this.dataGridView1.Columns[e.ColumnIndex].Name;
 
-            if (columnName.Equals("PatientName") == true)
+            if (columnName.Equals("Name") == true)
             {
                 try
                 {
                     OPDPId = Convert.ToInt32(dataGridView1.CurrentRow.Cells["PatientOPDId"].Value);
-                    OPD_Consultaion_mainform o = new OPD_Consultaion_mainform();
+                    OPD_Consultaion_mainform o = new OPD_Consultaion_mainform(OPDPId);
                     o.Show();
                    
                 }
@@ -58,8 +58,10 @@ namespace Ruby_Hospital
         {
             SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
             con.Open();
-            SqlCommand cmb = new SqlCommand(@"Select Patient_ID,Name,Mobile_Number,Doctors_Name,Referred_By,Address FROM Patient_Registration Where Purpose='OPD'", con);
-            SqlDataAdapter adt = new SqlDataAdapter(cmb);
+            //SqlCommand cmb = new SqlCommand(@"Select Patient_ID,Name,Mobile_Number,Doctors_Name,Referred_By,Address FROM Patient_Registration Where Purpose='OPD'", con);
+            SqlCommand cmd = new SqlCommand(@"SELECT Patient_Registration.Name, Patient_Registration.Mobile_Number, Patient_Registration.Doctors_Name, Patient_Registration.Referred_By,OPD_Patient_Registration.PatientOPDId
+                      FROM Patient_Registration INNER JOIN OPD_Patient_Registration ON Patient_Registration.PID = OPD_Patient_Registration.PatientId where IsCheck = 0", con);
+            SqlDataAdapter adt = new SqlDataAdapter(cmd);
             DataTable o = new DataTable();
             adt.Fill(o);
             if (o.Rows.Count > 0)

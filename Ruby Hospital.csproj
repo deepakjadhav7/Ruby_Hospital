@@ -106,12 +106,6 @@
     <Compile Include="Dashbord.Designer.cs">
       <DependentUpon>Dashbord.cs</DependentUpon>
     </Compile>
-    <Compile Include="exampleset.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="exampleset.Designer.cs">
-      <DependentUpon>exampleset.cs</DependentUpon>
-    </Compile>
     <Compile Include="Fill_IPD_Billing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +135,12 @@
     </Compile>
     <Compile Include="IPD Registration.Designer.cs">
       <DependentUpon>IPD Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPD_Billng_Gridview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPD_Billng_Gridview.Designer.cs">
+      <DependentUpon>IPD_Billng_Gridview.cs</DependentUpon>
     </Compile>
     <Compile Include="IPD_Daily_Procedure_grid.cs">
       <SubType>Form</SubType>
@@ -214,12 +214,6 @@
     <Compile Include="MLC Details.Designer.cs">
       <DependentUpon>MLC Details.cs</DependentUpon>
     </Compile>
-    <Compile Include="MSI_REPORT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MSI_REPORT.Designer.cs">
-      <DependentUpon>MSI_REPORT.cs</DependentUpon>
-    </Compile>
     <Compile Include="Old_lab_Reciept.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +226,18 @@
     <Compile Include="Old_OPD_Receipt.Designer.cs">
       <DependentUpon>Old_OPD_Receipt.cs</DependentUpon>
     </Compile>
+    <Compile Include="OPD_Billing_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OPD_Billing_Details.Designer.cs">
+      <DependentUpon>OPD_Billing_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OPD_Billing_info_gridview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OPD_Billing_info_gridview.Designer.cs">
+      <DependentUpon>OPD_Billing_info_gridview.cs</DependentUpon>
+    </Compile>
     <Compile Include="OPD_Consultaion_gridview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,12 @@
     </Compile>
     <Compile Include="OPD_Consultaion_mainform.Designer.cs">
       <DependentUpon>OPD_Consultaion_mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OPD_ECG_and_Radiology_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OPD_ECG_and_Radiology_list.Designer.cs">
+      <DependentUpon>OPD_ECG_and_Radiology_list.cs</DependentUpon>
     </Compile>
     <Compile Include="OPD_List.cs">
       <SubType>Form</SubType>
@@ -306,9 +318,6 @@
     <EmbeddedResource Include="Dashbord.resx">
       <DependentUpon>Dashbord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="exampleset.resx">
-      <DependentUpon>exampleset.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Fill_IPD_Billing.resx">
       <DependentUpon>Fill_IPD_Billing.cs</DependentUpon>
     </EmbeddedResource>
@@ -323,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IPD Registration.resx">
       <DependentUpon>IPD Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPD_Billng_Gridview.resx">
+      <DependentUpon>IPD_Billng_Gridview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IPD_Daily_Procedure_grid.resx">
       <DependentUpon>IPD_Daily_Procedure_grid.cs</DependentUpon>
@@ -360,20 +372,26 @@
     <EmbeddedResource Include="MLC Details.resx">
       <DependentUpon>MLC Details.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MSI_REPORT.resx">
-      <DependentUpon>MSI_REPORT.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Old_lab_Reciept.resx">
       <DependentUpon>Old_lab_Reciept.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Old_OPD_Receipt.resx">
       <DependentUpon>Old_OPD_Receipt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OPD_Billing_Details.resx">
+      <DependentUpon>OPD_Billing_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OPD_Billing_info_gridview.resx">
+      <DependentUpon>OPD_Billing_info_gridview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OPD_Consultaion_gridview.resx">
       <DependentUpon>OPD_Consultaion_gridview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OPD_Consultaion_mainform.resx">
       <DependentUpon>OPD_Consultaion_mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OPD_ECG_and_Radiology_list.resx">
+      <DependentUpon>OPD_ECG_and_Radiology_list.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OPD_List.resx">
       <DependentUpon>OPD_List.cs</DependentUpon>

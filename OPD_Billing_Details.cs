@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Ruby_Hospital
 {
-    public partial class exampleset : Form
+    public partial class OPD_Billing_Details : Form
     {
-        public exampleset()
+        public OPD_Billing_Details()
         {
             InitializeComponent();
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+      
     }
 }

@@ -143,9 +143,19 @@ G:\Ruby_Hospital\obj\Debug\Ruby Hospital.csproj.CopyComplete
 G:\Ruby_Hospital\obj\Debug\Ruby Hospital.exe
 G:\Ruby_Hospital\obj\Debug\Ruby Hospital.pdb
 >>>>>>> 969de2ddf570c4fb204ae601cce75ebd18105cef
+C:\Users\MI Tech\Ruby Hospital\Ruby_Hospital\obj\Debug\Ruby_Hospital.exampleset.resources
 G:\Ruby_Hospital\obj\Debug\Ruby_Hospital.Referred_doctor.resources
 >>>>>>> 679592043adaf96d6eaf45a16babd6cf39ce6c60
 D:\Ruby_hospital_new_development\Ruby_Hospital\obj\Debug\Ruby_Hospital.Referred_doctor.resources
 D:\Ruby_hospital_new_development\Ruby_Hospital\obj\Debug\Ruby_Hospital.exampleset.resources
 >>>>>>> a59c7d76b86f326f0356dfeef2648068e7705d51
 G:\Ruby_Hospital\obj\Debug\Ruby_Hospital.exampleset.resources
+>>>>>>> 5127a6a3f6e5798db2fff9b0297e45bd1674f627
+C:\Users\MI Tech\Ruby Hospital\Ruby_Hospital\obj\Debug\Ruby_Hospital.IPD_Billng_Gridview.resources
+C:\Users\MI Tech\Ruby Hospital\Ruby_Hospital\obj\Debug\Ruby_Hospital.OPD_Billing_info_gridview.resources
+C:\Users\MI Tech\Ruby Hospital\Ruby_Hospital\obj\Debug\Ruby_Hospital.OPD_Billing_Details.resources
+C:\Users\MI Tech\Ruby Hospital\Ruby_Hospital\obj\Debug\Ruby_Hospital.OPD_ECG_and_Radiology_list.resources
+D:\Ruby_hospital_new_development\Ruby_Hospital\obj\Debug\Ruby_Hospital.IPD_Billng_Gridview.resources
+D:\Ruby_hospital_new_development\Ruby_Hospital\obj\Debug\Ruby_Hospital.OPD_Billing_Details.resources
+D:\Ruby_hospital_new_development\Ruby_Hospital\obj\Debug\Ruby_Hospital.OPD_Billing_info_gridview.resources
+D:\Ruby_hospital_new_development\Ruby_Hospital\obj\Debug\Ruby_Hospital.OPD_ECG_and_Radiology_list.resources

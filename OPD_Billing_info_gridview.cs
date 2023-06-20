@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Ruby_Hospital
 {
-    public partial class MSI_REPORT : Form
+    public partial class OPD_Billing_info_gridview : Form
     {
-        public MSI_REPORT()
+        public OPD_Billing_info_gridview()
         {
             InitializeComponent();
         }

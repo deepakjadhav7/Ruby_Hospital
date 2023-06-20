@@ -18,7 +18,13 @@ namespace Ruby_Hospital
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            Application.Run(new Patient_Registration());
+            Application.Run(new OPD_Consultaion_gridview());
+           
+
+       
+           
+
+
 
         }
     }
