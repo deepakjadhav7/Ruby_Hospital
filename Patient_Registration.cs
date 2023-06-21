@@ -17,7 +17,7 @@ namespace Ruby_Hospital
     {
         //SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["SpecalistHospitalSystem.Properties.Settings.Db_BNHConnectionString"].ConnectionString);
         AutoCompleteStringCollection namesCollection = new AutoCompleteStringCollection();
-        String selectedby;
+       // String selectedby;
         public Patient_Registration()
         {
             InitializeComponent();

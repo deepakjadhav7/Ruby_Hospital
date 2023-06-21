@@ -99,7 +99,9 @@ namespace Ruby_Hospital
             this.label20 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+
             this.txtcity = new System.Windows.Forms.TextBox();
+
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -180,7 +182,9 @@ namespace Ruby_Hospital
             // cmbReferred
             // 
             resources.ApplyResources(this.cmbReferred, "cmbReferred");
+
             this.cmbReferred.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+
             this.cmbReferred.FormattingEnabled = true;
             this.cmbReferred.Name = "cmbReferred";
             // 
@@ -193,7 +197,9 @@ namespace Ruby_Hospital
             // cmbDoctor
             // 
             resources.ApplyResources(this.cmbDoctor, "cmbDoctor");
+
             this.cmbDoctor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+
             this.cmbDoctor.FormattingEnabled = true;
             this.cmbDoctor.Name = "cmbDoctor";
             this.cmbDoctor.Leave += new System.EventHandler(this.comboBox9_Leave);
@@ -593,7 +599,9 @@ namespace Ruby_Hospital
             // 
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
+
             this.groupBox2.Controls.Add(this.txtcity);
+
             this.groupBox2.Controls.Add(this.txtaddress);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txtstate);
@@ -677,10 +685,12 @@ namespace Ruby_Hospital
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+
             // txtcity
             // 
             resources.ApplyResources(this.txtcity, "txtcity");
             this.txtcity.Name = "txtcity";
+
             // 
             // Patient_Registration
             // 
@@ -780,6 +790,8 @@ namespace Ruby_Hospital
         private System.Windows.Forms.Button btnGOTOIPD;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label26;
+
         private System.Windows.Forms.TextBox txtcity;
+
     }
 }
