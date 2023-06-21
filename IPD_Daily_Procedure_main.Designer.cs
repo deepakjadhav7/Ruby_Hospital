@@ -91,6 +91,8 @@ namespace Ruby_Hospital
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.panel_head.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -605,6 +607,8 @@ namespace Ruby_Hospital
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label19);
+            this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Controls.Add(this.label17);
             this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Controls.Add(this.comboBox5);
@@ -615,6 +619,7 @@ namespace Ruby_Hospital
             this.tabPage3.Controls.Add(this.button10);
             this.tabPage3.Controls.Add(this.button11);
             this.tabPage3.Controls.Add(this.panel8);
+            this.tabPage3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage3.Location = new System.Drawing.Point(4, 32);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -648,7 +653,7 @@ namespace Ruby_Hospital
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(57, 181);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(373, 31);
+            this.comboBox5.Size = new System.Drawing.Size(373, 30);
             this.comboBox5.TabIndex = 95;
             // 
             // comboBox6
@@ -658,7 +663,7 @@ namespace Ruby_Hospital
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(59, 63);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(371, 31);
+            this.comboBox6.Size = new System.Drawing.Size(371, 30);
             this.comboBox6.TabIndex = 94;
             // 
             // label3
@@ -779,9 +784,9 @@ namespace Ruby_Hospital
             this.panel1.Controls.Add(this.button14);
             this.panel1.Controls.Add(this.button13);
             this.panel1.Controls.Add(this.button12);
-            this.panel1.Location = new System.Drawing.Point(304, 23);
+            this.panel1.Location = new System.Drawing.Point(307, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(638, 391);
+            this.panel1.Size = new System.Drawing.Size(638, 378);
             this.panel1.TabIndex = 39;
             // 
             // button1
@@ -796,7 +801,7 @@ namespace Ruby_Hospital
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(138, 278);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(393, 46);
+            this.button1.Size = new System.Drawing.Size(393, 33);
             this.button1.TabIndex = 36;
             this.button1.Text = "Consent For Preterm /LBW";
             this.button1.UseVisualStyleBackColor = false;
@@ -813,7 +818,7 @@ namespace Ruby_Hospital
             this.button14.ForeColor = System.Drawing.Color.White;
             this.button14.Location = new System.Drawing.Point(138, 51);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(393, 46);
+            this.button14.Size = new System.Drawing.Size(393, 33);
             this.button14.TabIndex = 33;
             this.button14.Text = "Dama Consent ";
             this.button14.UseVisualStyleBackColor = false;
@@ -830,7 +835,7 @@ namespace Ruby_Hospital
             this.button13.ForeColor = System.Drawing.Color.White;
             this.button13.Location = new System.Drawing.Point(138, 127);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(393, 46);
+            this.button13.Size = new System.Drawing.Size(393, 33);
             this.button13.TabIndex = 34;
             this.button13.Text = "OT Consent";
             this.button13.UseVisualStyleBackColor = false;
@@ -847,10 +852,30 @@ namespace Ruby_Hospital
             this.button12.ForeColor = System.Drawing.Color.White;
             this.button12.Location = new System.Drawing.Point(138, 200);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(393, 46);
+            this.button12.Size = new System.Drawing.Size(393, 33);
             this.button12.TabIndex = 35;
             this.button12.Text = "Medical  Certificate";
             this.button12.UseVisualStyleBackColor = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(58, 37);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(234, 22);
+            this.label18.TabIndex = 98;
+            this.label18.Text = "Main Hospital procedure";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(58, 155);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(223, 22);
+            this.label19.TabIndex = 98;
+            this.label19.Text = "Sub Hospital procedure";
             // 
             // IPD_Daily_Procedure_main
             // 
@@ -959,5 +984,7 @@ namespace Ruby_Hospital
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
     }
 }
