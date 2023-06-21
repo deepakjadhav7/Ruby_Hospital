@@ -23,7 +23,7 @@ namespace Ruby_Hospital
         {
             InitializeComponent();
             OPDFillID = OPDId;
-            OPD_Procedure_show();
+            
             show();
 
         }
@@ -53,11 +53,13 @@ namespace Ruby_Hospital
             SqlCommand cmd = new SqlCommand(@"Select * From Master_OPD_Procedures", con);
 
             SqlDataAdapter adt = new SqlDataAdapter(cmd);
-            DataTable o = new DataTable();
-            adt.Fill(o);
-            if (o.Rows.Count > 0)
+            DataTable dt = new DataTable();
+            adt.Fill(dt);
+            if (dt.Rows.Count > 0)
             {
-                dataGridView2.DataSource = o;
+                comboBox1.DataSource = dt;
+                comboBox1.DisplayMember = "Name";
+                comboBox1.ValueMember = "OPD_ProcedureID";
             }
 
 
@@ -68,7 +70,9 @@ namespace Ruby_Hospital
             //int h = Screen.PrimaryScreen.Bounds.Height;
             //this.Location = new Point(0, 0);
             //this.Size = new Size(w, h);
+            OPD_Procedure_show();
         }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {

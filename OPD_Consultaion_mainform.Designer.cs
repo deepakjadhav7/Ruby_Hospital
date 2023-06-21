@@ -345,6 +345,7 @@ namespace Ruby_Hospital
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(20, 177);
             this.comboBox1.Name = "comboBox1";
@@ -534,7 +535,11 @@ namespace Ruby_Hospital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1304, 747);
+=======
+            this.ClientSize = new System.Drawing.Size(1304, 749);
+>>>>>>> 2fc1de717e1ad1e8f1387b116e8689038950ef24
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.panel6);

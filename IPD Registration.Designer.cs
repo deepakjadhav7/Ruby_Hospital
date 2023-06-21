@@ -103,9 +103,7 @@ namespace Ruby_Hospital
             // 
             // button4
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button4.BackColor = System.Drawing.Color.Brown;
-            this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
@@ -160,8 +158,6 @@ namespace Ruby_Hospital
             this.txtRelativeMobileNo.Text = "123456789";
             this.txtRelativeMobileNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtRelativeMobileNo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtRelativeMobileNo_MouseClick);
-            this.txtRelativeMobileNo.Enter += new System.EventHandler(this.txtRelativeMobileNo_Enter);
-            this.txtRelativeMobileNo.Leave += new System.EventHandler(this.txtRelativeMobileNo_Leave);
             // 
             // label3
             // 
@@ -188,8 +184,6 @@ namespace Ruby_Hospital
             this.txtReativeName.Text = "Firstname                                    Middlename                          " +
     "       Lastname";
             this.txtReativeName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtReativeName_MouseClick);
-            this.txtReativeName.Enter += new System.EventHandler(this.txtReativeName_Enter);
-            this.txtReativeName.Leave += new System.EventHandler(this.txtReativeName_Leave);
             // 
             // label5
             // 
@@ -215,9 +209,7 @@ namespace Ruby_Hospital
             // 
             // bunSave
             // 
-            this.bunSave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunSave.BackColor = System.Drawing.Color.Goldenrod;
-            this.bunSave.FlatAppearance.BorderSize = 0;
             this.bunSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bunSave.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunSave.ForeColor = System.Drawing.Color.White;
@@ -542,8 +534,6 @@ namespace Ruby_Hospital
             this.txtPatientIPDID.TabIndex = 21;
             this.txtPatientIPDID.Text = "123456789";
             this.txtPatientIPDID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtPatientIPDID.Enter += new System.EventHandler(this.txtPatientIPDID_Enter);
-            this.txtPatientIPDID.Leave += new System.EventHandler(this.txtPatientIPDID_Leave);
             // 
             // pictureBox1
             // 

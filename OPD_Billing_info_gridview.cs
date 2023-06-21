@@ -16,5 +16,10 @@ namespace Ruby_Hospital
         {
             InitializeComponent();
         }
+
+        private void OPD_Billing_info_gridview_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
