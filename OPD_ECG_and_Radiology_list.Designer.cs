@@ -185,7 +185,7 @@ namespace Ruby_Hospital
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(68, 107);
+            this.label2.Location = new System.Drawing.Point(61, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 19);
             this.label2.TabIndex = 86;
@@ -242,9 +242,9 @@ namespace Ruby_Hospital
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(50, 5, 50, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(393, 36);
+            this.label1.Size = new System.Drawing.Size(409, 36);
             this.label1.TabIndex = 2;
-            this.label1.Text = "IPD ECG and Radiology List";
+            this.label1.Text = "OPD ECG and Radiology List";
             // 
             // pictureBox1
             // 

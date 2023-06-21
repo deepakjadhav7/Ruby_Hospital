@@ -13,6 +13,8 @@ namespace Ruby_Hospital
 {
     public partial class IPD_Registration : Form
     {
+        string IIDA = "IPD/RSHJ";
+        int countpatient;
         public IPD_Registration()
         {
             InitializeComponent();
@@ -20,12 +22,25 @@ namespace Ruby_Hospital
 
         private void IPD_Registration_Load(object sender, EventArgs e)
         {
-            int w = Screen.PrimaryScreen.Bounds.Width;
-            int h = Screen.PrimaryScreen.Bounds.Height;
-            this.Location = new Point(0, 0);
-            this.Size = new Size(w, h);
+            generateAutoIId();
+            //int w = Screen.PrimaryScreen.Bounds.Width;
+            //int h = Screen.PrimaryScreen.Bounds.Height;
+            //this.Location = new Point(0, 0);
+            //this.Size = new Size(w, h);
             FetchDoctor();
             Referred_Doctor();
+
+        }
+        public void generateAutoIId()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand cmb = new SqlCommand(@"Select Count(IPDID) From IPD_Registration", con);
+            int i = Convert.ToInt32(cmb.ExecuteScalar());
+            con.Close();
+            i++;
+            string a = i.ToString("0000");
+            txtPatientIPDID.Text = IIDA + a;
 
         }
 
@@ -57,6 +72,16 @@ namespace Ruby_Hospital
                 md.Show();
             }
         }
+        public void rowcount()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand cmd = new SqlCommand(@"select * from Patient_Registration", con);
+            SqlDataAdapter s = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            s.Fill(dt);
+            countpatient = dt.Rows.Count;
+        }
 
         private void bunSave_Click(object sender, EventArgs e)
         {
@@ -66,12 +91,13 @@ namespace Ruby_Hospital
 
                 SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
                 con.Open();
-                SqlCommand cmd = new SqlCommand(@"Insert into IPD_Registration (IPD_ID,Relatives_Name,Relation,Relative_Mobile_No,
+                SqlCommand cmd = new SqlCommand(@"Insert into IPD_Registration (IPD_ID,Patient_Id,Relatives_Name,Relation,Relative_Mobile_No,
                                 Date_Of_Admission,Type_Of_Admission,Mediclaim
-                   ,Room_Segment,Bed_No,ConsultantID,Reserred_By,MLC_NonMLC,DischargeDate) Values(@IPD_ID,@Relatives_Name,@Relation,@Relative_Mobile_No,@Date_Of_Admission,@Type_Of_Admission,@Mediclaim
+                   ,Room_Segment,Bed_No,ConsultantID,Reserred_By,MLC_NonMLC,DischargeDate) Values(@IPD_ID,@Patient_Id,@Relatives_Name,@Relation,@Relative_Mobile_No,@Date_Of_Admission,@Type_Of_Admission,@Mediclaim
                    ,@Room_Segment,@Bed_No,@ConsultantID,@Reserred_By,@MLC_NonMLC,@DischargeDate)", con);
 
                 cmd.Parameters.AddWithValue("@IPD_ID",txtPatientIPDID.Text);
+                cmd.Parameters.AddWithValue("@Patient_Id", countpatient);
                 cmd.Parameters.AddWithValue("@Relatives_Name", txtReativeName.Text);
                 cmd.Parameters.AddWithValue("@Relation", cmbRelation.Text);
                 cmd.Parameters.AddWithValue("@Relative_Mobile_No", txtRelativeMobileNo.Text); 
@@ -115,7 +141,8 @@ namespace Ruby_Hospital
         {
 
         }
-//<<<<<<< HEAD
+
+
 
 //        private void txtPatientIPDID_Enter(object sender, EventArgs e)
 //        {
@@ -164,14 +191,16 @@ namespace Ruby_Hospital
 //            }
 //        }
 
-//        private void txtPatientIPDID_Leave(object sender, EventArgs e)
-//        {
-//            if (txtPatientIPDID.Text == "")
-//            {
-//                txtPatientIPDID.Text = "123456789";
-//                txtPatientIPDID.ForeColor = Color.Gray;
-//            }
-//=======
+
+        private void txtPatientIPDID_Leave(object sender, EventArgs e)
+        {
+            if (txtPatientIPDID.Text == "")
+            {
+                txtPatientIPDID.Text = "123456789";
+                txtPatientIPDID.ForeColor = Color.Gray;
+            }
+        }
+
         public void FetchDoctor()
         {
             SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
@@ -204,7 +233,7 @@ namespace Ruby_Hospital
                 cmbReferredBy.ValueMember = "ReferredID";
             }
             con.Close();
-//>>>>>>> beb185a99ced36cc27adfb7276ec0ea0630aeaf4
+
         }
     }
 }

@@ -206,6 +206,7 @@ namespace Ruby_Hospital
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OPD_Billing_info";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.OPD_Billing_info_gridview_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel_head.ResumeLayout(false);
             this.panel_head.PerformLayout();

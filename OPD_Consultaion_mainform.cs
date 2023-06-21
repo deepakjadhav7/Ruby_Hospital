@@ -19,10 +19,10 @@ namespace Ruby_Hospital
 
         private void OPD_Consultaion_mainform_Load(object sender, EventArgs e)
         {
-            int w = Screen.PrimaryScreen.Bounds.Width;
-            int h = Screen.PrimaryScreen.Bounds.Height;
-            this.Location = new Point(0, 0);
-            this.Size = new Size(w, h);
+            //int w = Screen.PrimaryScreen.Bounds.Width;
+            //int h = Screen.PrimaryScreen.Bounds.Height;
+            //this.Location = new Point(0, 0);
+            //this.Size = new Size(w, h);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -60,7 +60,10 @@ namespace Ruby_Hospital
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            OPD_ECG_and_Radiology_list oer = new OPD_ECG_and_Radiology_list();
+            oer.Show();
         }
+
+      
     }
 }

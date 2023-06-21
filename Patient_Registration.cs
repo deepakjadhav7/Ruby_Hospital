@@ -15,6 +15,10 @@ namespace Ruby_Hospital
 {
     public partial class Patient_Registration : Form
     {
+        String PID = "RSHJ";
+        string OIDA = "OPD/RSHJ";
+        
+        int countpatient;
         //SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["SpecalistHospitalSystem.Properties.Settings.Db_BNHConnectionString"].ConnectionString);
         AutoCompleteStringCollection namesCollection = new AutoCompleteStringCollection();
         String selectedby;
@@ -30,13 +34,13 @@ namespace Ruby_Hospital
 
         private void comboBox9_Leave(object sender, EventArgs e)
         {
-            
+
 
         }
 
         private void txtmail_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void txtmail_Leave(object sender, EventArgs e)
@@ -58,7 +62,7 @@ namespace Ruby_Hospital
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if( char .IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
 
@@ -67,15 +71,15 @@ namespace Ruby_Hospital
 
         private void txtmobilenumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(!char .IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-                {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
                 e.Handled = true;
             }
         }
 
         private void txtaadhaar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(!char .IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -83,7 +87,7 @@ namespace Ruby_Hospital
 
         private void txtweight_KeyPress(object sender, KeyPressEventArgs e)
         {
-                 if(!char .IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
 
@@ -92,7 +96,7 @@ namespace Ruby_Hospital
 
         private void txtalternateno_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(!char .IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -104,7 +108,7 @@ namespace Ruby_Hospital
             {
                 e.Handled = true;
             }
-         }
+        }
 
         private void txtpatient_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -112,13 +116,13 @@ namespace Ruby_Hospital
             {
                 e.Handled = true;
             }
-         }
+        }
 
         private void txtreferred_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(char .IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled=true;
+                e.Handled = true;
             }
         }
 
@@ -139,7 +143,7 @@ namespace Ruby_Hospital
             SqlDataAdapter adt = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             adt.Fill(dt);
-            
+
             for (int i = 0; i < dt.Rows.Count; i++)
                 namesCollection.Add(dt.Rows[i]["Name"].ToString());
 
@@ -147,11 +151,37 @@ namespace Ruby_Hospital
             txtpatient.AutoCompleteSource = AutoCompleteSource.CustomSource;
             txtpatient.AutoCompleteCustomSource = namesCollection;
             #endregion
-
+            // if(!IsPostBack)
+            generateAutoId();
             FetchDoctor();
             Referred_Doctor();
             State();
             District();
+        }
+
+        public void generateAutoId()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand cmb = new SqlCommand(@"Select Count(PID) From Patient_Registration", con);
+            int i = Convert.ToInt32(cmb.ExecuteScalar());
+            con.Close();
+            i++;
+            string a = i.ToString("0000");
+            textBox1.Text = PID + a;
+
+        }
+        public void generateAutoOId()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand cmb = new SqlCommand(@"Select Count(PatientOPDId) From OPD_Patient_Registration", con);
+            int i = Convert.ToInt32(cmb.ExecuteScalar());
+            con.Close();
+            i++;
+            string a = i.ToString("0000");
+            textBox2.Text = OIDA + a;
+
         }
         public void State()
         {
@@ -161,7 +191,7 @@ namespace Ruby_Hospital
             SqlDataAdapter adt = new SqlDataAdapter(cmb);
             DataTable dt = new DataTable();
             adt.Fill(dt);
-            if(dt.Rows.Count>0)
+            if (dt.Rows.Count > 0)
             {
                 txtstate.DataSource = dt;
                 txtstate.DisplayMember = "State";
@@ -214,7 +244,6 @@ namespace Ruby_Hospital
         {
             try
             {
-
                 SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
                 con.Open();
                 SqlCommand cmd = new SqlCommand(@"Insert Into Patient_Registration (Patient_ID,Prefixes,Name,Gender,DOB,Age,Marital_Status,Mobile_Number,
@@ -222,9 +251,7 @@ namespace Ruby_Hospital
                                                Address,State,District,Taluka,City,Doctors_Name,Referred_By) Values (@Patient_ID,@Prefixes,@Name,@Gender,@DOB,@Age,@Marital_Status,@Mobile_Number,
                                                @Email,@Adhaar_ID,@Weight,@Purpose,@Alternate_Mobile,@Nationality,@Remark,@AROGYA_Card,@Registration_Charges,@Consultation_Charges,
                                                @Address,@State,@District,@Taluka,@City,@Doctors_Name,@Referred_By)", con);
-
-
-                cmd.Parameters.AddWithValue("@Patient_ID", "RSHJ001");
+                cmd.Parameters.AddWithValue("@Patient_ID", textBox1.Text);
                 cmd.Parameters.AddWithValue("@Prefixes", txtprofix.Text);
                 cmd.Parameters.AddWithValue("@Name", txtname.Text);
                 if (btnmale.Checked == true)
@@ -235,7 +262,6 @@ namespace Ruby_Hospital
                 {
                     cmd.Parameters.AddWithValue("@Gender", "Female");
                 }
-
                 cmd.Parameters.AddWithValue("@DOB", txtdate.Text);
                 cmd.Parameters.AddWithValue("@Age", txtage.Text);
                 cmd.Parameters.AddWithValue("@Marital_Status", cbmmaritalstatus.Text);
@@ -247,7 +273,6 @@ namespace Ruby_Hospital
                 cmd.Parameters.AddWithValue("@Alternate_Mobile", txtalternateno.Text);
                 cmd.Parameters.AddWithValue("@Nationality", txtnationality.Text);
                 cmd.Parameters.AddWithValue("@Remark", txtremark.Text);
-
                 cmd.Parameters.AddWithValue("@AROGYA_Card", txtarogyacard.Text);
                 cmd.Parameters.AddWithValue("@Registration_Charges", txtregicharges.Text);
                 cmd.Parameters.AddWithValue("@Consultation_Charges", txtconsultacharges.Text);
@@ -258,33 +283,25 @@ namespace Ruby_Hospital
                 cmd.Parameters.AddWithValue("@City", txtcity.Text);
                 cmd.Parameters.AddWithValue("@Doctors_Name", cmbDoctor.Text);
                 cmd.Parameters.AddWithValue("@Referred_By", cmbReferred.Text);
-
                 cmd.ExecuteNonQuery();
                 con.Close();
-
-                
                 if (txtpurpose.Text == "IPD")
                 {
-                   
                     MessageBox.Show("Record Added Successfully to IPD...");
                     btnGOTOIPD.Visible = true;
                     btnsave.Visible = false;
                     btnPrint.Visible = false;
                 }
-
                 if (txtpurpose.Text == "Only Test")
                 {
-
                     MessageBox.Show("Record Added Successfully ...");
                     btnGOTOIPD.Visible = false;
                     btnsave.Visible = false;
                     btnPrint.Visible = false;
                 }
-               
-
                 if (txtpurpose.Text == "OPD")
                 {
-
+                    generateAutoOId();
                     MessageBox.Show("Record Added Successfully");
                     OPDRegistration();
                     btnGOTOIPD.Visible = true;
@@ -297,6 +314,16 @@ namespace Ruby_Hospital
                 MessageBox.Show(ex.ToString());
             }
         }
+        public void rowcount()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+            con.Open();
+            SqlCommand cmd = new SqlCommand(@"select * from Patient_Registration", con);
+            SqlDataAdapter s = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            s.Fill(dt);
+            countpatient = dt.Rows.Count;
+        }
         public void OPDRegistration()
         {
             try
@@ -305,7 +332,7 @@ namespace Ruby_Hospital
                 SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
                 con.Open();
                 SqlCommand cmd = new SqlCommand(@"Insert into OPD_Patient_Registration (PatientId,Summary,Treatement,ChargesId,XRay,OPDSurgicalProcedureID,ConsultantID,ReferredId,VisitDate,IsCheck,FollowUpDate,PatientOPDIdWithSr)Values(@PatientId,@Summary,@Treatement,@ChargesId,@XRay,@OPDSurgicalProcedureID,@ConsultantID,@ReferredId,@VisitDate,@IsCheck,@FollowUpDate,@PatientOPDIdWithSr)", con);
-                cmd.Parameters.AddWithValue("@PatientId", "01");
+                cmd.Parameters.AddWithValue("@PatientId", countpatient);
                 cmd.Parameters.AddWithValue("@Summary", "");
                 cmd.Parameters.AddWithValue("@Treatement", "");
                 cmd.Parameters.AddWithValue("@ChargesId", "");
@@ -316,12 +343,10 @@ namespace Ruby_Hospital
                 cmd.Parameters.AddWithValue("@VisitDate", System.DateTime.Now);
                 cmd.Parameters.AddWithValue("@IsCheck", 0);
                 cmd.Parameters.AddWithValue("@FollowUpDate", System.DateTime.Now);
-                cmd.Parameters.AddWithValue("@PatientOPDIdWithSr", "OPD/RSHJ0001");
+                cmd.Parameters.AddWithValue("@PatientOPDIdWithSr", textBox2.Text);
                 cmd.ExecuteNonQuery();
-
-
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
@@ -396,10 +421,10 @@ namespace Ruby_Hospital
             {
                 if (txtpatientsearch.Text == "Name")
                 {
-                   
 
 
-                    if (txtpatient.Text == "" )
+
+                    if (txtpatient.Text == "")
                     {
                         MessageBox.Show("Please Enter Patient Name!!!");
                     }
@@ -446,12 +471,12 @@ namespace Ruby_Hospital
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
         }
-          
+
         private void txtpatient_TextChanged(object sender, EventArgs e)
         {
 
@@ -469,7 +494,7 @@ namespace Ruby_Hospital
 
         private void txtname_Enter(object sender, EventArgs e)
         {
-            if(txtname.Text== "Fisrtname           Middle             Lastname")
+            if (txtname.Text == "Fisrtname           Middle             Lastname")
             {
                 txtname.Text = "";
                 txtname.ForeColor = Color.Black;
@@ -487,7 +512,7 @@ namespace Ruby_Hospital
 
         private void txtmobilenumber_Enter(object sender, EventArgs e)
         {
-            if(txtmobilenumber.Text == "123456789")
+            if (txtmobilenumber.Text == "123456789")
             {
                 txtmobilenumber.Text = "";
                 txtmobilenumber.ForeColor = Color.Black;
@@ -505,7 +530,7 @@ namespace Ruby_Hospital
 
         private void txtpatient_Enter(object sender, EventArgs e)
         {
-            if(txtpatient.Text == "Enter the Patient Info")
+            if (txtpatient.Text == "Enter the Patient Info")
             {
                 txtpatient.Text = "";
                 txtpatient.ForeColor = Color.Black;
@@ -514,7 +539,7 @@ namespace Ruby_Hospital
 
         private void txtpatient_Leave(object sender, EventArgs e)
         {
-            if(txtpatient.Text == "")
+            if (txtpatient.Text == "")
             {
                 txtpatient.Text = "Enter the Patient Info";
                 txtpatient.ForeColor = Color.Gray;
@@ -523,7 +548,7 @@ namespace Ruby_Hospital
 
         private void txtmail_Enter(object sender, EventArgs e)
         {
-            if(txtmail.Text == "Enter Your Email")
+            if (txtmail.Text == "Enter Your Email")
             {
                 txtmail.Text = "";
                 txtmail.ForeColor = Color.Black;
@@ -532,7 +557,7 @@ namespace Ruby_Hospital
 
         private void txtaadhaar_Enter(object sender, EventArgs e)
         {
-            if(txtaadhaar.Text == "1233456789012")
+            if (txtaadhaar.Text == "1233456789012")
             {
                 txtaadhaar.Text = "";
                 txtaadhaar.ForeColor = Color.Black;
@@ -552,7 +577,7 @@ namespace Ruby_Hospital
 
         private void txtregicharges_Enter(object sender, EventArgs e)
         {
-            if(txtregicharges.Text== "Enter Registration Charges")
+            if (txtregicharges.Text == "Enter Registration Charges")
             {
                 txtregicharges.Text = "";
                 txtregicharges.ForeColor = Color.Black;
@@ -572,7 +597,7 @@ namespace Ruby_Hospital
         private void txtconsultacharges_Enter(object sender, EventArgs e)
         {
 
-            if (txtconsultacharges.Text == "" )
+            if (txtconsultacharges.Text == "")
 
             {
                 txtconsultacharges.Text = "";
@@ -582,7 +607,7 @@ namespace Ruby_Hospital
 
         private void txtconsultacharges_Leave(object sender, EventArgs e)
         {
-            if (txtconsultacharges.Text == "") 
+            if (txtconsultacharges.Text == "")
             {
                 txtconsultacharges.ForeColor = Color.Gray;
             }
@@ -590,7 +615,7 @@ namespace Ruby_Hospital
 
         private void txtarogyacard_Enter(object sender, EventArgs e)
         {
-            if(txtarogyacard.Text== "1233456789012")
+            if (txtarogyacard.Text == "1233456789012")
             {
                 txtarogyacard.Text = "";
                 txtarogyacard.ForeColor = Color.Black;
@@ -608,7 +633,7 @@ namespace Ruby_Hospital
 
         private void txtage_Enter(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtdate_ValueChanged(object sender, EventArgs e)
@@ -677,7 +702,7 @@ namespace Ruby_Hospital
 
         private void txtage_Enter_1(object sender, EventArgs e)
         {
-            if(txtage.Text=="Enter the Age")
+            if (txtage.Text == "Enter the Age")
             {
                 txtage.Text = "";
                 txtage.ForeColor = Color.Black;
@@ -695,7 +720,7 @@ namespace Ruby_Hospital
 
         private void txtweight_Enter(object sender, EventArgs e)
         {
-            if(txtweight.Text =="Enter the Weight")
+            if (txtweight.Text == "Enter the Weight")
             {
                 txtweight.Text = "";
                 txtweight.ForeColor = Color.Black;
@@ -713,17 +738,17 @@ namespace Ruby_Hospital
 
         private void txtalternateno_Enter(object sender, EventArgs e)
         {
-            if(txtalternateno.Text=="1234567890")
+            if (txtalternateno.Text == "1234567890")
             {
                 txtalternateno.Text = "";
                 txtalternateno.ForeColor = Color.Black;
             }
 
         }
-        
+
         private void txtremark_Enter(object sender, EventArgs e)
         {
-            if(txtremark.Text=="Enter the Remark")
+            if (txtremark.Text == "Enter the Remark")
             {
                 txtremark.Text = "";
                 txtremark.ForeColor = Color.Black;
@@ -744,7 +769,7 @@ namespace Ruby_Hospital
             if (txtremark.Text == "")
             {
                 txtremark.Text = "Enter the Remark";
-                
+
                 txtremark.ForeColor = Color.Gray;
             }
         }
@@ -772,7 +797,7 @@ namespace Ruby_Hospital
             SqlDataAdapter adt = new SqlDataAdapter(com);
             DataTable dt = new DataTable();
             adt.Fill(dt);
-            if(dt.Rows.Count>0)
+            if (dt.Rows.Count > 0)
             {
                 cmbDoctor.DataSource = dt;
                 cmbDoctor.DisplayMember = "Dr_Name";
@@ -816,6 +841,23 @@ namespace Ruby_Hospital
         private void NN(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtconsultacharges_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtpurpose_TextChanged(object sender, EventArgs e)
+        {
+            if (txtpurpose.Text == "OPD")
+            {
+                generateAutoOId();
+            }
+            else
+            {
+                textBox2.Text = "";
+            }
         }
     }
 }

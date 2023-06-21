@@ -18,7 +18,7 @@ namespace Ruby_Hospital
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            Application.Run(new Patient_Registration());
+            Application.Run(new IPD_Registration());
            
 
        
