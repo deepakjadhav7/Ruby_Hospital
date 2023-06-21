@@ -159,3 +159,4 @@ D:\Ruby_hospital_new_development\Ruby_Hospital\obj\Debug\Ruby_Hospital.IPD_Billn
 D:\Ruby_hospital_new_development\Ruby_Hospital\obj\Debug\Ruby_Hospital.OPD_Billing_Details.resources
 D:\Ruby_hospital_new_development\Ruby_Hospital\obj\Debug\Ruby_Hospital.OPD_Billing_info_gridview.resources
 D:\Ruby_hospital_new_development\Ruby_Hospital\obj\Debug\Ruby_Hospital.OPD_ECG_and_Radiology_list.resources
+D:\Ruby_hospital_new_development\Ruby_Hospital\obj\Debug\Ruby Hospital.csprojAssemblyReference.cache
