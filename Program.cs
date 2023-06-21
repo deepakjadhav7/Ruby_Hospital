@@ -18,8 +18,11 @@ namespace Ruby_Hospital
             Application.SetCompatibleTextRenderingDefault(false);
 
 
+
+
             Application.Run(new OPD_Consultaion_mainform());
-           
+
+
 
        
            

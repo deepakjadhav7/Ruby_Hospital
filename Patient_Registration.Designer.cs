@@ -50,6 +50,7 @@ namespace Ruby_Hospital
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbl = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txtconsultacharges = new System.Windows.Forms.TextBox();
             this.txtregicharges = new System.Windows.Forms.TextBox();
@@ -88,6 +89,8 @@ namespace Ruby_Hospital
             this.txtprofix = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtstate = new System.Windows.Forms.ComboBox();
@@ -144,6 +147,7 @@ namespace Ruby_Hospital
             this.panel5.BackColor = System.Drawing.Color.Teal;
             resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.NN);
             // 
             // btnGOTOIPD
             // 
@@ -183,7 +187,9 @@ namespace Ruby_Hospital
             // 
             resources.ApplyResources(this.cmbReferred, "cmbReferred");
 
+
             this.cmbReferred.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+
 
             this.cmbReferred.FormattingEnabled = true;
             this.cmbReferred.Name = "cmbReferred";
@@ -197,6 +203,7 @@ namespace Ruby_Hospital
             // cmbDoctor
             // 
             resources.ApplyResources(this.cmbDoctor, "cmbDoctor");
+
 
             this.cmbDoctor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 
@@ -281,6 +288,7 @@ namespace Ruby_Hospital
             // 
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
+            this.groupBox1.Controls.Add(this.lbl);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.txtconsultacharges);
             this.groupBox1.Controls.Add(this.txtregicharges);
@@ -321,6 +329,11 @@ namespace Ruby_Hospital
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // lbl
+            // 
+            resources.ApplyResources(this.lbl, "lbl");
+            this.lbl.Name = "lbl";
             // 
             // checkBox1
             // 
@@ -564,6 +577,7 @@ namespace Ruby_Hospital
             resources.GetString("txtpurpose.Items2"),
             resources.GetString("txtpurpose.Items3")});
             this.txtpurpose.Name = "txtpurpose";
+            this.txtpurpose.TextChanged += new System.EventHandler(this.txtpurpose_TextChanged);
             // 
             // cbmmaritalstatus
             // 
@@ -614,6 +628,18 @@ namespace Ruby_Hospital
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // textBox2
+            // 
+            resources.ApplyResources(this.textBox2, "textBox2");
+            this.textBox2.ForeColor = System.Drawing.Color.Gray;
+            this.textBox2.Name = "textBox2";
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.ForeColor = System.Drawing.Color.Gray;
+            this.textBox1.Name = "textBox1";
             // 
             // txtaddress
             // 
@@ -696,6 +722,8 @@ namespace Ruby_Hospital
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
@@ -716,6 +744,7 @@ namespace Ruby_Hospital
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -791,6 +820,9 @@ namespace Ruby_Hospital
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label26;
 
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox txtcity;
 
     }
