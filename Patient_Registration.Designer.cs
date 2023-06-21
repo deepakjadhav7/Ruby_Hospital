@@ -50,6 +50,7 @@ namespace Ruby_Hospital
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbl = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txtconsultacharges = new System.Windows.Forms.TextBox();
             this.txtregicharges = new System.Windows.Forms.TextBox();
@@ -88,21 +89,20 @@ namespace Ruby_Hospital
             this.txtprofix = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtstate = new System.Windows.Forms.ComboBox();
             this.txtdistrict = new System.Windows.Forms.ComboBox();
             this.txttaluka = new System.Windows.Forms.ComboBox();
-            this.txtcity = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lbl = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtcity = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -251,11 +251,13 @@ namespace Ruby_Hospital
             // txtpatientsearch
             // 
             resources.ApplyResources(this.txtpatientsearch, "txtpatientsearch");
+            this.txtpatientsearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtpatientsearch.FormattingEnabled = true;
             this.txtpatientsearch.Items.AddRange(new object[] {
             resources.GetString("txtpatientsearch.Items"),
             resources.GetString("txtpatientsearch.Items1"),
-            resources.GetString("txtpatientsearch.Items2")});
+            resources.GetString("txtpatientsearch.Items2"),
+            resources.GetString("txtpatientsearch.Items3")});
             this.txtpatientsearch.Name = "txtpatientsearch";
             this.txtpatientsearch.SelectedIndexChanged += new System.EventHandler(this.txtpatientsearch_SelectedIndexChanged);
             // 
@@ -316,6 +318,11 @@ namespace Ruby_Hospital
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // lbl
+            // 
+            resources.ApplyResources(this.lbl, "lbl");
+            this.lbl.Name = "lbl";
             // 
             // checkBox1
             // 
@@ -540,44 +547,50 @@ namespace Ruby_Hospital
             // txtnationality
             // 
             resources.ApplyResources(this.txtnationality, "txtnationality");
+            this.txtnationality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtnationality.FormattingEnabled = true;
             this.txtnationality.Items.AddRange(new object[] {
             resources.GetString("txtnationality.Items"),
-            resources.GetString("txtnationality.Items1")});
+            resources.GetString("txtnationality.Items1"),
+            resources.GetString("txtnationality.Items2")});
             this.txtnationality.Name = "txtnationality";
             // 
             // txtpurpose
             // 
             resources.ApplyResources(this.txtpurpose, "txtpurpose");
+            this.txtpurpose.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtpurpose.FormattingEnabled = true;
             this.txtpurpose.Items.AddRange(new object[] {
             resources.GetString("txtpurpose.Items"),
             resources.GetString("txtpurpose.Items1"),
-            resources.GetString("txtpurpose.Items2")});
+            resources.GetString("txtpurpose.Items2"),
+            resources.GetString("txtpurpose.Items3")});
             this.txtpurpose.Name = "txtpurpose";
             this.txtpurpose.TextChanged += new System.EventHandler(this.txtpurpose_TextChanged);
             // 
             // cbmmaritalstatus
             // 
+            this.cbmmaritalstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmmaritalstatus.FormattingEnabled = true;
             this.cbmmaritalstatus.Items.AddRange(new object[] {
             resources.GetString("cbmmaritalstatus.Items"),
             resources.GetString("cbmmaritalstatus.Items1"),
             resources.GetString("cbmmaritalstatus.Items2"),
             resources.GetString("cbmmaritalstatus.Items3"),
-            resources.GetString("cbmmaritalstatus.Items4")});
+            resources.GetString("cbmmaritalstatus.Items4"),
+            resources.GetString("cbmmaritalstatus.Items5")});
             resources.ApplyResources(this.cbmmaritalstatus, "cbmmaritalstatus");
             this.cbmmaritalstatus.Name = "cbmmaritalstatus";
             this.cbmmaritalstatus.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // txtprofix
             // 
+            this.txtprofix.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.txtprofix, "txtprofix");
             this.txtprofix.FormattingEnabled = true;
             this.txtprofix.Items.AddRange(new object[] {
             resources.GetString("txtprofix.Items"),
-            resources.GetString("txtprofix.Items1"),
-            resources.GetString("txtprofix.Items2")});
+            resources.GetString("txtprofix.Items1")});
             this.txtprofix.Name = "txtprofix";
             // 
             // label3
@@ -589,12 +602,12 @@ namespace Ruby_Hospital
             // 
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
+            this.groupBox2.Controls.Add(this.txtcity);
             this.groupBox2.Controls.Add(this.txtaddress);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txtstate);
             this.groupBox2.Controls.Add(this.txtdistrict);
             this.groupBox2.Controls.Add(this.txttaluka);
-            this.groupBox2.Controls.Add(this.txtcity);
             this.groupBox2.Controls.Add(this.label22);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label21);
@@ -602,6 +615,18 @@ namespace Ruby_Hospital
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // textBox2
+            // 
+            resources.ApplyResources(this.textBox2, "textBox2");
+            this.textBox2.ForeColor = System.Drawing.Color.Gray;
+            this.textBox2.Name = "textBox2";
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.ForeColor = System.Drawing.Color.Gray;
+            this.textBox1.Name = "textBox1";
             // 
             // txtaddress
             // 
@@ -639,15 +664,6 @@ namespace Ruby_Hospital
             resources.GetString("txttaluka.Items1")});
             this.txttaluka.Name = "txttaluka";
             // 
-            // txtcity
-            // 
-            resources.ApplyResources(this.txtcity, "txtcity");
-            this.txtcity.FormattingEnabled = true;
-            this.txtcity.Items.AddRange(new object[] {
-            resources.GetString("txtcity.Items"),
-            resources.GetString("txtcity.Items1")});
-            this.txtcity.Name = "txtcity";
-            // 
             // label22
             // 
             resources.ApplyResources(this.label22, "label22");
@@ -682,22 +698,10 @@ namespace Ruby_Hospital
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // textBox1
+            // txtcity
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Name = "textBox1";
-            // 
-            // lbl
-            // 
-            resources.ApplyResources(this.lbl, "lbl");
-            this.lbl.Name = "lbl";
-            // 
-            // textBox2
-            // 
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Name = "textBox2";
+            resources.ApplyResources(this.txtcity, "txtcity");
+            this.txtcity.Name = "txtcity";
             // 
             // Patient_Registration
             // 
@@ -776,7 +780,6 @@ namespace Ruby_Hospital
         private System.Windows.Forms.ComboBox txtstate;
         private System.Windows.Forms.ComboBox txtdistrict;
         private System.Windows.Forms.ComboBox txttaluka;
-        private System.Windows.Forms.ComboBox txtcity;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
@@ -804,5 +807,6 @@ namespace Ruby_Hospital
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtcity;
     }
 }

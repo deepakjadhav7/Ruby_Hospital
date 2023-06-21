@@ -21,7 +21,7 @@ namespace Ruby_Hospital
         int countpatient;
         //SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["SpecalistHospitalSystem.Properties.Settings.Db_BNHConnectionString"].ConnectionString);
         AutoCompleteStringCollection namesCollection = new AutoCompleteStringCollection();
-        String selectedby;
+       // String selectedby;
         public Patient_Registration()
         {
             InitializeComponent();
@@ -133,7 +133,10 @@ namespace Ruby_Hospital
             //this.Location = new Point(0, 0);
             //this.Size = new Size(w, h);
 
-
+            cbmmaritalstatus.SelectedIndex = 0;
+            txtpurpose.SelectedIndex = 0;
+            txtnationality.SelectedIndex = 0;
+            txtpatientsearch.SelectedIndex = 0;
             #region Auto Complete Property
             System.Collections.ArrayList ListArray = new ArrayList();
             SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
@@ -157,6 +160,7 @@ namespace Ruby_Hospital
             Referred_Doctor();
             State();
             District();
+            Taluka();
         }
 
         public void generateAutoId()
@@ -244,14 +248,22 @@ namespace Ruby_Hospital
         {
             try
             {
+
                 SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
                 con.Open();
                 SqlCommand cmd = new SqlCommand(@"Insert Into Patient_Registration (Patient_ID,Prefixes,Name,Gender,DOB,Age,Marital_Status,Mobile_Number,
                                                Email,Adhaar_ID,Weight,Purpose,Alternate_Mobile,Nationality,Remark,AROGYA_Card,Registration_Charges,Consultation_Charges,
-                                               Address,State,District,Taluka,City,Doctors_Name,Referred_By) Values (@Patient_ID,@Prefixes,@Name,@Gender,@DOB,@Age,@Marital_Status,@Mobile_Number,
+                                               Address,State,District,Taluka,City,Doctors_Name,Referred_By,Date) Values (@Patient_ID,@Prefixes,@Name,@Gender,@DOB,@Age,@Marital_Status,@Mobile_Number,
                                                @Email,@Adhaar_ID,@Weight,@Purpose,@Alternate_Mobile,@Nationality,@Remark,@AROGYA_Card,@Registration_Charges,@Consultation_Charges,
+
                                                @Address,@State,@District,@Taluka,@City,@Doctors_Name,@Referred_By)", con);
                 cmd.Parameters.AddWithValue("@Patient_ID", textBox1.Text);
+
+                                              // @Address,@State,@District,@Taluka,@City,@Doctors_Name,@Referred_By,@Date)", con);
+
+
+                cmd.Parameters.AddWithValue("@Patient_ID", "RSHJ001");
+
                 cmd.Parameters.AddWithValue("@Prefixes", txtprofix.Text);
                 cmd.Parameters.AddWithValue("@Name", txtname.Text);
                 if (btnmale.Checked == true)
@@ -283,6 +295,10 @@ namespace Ruby_Hospital
                 cmd.Parameters.AddWithValue("@City", txtcity.Text);
                 cmd.Parameters.AddWithValue("@Doctors_Name", cmbDoctor.Text);
                 cmd.Parameters.AddWithValue("@Referred_By", cmbReferred.Text);
+
+                cmd.Parameters.AddWithValue("@Date", System.DateTime.Now);
+
+
                 cmd.ExecuteNonQuery();
                 con.Close();
                 if (txtpurpose.Text == "IPD")
@@ -304,9 +320,10 @@ namespace Ruby_Hospital
                     generateAutoOId();
                     MessageBox.Show("Record Added Successfully");
                     OPDRegistration();
-                    btnGOTOIPD.Visible = true;
+                    btnGOTOIPD.Visible = false;
                     btnsave.Visible = false;
                     btnPrint.Visible = false;
+                    this.Close();
                 }
             }
             catch (Exception ex)
@@ -353,49 +370,56 @@ namespace Ruby_Hospital
         }
         public void UpdateRegistration()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
-            con.Open();
-            SqlCommand cmd = new SqlCommand(@"Update Patient_Registration set (Prefixes=@Prefixes,Name=@Name,Gender=@Gende,DOB=@DOB,Age=@Age,Marital_Status=@Marital_Status,Mobile_Number=@Mobile_Number,
+            try
+            {
+
+                SqlConnection con = new SqlConnection(@"Data Source=208.91.198.196;User ID=Ruby_Jamner123;Password=ruby@jamner");
+                con.Open();
+                SqlCommand cmd = new SqlCommand(@"Update Patient_Registration set (Prefixes=@Prefixes,Name=@Name,Gender=@Gende,DOB=@DOB,Age=@Age,Marital_Status=@Marital_Status,Mobile_Number=@Mobile_Number,
                                                Email=@Email,Adhaar_ID=@Adhaar_ID,Weight=@Weight,Purpose=@Purpose,Alternate_Mobile=@Alternate_Mobile,Nationality=@Nationality,Remark=@Remark,AROGYA_Card=@AROGYA_Card,Registration_Charges=@Registration_Charges,Consultation_Charges=@Consultation_Charges,
-                                               Address=@Address,State=@State,District=@District,Taluka=@Taluka,City=@City,Doctors_Name=@Doctors_Name,Referred_By=@Referred_By)  where Patient_ID=@Patient_ID)", con);
+                                               Address=@Address,State=@State,District=@District,Taluka=@Taluka,City=@City,Doctors_Name=@Doctors_Name,Referred_By=@Referred_By,Date=@Date)  where Patient_ID=@Patient_ID)", con);
 
 
-            cmd.Parameters.AddWithValue("@Patient_ID", "RSHJ001");
-            cmd.Parameters.AddWithValue("@Prefixes", txtprofix.Text);
-            cmd.Parameters.AddWithValue("@Name", txtname.Text);
-            if (btnmale.Checked == true)
-            {
-                cmd.Parameters.AddWithValue("@Gender", "Male");
+                cmd.Parameters.AddWithValue("@Patient_ID", "RSHJ001");
+                cmd.Parameters.AddWithValue("@Prefixes", txtprofix.Text);
+                cmd.Parameters.AddWithValue("@Name", txtname.Text);
+                if (btnmale.Checked == true)
+                {
+                    cmd.Parameters.AddWithValue("@Gender", "Male");
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@Gender", "Female");
+                }
+
+                cmd.Parameters.AddWithValue("@DOB", txtdate.Text);
+                cmd.Parameters.AddWithValue("@Age", txtage.Text);
+                cmd.Parameters.AddWithValue("@Marital_Status", cbmmaritalstatus.Text);
+                cmd.Parameters.AddWithValue("@Mobile_Number", txtmobilenumber.Text);
+                cmd.Parameters.AddWithValue("@Email", txtmail.Text);
+                cmd.Parameters.AddWithValue("@Adhaar_ID", txtaadhaar.Text);
+                cmd.Parameters.AddWithValue("@Weight", txtweight.Text);
+                cmd.Parameters.AddWithValue("@Purpose", txtpurpose.Text);
+                cmd.Parameters.AddWithValue("@Alternate_Mobile", txtalternateno.Text);
+                cmd.Parameters.AddWithValue("@Nationality", txtnationality.Text);
+                cmd.Parameters.AddWithValue("@Remark", txtremark.Text);
+                cmd.Parameters.AddWithValue("@AROGYA_Card", txtarogyacard.Text);
+                cmd.Parameters.AddWithValue("@Registration_Charges", txtregicharges.Text);
+                cmd.Parameters.AddWithValue("@Consultation_Charges", txtconsultacharges.Text);
+                cmd.Parameters.AddWithValue("@Address", txtaddress.Text);
+                cmd.Parameters.AddWithValue("@State", txtstate.Text);
+                cmd.Parameters.AddWithValue("@District", txtdistrict.Text);
+                cmd.Parameters.AddWithValue("@Taluka", txttaluka.Text);
+                cmd.Parameters.AddWithValue("@City", txtcity.Text);
+                cmd.Parameters.AddWithValue("@Doctors_Name", cmbDoctor.Text);
+                cmd.Parameters.AddWithValue("@Referred_By", cmbReferred.Text);
+                cmd.Parameters.AddWithValue("@Date", System.DateTime.Now);
+                cmd.ExecuteNonQuery();
             }
-            else
+            catch(Exception ex)
             {
-                cmd.Parameters.AddWithValue("@Gender", "Female");
+                MessageBox.Show(ex.ToString());
             }
-
-            cmd.Parameters.AddWithValue("@DOB", txtdate.Text);
-            cmd.Parameters.AddWithValue("@Age", txtage.Text);
-            cmd.Parameters.AddWithValue("@Marital_Status", cbmmaritalstatus.Text);
-            cmd.Parameters.AddWithValue("@Mobile_Number", txtmobilenumber.Text);
-            cmd.Parameters.AddWithValue("@Email", txtmail.Text);
-            cmd.Parameters.AddWithValue("@Adhaar_ID", txtaadhaar.Text);
-            cmd.Parameters.AddWithValue("@Weight", txtweight.Text);
-            cmd.Parameters.AddWithValue("@Purpose", txtpurpose.Text);
-            cmd.Parameters.AddWithValue("@Alternate_Mobile", txtalternateno.Text);
-            cmd.Parameters.AddWithValue("@Nationality", txtnationality.Text);
-            cmd.Parameters.AddWithValue("@Remark", txtremark.Text);
-            cmd.Parameters.AddWithValue("@AROGYA_Card", txtarogyacard.Text);
-            cmd.Parameters.AddWithValue("@Registration_Charges", txtregicharges.Text);
-            cmd.Parameters.AddWithValue("@Consultation_Charges", txtconsultacharges.Text);
-            cmd.Parameters.AddWithValue("@Address", txtaddress.Text);
-            cmd.Parameters.AddWithValue("@State", txtstate.Text);
-            cmd.Parameters.AddWithValue("@District", txtdistrict.Text);
-            cmd.Parameters.AddWithValue("@Taluka", txttaluka.Text);
-            cmd.Parameters.AddWithValue("@City", txtcity.Text);
-            cmd.Parameters.AddWithValue("@Doctors_Name", cmbDoctor.Text);
-            cmd.Parameters.AddWithValue("@Referred_By", cmbReferred.Text);
-
-            cmd.ExecuteNonQuery();
-            con.Close();
 
         }
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -802,6 +826,20 @@ namespace Ruby_Hospital
                 cmbDoctor.DataSource = dt;
                 cmbDoctor.DisplayMember = "Dr_Name";
                 cmbDoctor.ValueMember = "DR_ID";
+                
+                DataRow drr3;
+                drr3 = dt.NewRow();
+                drr3["DR_ID"] = "0";
+                drr3["Dr_Name"] = "$---Select---$";
+                dt.Rows.Add(drr3);
+                dt.DefaultView.Sort = "DR_ID asc";
+
+
+                //dt1.DefaultView.Sort = "PurposeId asc";
+                cmbDoctor.DataSource = dt;
+                cmbDoctor.DisplayMember = "Dr_Name";
+                cmbDoctor.ValueMember = "DR_ID";
+                cmbDoctor.Text = "$--Select Doctor--$";
             }
             con.Close();
 
@@ -819,6 +857,20 @@ namespace Ruby_Hospital
                 cmbReferred.DataSource = dt;
                 cmbReferred.DisplayMember = "Referred_Name";
                 cmbReferred.ValueMember = "ReferredID";
+
+                DataRow drr1;
+                drr1 = dt.NewRow();
+                drr1["ReferredID"] = "0";
+                drr1["Referred_Name"] = "$---Select---$";
+                dt.Rows.Add(drr1);
+                dt.DefaultView.Sort = "ReferredID asc";
+
+
+                //dt1.DefaultView.Sort = "PurposeId asc";
+                cmbReferred.DataSource = dt;
+                cmbReferred.DisplayMember = "Referred_Name";
+                cmbReferred.ValueMember = "ReferredID";
+                cmbReferred.Text = "$--Select Doctor--$";
             }
             con.Close();
         }

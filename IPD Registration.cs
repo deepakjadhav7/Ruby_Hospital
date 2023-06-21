@@ -66,8 +66,8 @@ namespace Ruby_Hospital
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-           if( rbtmlc.Checked == true)
-           {
+            if (rbtmlc.Checked == true)
+            {
                 MLC_Details md = new MLC_Details();
                 md.Show();
             }
@@ -100,16 +100,16 @@ namespace Ruby_Hospital
                 cmd.Parameters.AddWithValue("@Patient_Id", countpatient);
                 cmd.Parameters.AddWithValue("@Relatives_Name", txtReativeName.Text);
                 cmd.Parameters.AddWithValue("@Relation", cmbRelation.Text);
-                cmd.Parameters.AddWithValue("@Relative_Mobile_No", txtRelativeMobileNo.Text); 
+                cmd.Parameters.AddWithValue("@Relative_Mobile_No", txtRelativeMobileNo.Text);
                 cmd.Parameters.AddWithValue("@Date_Of_Admission", dateTimePicker1.Text);
                 cmd.Parameters.AddWithValue("@Type_Of_Admission", cmbTypeOfAddmission.Text);
                 cmd.Parameters.AddWithValue("@Mediclaim", cmbMediclaim.Text);
                 cmd.Parameters.AddWithValue("@Room_Segment", cmbRoomSegment.Text);
                 cmd.Parameters.AddWithValue("@Bed_No", cmb_BedNo.Text);
                 cmd.Parameters.AddWithValue("@ConsultantID", cmbConsultant.Text);
-                cmd.Parameters.AddWithValue("@Reserred_By", cmbReferredBy.Text); 
-               
-                if(rbtnonmlc.Checked==true)
+                cmd.Parameters.AddWithValue("@Reserred_By", cmbReferredBy.Text);
+
+                if (rbtnonmlc.Checked == true)
                 {
                     cmd.Parameters.AddWithValue("@MLC_NonMLC", "NON MLC");
                 }
@@ -237,4 +237,5 @@ namespace Ruby_Hospital
         }
     }
 }
+
 
