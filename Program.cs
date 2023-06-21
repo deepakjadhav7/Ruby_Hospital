@@ -18,7 +18,7 @@ namespace Ruby_Hospital
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            Application.Run(new OPD_ECG_and_Radiology_list());
+            Application.Run(new IPD_ECG_and_Radiology_fess());
            
 
        

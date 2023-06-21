@@ -534,11 +534,7 @@ namespace Ruby_Hospital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1304, 747);
-=======
-            this.ClientSize = new System.Drawing.Size(1304, 749);
->>>>>>> 31f04e0917c7677f9905ae98034db01e2ff30b8c
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.panel6);

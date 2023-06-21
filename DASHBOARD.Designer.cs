@@ -40,16 +40,17 @@ namespace Ruby_Hospital
             this.Login = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_Regi_down = new System.Windows.Forms.Panel();
-            this.btn_opdpatinetlist_slid = new System.Windows.Forms.Button();
-            this.btn_regi_Printform_slid = new System.Windows.Forms.Button();
-            this.btn_ipdpatientregi_slid = new System.Windows.Forms.Button();
-            this.btn_ipdregi_slid = new System.Windows.Forms.Button();
-            this.btn_regi_slid = new System.Windows.Forms.Button();
             this.panel_OPD_down = new System.Windows.Forms.Panel();
             this.btnlabreceipts = new System.Windows.Forms.Button();
             this.btnoldopdrecepites = new System.Windows.Forms.Button();
             this.btnopdlist = new System.Windows.Forms.Button();
             this.btnopdregistration = new System.Windows.Forms.Button();
+            this.btn_opdpatinetlist_slid = new System.Windows.Forms.Button();
+            this.btn_regi_Printform_slid = new System.Windows.Forms.Button();
+            this.btn_ipdpatientregi_slid = new System.Windows.Forms.Button();
+            this.btn_ipdregi_slid = new System.Windows.Forms.Button();
+            this.btn_regi_slid = new System.Windows.Forms.Button();
+            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.panel1.SuspendLayout();
             this.panel_Regi_down.SuspendLayout();
             this.panel_OPD_down.SuspendLayout();
@@ -210,66 +211,6 @@ namespace Ruby_Hospital
             this.panel_Regi_down.Size = new System.Drawing.Size(237, 231);
             this.panel_Regi_down.TabIndex = 10;
             // 
-            // btn_opdpatinetlist_slid
-            // 
-            this.btn_opdpatinetlist_slid.FlatAppearance.BorderSize = 0;
-            this.btn_opdpatinetlist_slid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_opdpatinetlist_slid.ForeColor = System.Drawing.Color.White;
-            this.btn_opdpatinetlist_slid.Location = new System.Drawing.Point(-1, 183);
-            this.btn_opdpatinetlist_slid.Name = "btn_opdpatinetlist_slid";
-            this.btn_opdpatinetlist_slid.Size = new System.Drawing.Size(225, 47);
-            this.btn_opdpatinetlist_slid.TabIndex = 4;
-            this.btn_opdpatinetlist_slid.Text = "OPD Patitent List";
-            this.btn_opdpatinetlist_slid.UseVisualStyleBackColor = true;
-            // 
-            // btn_regi_Printform_slid
-            // 
-            this.btn_regi_Printform_slid.FlatAppearance.BorderSize = 0;
-            this.btn_regi_Printform_slid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_regi_Printform_slid.ForeColor = System.Drawing.Color.White;
-            this.btn_regi_Printform_slid.Location = new System.Drawing.Point(0, 138);
-            this.btn_regi_Printform_slid.Name = "btn_regi_Printform_slid";
-            this.btn_regi_Printform_slid.Size = new System.Drawing.Size(225, 47);
-            this.btn_regi_Printform_slid.TabIndex = 3;
-            this.btn_regi_Printform_slid.Text = "Print Form Mannully";
-            this.btn_regi_Printform_slid.UseVisualStyleBackColor = true;
-            // 
-            // btn_ipdpatientregi_slid
-            // 
-            this.btn_ipdpatientregi_slid.FlatAppearance.BorderSize = 0;
-            this.btn_ipdpatientregi_slid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ipdpatientregi_slid.ForeColor = System.Drawing.Color.White;
-            this.btn_ipdpatientregi_slid.Location = new System.Drawing.Point(0, 93);
-            this.btn_ipdpatientregi_slid.Name = "btn_ipdpatientregi_slid";
-            this.btn_ipdpatientregi_slid.Size = new System.Drawing.Size(225, 47);
-            this.btn_ipdpatientregi_slid.TabIndex = 2;
-            this.btn_ipdpatientregi_slid.Text = "IPD Patient Registration";
-            this.btn_ipdpatientregi_slid.UseVisualStyleBackColor = true;
-            // 
-            // btn_ipdregi_slid
-            // 
-            this.btn_ipdregi_slid.FlatAppearance.BorderSize = 0;
-            this.btn_ipdregi_slid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ipdregi_slid.ForeColor = System.Drawing.Color.White;
-            this.btn_ipdregi_slid.Location = new System.Drawing.Point(0, 47);
-            this.btn_ipdregi_slid.Name = "btn_ipdregi_slid";
-            this.btn_ipdregi_slid.Size = new System.Drawing.Size(225, 47);
-            this.btn_ipdregi_slid.TabIndex = 1;
-            this.btn_ipdregi_slid.Text = "IPD Registration";
-            this.btn_ipdregi_slid.UseVisualStyleBackColor = true;
-            // 
-            // btn_regi_slid
-            // 
-            this.btn_regi_slid.FlatAppearance.BorderSize = 0;
-            this.btn_regi_slid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_regi_slid.ForeColor = System.Drawing.Color.White;
-            this.btn_regi_slid.Location = new System.Drawing.Point(0, 1);
-            this.btn_regi_slid.Name = "btn_regi_slid";
-            this.btn_regi_slid.Size = new System.Drawing.Size(225, 47);
-            this.btn_regi_slid.TabIndex = 0;
-            this.btn_regi_slid.Text = "Patient Registraion";
-            this.btn_regi_slid.UseVisualStyleBackColor = true;
-            // 
             // panel_OPD_down
             // 
             this.panel_OPD_down.BackColor = System.Drawing.Color.Teal;
@@ -330,6 +271,73 @@ namespace Ruby_Hospital
             this.btnopdregistration.Text = "OPD Registraion";
             this.btnopdregistration.UseVisualStyleBackColor = true;
             // 
+            // btn_opdpatinetlist_slid
+            // 
+            this.btn_opdpatinetlist_slid.FlatAppearance.BorderSize = 0;
+            this.btn_opdpatinetlist_slid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_opdpatinetlist_slid.ForeColor = System.Drawing.Color.White;
+            this.btn_opdpatinetlist_slid.Location = new System.Drawing.Point(-1, 183);
+            this.btn_opdpatinetlist_slid.Name = "btn_opdpatinetlist_slid";
+            this.btn_opdpatinetlist_slid.Size = new System.Drawing.Size(225, 47);
+            this.btn_opdpatinetlist_slid.TabIndex = 4;
+            this.btn_opdpatinetlist_slid.Text = "OPD Patitent List";
+            this.btn_opdpatinetlist_slid.UseVisualStyleBackColor = true;
+            // 
+            // btn_regi_Printform_slid
+            // 
+            this.btn_regi_Printform_slid.FlatAppearance.BorderSize = 0;
+            this.btn_regi_Printform_slid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_regi_Printform_slid.ForeColor = System.Drawing.Color.White;
+            this.btn_regi_Printform_slid.Location = new System.Drawing.Point(0, 138);
+            this.btn_regi_Printform_slid.Name = "btn_regi_Printform_slid";
+            this.btn_regi_Printform_slid.Size = new System.Drawing.Size(225, 47);
+            this.btn_regi_Printform_slid.TabIndex = 3;
+            this.btn_regi_Printform_slid.Text = "Print Form Mannully";
+            this.btn_regi_Printform_slid.UseVisualStyleBackColor = true;
+            // 
+            // btn_ipdpatientregi_slid
+            // 
+            this.btn_ipdpatientregi_slid.FlatAppearance.BorderSize = 0;
+            this.btn_ipdpatientregi_slid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ipdpatientregi_slid.ForeColor = System.Drawing.Color.White;
+            this.btn_ipdpatientregi_slid.Location = new System.Drawing.Point(0, 93);
+            this.btn_ipdpatientregi_slid.Name = "btn_ipdpatientregi_slid";
+            this.btn_ipdpatientregi_slid.Size = new System.Drawing.Size(225, 47);
+            this.btn_ipdpatientregi_slid.TabIndex = 2;
+            this.btn_ipdpatientregi_slid.Text = "IPD Patient Registration";
+            this.btn_ipdpatientregi_slid.UseVisualStyleBackColor = true;
+            // 
+            // btn_ipdregi_slid
+            // 
+            this.btn_ipdregi_slid.FlatAppearance.BorderSize = 0;
+            this.btn_ipdregi_slid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ipdregi_slid.ForeColor = System.Drawing.Color.White;
+            this.btn_ipdregi_slid.Location = new System.Drawing.Point(0, 47);
+            this.btn_ipdregi_slid.Name = "btn_ipdregi_slid";
+            this.btn_ipdregi_slid.Size = new System.Drawing.Size(225, 47);
+            this.btn_ipdregi_slid.TabIndex = 1;
+            this.btn_ipdregi_slid.Text = "IPD Registration";
+            this.btn_ipdregi_slid.UseVisualStyleBackColor = true;
+            // 
+            // btn_regi_slid
+            // 
+            this.btn_regi_slid.FlatAppearance.BorderSize = 0;
+            this.btn_regi_slid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_regi_slid.ForeColor = System.Drawing.Color.White;
+            this.btn_regi_slid.Location = new System.Drawing.Point(0, 1);
+            this.btn_regi_slid.Name = "btn_regi_slid";
+            this.btn_regi_slid.Size = new System.Drawing.Size(225, 47);
+            this.btn_regi_slid.TabIndex = 0;
+            this.btn_regi_slid.Text = "Patient Registraion";
+            this.btn_regi_slid.UseVisualStyleBackColor = true;
+            // 
+            // metroToolTip1
+            // 
+            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroToolTip1.StyleManager = null;
+            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroToolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.metroToolTip1_Popup);
+            // 
             // DASHBOARD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -374,5 +382,6 @@ namespace Ruby_Hospital
         private System.Windows.Forms.Button btnoldopdrecepites;
         private System.Windows.Forms.Button btnopdlist;
         private System.Windows.Forms.Button btnopdregistration;
+        private MetroFramework.Components.MetroToolTip metroToolTip1;
     }
 }

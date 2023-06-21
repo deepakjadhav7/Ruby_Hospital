@@ -99,14 +99,12 @@ namespace Ruby_Hospital
             this.label20 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-<<<<<<< HEAD
+
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-=======
-            this.txtcity = new System.Windows.Forms.TextBox();
->>>>>>> 31f04e0917c7677f9905ae98034db01e2ff30b8c
+
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -187,10 +185,9 @@ namespace Ruby_Hospital
             // cmbReferred
             // 
             resources.ApplyResources(this.cmbReferred, "cmbReferred");
-<<<<<<< HEAD
-=======
+
             this.cmbReferred.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
->>>>>>> 31f04e0917c7677f9905ae98034db01e2ff30b8c
+
             this.cmbReferred.FormattingEnabled = true;
             this.cmbReferred.Name = "cmbReferred";
             // 
@@ -203,10 +200,9 @@ namespace Ruby_Hospital
             // cmbDoctor
             // 
             resources.ApplyResources(this.cmbDoctor, "cmbDoctor");
-<<<<<<< HEAD
-=======
+
             this.cmbDoctor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
->>>>>>> 31f04e0917c7677f9905ae98034db01e2ff30b8c
+
             this.cmbDoctor.FormattingEnabled = true;
             this.cmbDoctor.Name = "cmbDoctor";
             this.cmbDoctor.Leave += new System.EventHandler(this.comboBox9_Leave);
@@ -606,14 +602,12 @@ namespace Ruby_Hospital
             // 
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
-<<<<<<< HEAD
+
             this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label28);
             this.groupBox2.Controls.Add(this.label27);
-=======
-            this.groupBox2.Controls.Add(this.txtcity);
->>>>>>> 31f04e0917c7677f9905ae98034db01e2ff30b8c
+
             this.groupBox2.Controls.Add(this.txtaddress);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txtstate);
@@ -697,7 +691,7 @@ namespace Ruby_Hospital
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-<<<<<<< HEAD
+
             // label27
             // 
             resources.ApplyResources(this.label27, "label27");
@@ -717,12 +711,7 @@ namespace Ruby_Hospital
             // 
             resources.ApplyResources(this.textBox2, "textBox2");
             this.textBox2.Name = "textBox2";
-=======
-            // txtcity
-            // 
-            resources.ApplyResources(this.txtcity, "txtcity");
-            this.txtcity.Name = "txtcity";
->>>>>>> 31f04e0917c7677f9905ae98034db01e2ff30b8c
+
             // 
             // Patient_Registration
             // 
@@ -822,13 +811,11 @@ namespace Ruby_Hospital
         private System.Windows.Forms.Button btnGOTOIPD;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label26;
-<<<<<<< HEAD
+
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
-=======
-        private System.Windows.Forms.TextBox txtcity;
->>>>>>> 31f04e0917c7677f9905ae98034db01e2ff30b8c
+
     }
 }

@@ -1870,7 +1870,7 @@
   <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-<<<<<<< HEAD
+
   <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>149, 437</value>
   </data>
@@ -1985,7 +1985,7 @@
   <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-=======
+
   <data name="&gt;&gt;txtcity.Name" xml:space="preserve">
     <value>txtcity</value>
   </data>
@@ -2130,7 +2130,7 @@
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
->>>>>>> 31f04e0917c7677f9905ae98034db01e2ff30b8c
+
   <data name="txtaddress.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -2162,11 +2162,9 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txtaddress.ZOrder" xml:space="preserve">
-<<<<<<< HEAD
-    <value>4</value>
-=======
+
     <value>1</value>
->>>>>>> 31f04e0917c7677f9905ae98034db01e2ff30b8c
+
   </data>
   <data name="label11.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2199,11 +2197,9 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-<<<<<<< HEAD
-    <value>5</value>
-=======
+
     <value>2</value>
->>>>>>> 31f04e0917c7677f9905ae98034db01e2ff30b8c
+
   </data>
   <data name="txtstate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2233,11 +2229,9 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txtstate.ZOrder" xml:space="preserve">
-<<<<<<< HEAD
-    <value>6</value>
-=======
+
     <value>3</value>
->>>>>>> 31f04e0917c7677f9905ae98034db01e2ff30b8c
+
   </data>
   <data name="txtdistrict.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2261,11 +2255,9 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txtdistrict.ZOrder" xml:space="preserve">
-<<<<<<< HEAD
-    <value>7</value>
-=======
+
     <value>4</value>
->>>>>>> 31f04e0917c7677f9905ae98034db01e2ff30b8c
+
   </data>
   <data name="txttaluka.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2295,7 +2287,6 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txttaluka.ZOrder" xml:space="preserve">
-<<<<<<< HEAD
     <value>8</value>
   </data>
   <data name="txtcity.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -2327,9 +2318,7 @@
   </data>
   <data name="&gt;&gt;txtcity.ZOrder" xml:space="preserve">
     <value>9</value>
-=======
-    <value>5</value>
->>>>>>> 31f04e0917c7677f9905ae98034db01e2ff30b8c
+
   </data>
   <data name="label22.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
