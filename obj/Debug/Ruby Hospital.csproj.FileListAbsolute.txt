@@ -155,3 +155,7 @@ C:\Users\MI Tech\Ruby Hospital\Ruby_Hospital\obj\Debug\Ruby_Hospital.IPD_Billng_
 C:\Users\MI Tech\Ruby Hospital\Ruby_Hospital\obj\Debug\Ruby_Hospital.OPD_Billing_info_gridview.resources
 C:\Users\MI Tech\Ruby Hospital\Ruby_Hospital\obj\Debug\Ruby_Hospital.OPD_Billing_Details.resources
 C:\Users\MI Tech\Ruby Hospital\Ruby_Hospital\obj\Debug\Ruby_Hospital.OPD_ECG_and_Radiology_list.resources
+D:\Ruby_hospital_new_development\Ruby_Hospital\obj\Debug\Ruby_Hospital.IPD_Billng_Gridview.resources
+D:\Ruby_hospital_new_development\Ruby_Hospital\obj\Debug\Ruby_Hospital.OPD_Billing_Details.resources
+D:\Ruby_hospital_new_development\Ruby_Hospital\obj\Debug\Ruby_Hospital.OPD_Billing_info_gridview.resources
+D:\Ruby_hospital_new_development\Ruby_Hospital\obj\Debug\Ruby_Hospital.OPD_ECG_and_Radiology_list.resources
