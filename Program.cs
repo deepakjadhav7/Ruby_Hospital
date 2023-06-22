@@ -20,7 +20,7 @@ namespace Ruby_Hospital
 
 
 
-            Application.Run(new OPD_Consultaion_mainform());
+            Application.Run(new OPD_Consultaion_gridview());
 
 
 

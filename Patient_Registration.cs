@@ -379,7 +379,7 @@ namespace Ruby_Hospital
                                                Address=@Address,State=@State,District=@District,Taluka=@Taluka,City=@City,Doctors_Name=@Doctors_Name,Referred_By=@Referred_By,Date=@Date)  where Patient_ID=@Patient_ID)", con);
 
 
-                cmd.Parameters.AddWithValue("@Patient_ID", "RSHJ001");
+                cmd.Parameters.AddWithValue("@Patient_ID", textBox1.Text);
                 cmd.Parameters.AddWithValue("@Prefixes", txtprofix.Text);
                 cmd.Parameters.AddWithValue("@Name", txtname.Text);
                 if (btnmale.Checked == true)

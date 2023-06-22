@@ -41,8 +41,8 @@ namespace Ruby_Hospital
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTreatment = new System.Windows.Forms.TextBox();
+            this.txtIllness = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -50,6 +50,7 @@ namespace Ruby_Hospital
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label14 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.button4 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -67,6 +68,7 @@ namespace Ruby_Hospital
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -118,6 +120,7 @@ namespace Ruby_Hospital
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -220,8 +223,8 @@ namespace Ruby_Hospital
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
-            this.panel4.Controls.Add(this.textBox3);
-            this.panel4.Controls.Add(this.textBox2);
+            this.panel4.Controls.Add(this.txtTreatment);
+            this.panel4.Controls.Add(this.txtIllness);
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(228, 173);
@@ -230,23 +233,23 @@ namespace Ruby_Hospital
             this.panel4.TabIndex = 19;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // textBox3
+            // txtTreatment
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(463, 15);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(538, 53);
-            this.textBox3.TabIndex = 8;
+            this.txtTreatment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTreatment.Location = new System.Drawing.Point(463, 15);
+            this.txtTreatment.Multiline = true;
+            this.txtTreatment.Name = "txtTreatment";
+            this.txtTreatment.Size = new System.Drawing.Size(538, 53);
+            this.txtTreatment.TabIndex = 8;
             // 
-            // textBox2
+            // txtIllness
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtIllness.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(92, 15);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(236, 33);
-            this.textBox2.TabIndex = 7;
+            this.txtIllness.Location = new System.Drawing.Point(92, 15);
+            this.txtIllness.Name = "txtIllness";
+            this.txtIllness.Size = new System.Drawing.Size(236, 33);
+            this.txtIllness.TabIndex = 7;
             // 
             // label13
             // 
@@ -313,7 +316,7 @@ namespace Ruby_Hospital
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(17, 155);
+            this.label14.Location = new System.Drawing.Point(16, 42);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(134, 20);
             this.label14.TabIndex = 10;
@@ -321,13 +324,24 @@ namespace Ruby_Hospital
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Delete});
             this.dataGridView3.Location = new System.Drawing.Point(232, 13);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(299, 343);
             this.dataGridView3.TabIndex = 9;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // button4
             // 
@@ -336,18 +350,19 @@ namespace Ruby_Hospital
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(60, 279);
+            this.button4.Location = new System.Drawing.Point(57, 188);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(102, 40);
             this.button4.TabIndex = 25;
             this.button4.Text = "Add";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(20, 177);
+            this.comboBox1.Location = new System.Drawing.Point(20, 78);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(185, 29);
             this.comboBox1.TabIndex = 8;
@@ -397,6 +412,7 @@ namespace Ruby_Hospital
             this.button5.TabIndex = 24;
             this.button5.Text = "Save";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
@@ -531,11 +547,20 @@ namespace Ruby_Hospital
             this.label5.TabIndex = 0;
             this.label5.Text = "OPD Procedure Rs.";
             // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(357, 41);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 33);
+            this.txtID.TabIndex = 27;
+            this.txtID.Visible = false;
+            // 
             // OPD_Consultaion_mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1304, 749);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.panel6);
@@ -604,8 +629,8 @@ namespace Ruby_Hospital
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTreatment;
+        private System.Windows.Forms.TextBox txtIllness;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl1;
@@ -613,5 +638,7 @@ namespace Ruby_Hospital
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }
