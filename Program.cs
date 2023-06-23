@@ -17,10 +17,8 @@ namespace Ruby_Hospital
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-
-
-
             Application.Run(new OPD_Consultaion_gridview());
+
 
 
 

@@ -154,6 +154,18 @@
     <Compile Include="IPD_Daily_Procedure_main.Designer.cs">
       <DependentUpon>IPD_Daily_Procedure_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="IPD_ECG_and_Radiology_fess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPD_ECG_and_Radiology_fess.Designer.cs">
+      <DependentUpon>IPD_ECG_and_Radiology_fess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPD_lab_test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPD_lab_test.Designer.cs">
+      <DependentUpon>IPD_lab_test.cs</DependentUpon>
+    </Compile>
     <Compile Include="IPD_Surgical_Procedure_Billing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +353,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IPD_Daily_Procedure_main.resx">
       <DependentUpon>IPD_Daily_Procedure_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPD_ECG_and_Radiology_fess.resx">
+      <DependentUpon>IPD_ECG_and_Radiology_fess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPD_lab_test.resx">
+      <DependentUpon>IPD_lab_test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IPD_Surgical_Procedure_Billing.resx">
       <DependentUpon>IPD_Surgical_Procedure_Billing.cs</DependentUpon>

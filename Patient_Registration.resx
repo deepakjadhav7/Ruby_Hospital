@@ -1825,8 +1825,14 @@
   <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+<<<<<<< HEAD
+
+  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 437</value>
+=======
   <data name="txtcity.Location" type="System.Drawing.Point, System.Drawing">
     <value>142, 353</value>
+>>>>>>> 2fc1de717e1ad1e8f1387b116e8689038950ef24
   </data>
   <data name="txtcity.Size" type="System.Drawing.Size, System.Drawing">
     <value>217, 27</value>
@@ -1834,6 +1840,115 @@
   <data name="txtcity.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
+<<<<<<< HEAD
+  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
+    <value>textBox2</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 398</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 27</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label28.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="label28.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label28.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="label28.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 440</value>
+  </data>
+  <data name="label28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 21</value>
+  </data>
+  <data name="label28.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="label28.Text" xml:space="preserve">
+    <value>TXTID with SR</value>
+  </data>
+  <data name="&gt;&gt;label28.Name" xml:space="preserve">
+    <value>label28</value>
+  </data>
+  <data name="&gt;&gt;label28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label28.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label28.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label27.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="label27.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label27.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="label27.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 402</value>
+  </data>
+  <data name="label27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 21</value>
+  </data>
+  <data name="label27.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="label27.Text" xml:space="preserve">
+    <value>TXTID</value>
+  </data>
+  <data name="&gt;&gt;label27.Name" xml:space="preserve">
+    <value>label27</value>
+  </data>
+  <data name="&gt;&gt;label27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label27.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+
+=======
+>>>>>>> 2fc1de717e1ad1e8f1387b116e8689038950ef24
   <data name="&gt;&gt;txtcity.Name" xml:space="preserve">
     <value>txtcity</value>
   </data>
@@ -2150,6 +2265,63 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+<<<<<<< HEAD
+    <value>0</value>
+  </data>
+
+  <data name="txtaddress.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="txtaddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 44</value>
+  </data>
+  <data name="txtaddress.MaxLength" type="System.Int32, mscorlib">
+    <value>800</value>
+  </data>
+  <data name="txtaddress.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtaddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 109</value>
+  </data>
+  <data name="txtaddress.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="txtaddress.Text" xml:space="preserve">
+    <value>Enter the Address</value>
+  </data>
+  <data name="&gt;&gt;txtaddress.Name" xml:space="preserve">
+    <value>txtaddress</value>
+  </data>
+  <data name="&gt;&gt;txtaddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtaddress.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtaddress.ZOrder" xml:space="preserve">
+
+    <value>1</value>
+
+  </data>
+  <data name="label11.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 47</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 21</value>
+  </data>
+  <data name="label11.TabIndex" type="System.Int32, mscorlib">
+=======
+>>>>>>> 2fc1de717e1ad1e8f1387b116e8689038950ef24
     <value>2</value>
   </data>
   <data name="textBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -2158,8 +2330,21 @@
   <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>306, 68</value>
   </data>
+<<<<<<< HEAD
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+
+    <value>2</value>
+
+=======
   <data name="textBox2.MaxLength" type="System.Int32, mscorlib">
     <value>2</value>
+>>>>>>> 2fc1de717e1ad1e8f1387b116e8689038950ef24
   </data>
   <data name="textBox2.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2167,7 +2352,78 @@
   <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 30</value>
   </data>
+<<<<<<< HEAD
+  <data name="txtstate.Items1" xml:space="preserve">
+    <value>Miss</value>
+  </data>
+  <data name="txtstate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 181</value>
+  </data>
+  <data name="txtstate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 29</value>
+  </data>
+  <data name="txtstate.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;txtstate.Name" xml:space="preserve">
+    <value>txtstate</value>
+  </data>
+  <data name="&gt;&gt;txtstate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtstate.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtstate.ZOrder" xml:space="preserve">
+
+    <value>3</value>
+
+  </data>
+  <data name="txtdistrict.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="txtdistrict.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 239</value>
+  </data>
+  <data name="txtdistrict.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 29</value>
+  </data>
+  <data name="txtdistrict.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;txtdistrict.Name" xml:space="preserve">
+    <value>txtdistrict</value>
+  </data>
+  <data name="&gt;&gt;txtdistrict.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtdistrict.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtdistrict.ZOrder" xml:space="preserve">
+
+    <value>4</value>
+
+  </data>
+  <data name="txttaluka.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="txttaluka.Items" xml:space="preserve">
+    <value>Mr</value>
+  </data>
+  <data name="txttaluka.Items1" xml:space="preserve">
+    <value>Miss</value>
+  </data>
+  <data name="txttaluka.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 294</value>
+  </data>
+  <data name="txttaluka.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 29</value>
+  </data>
+  <data name="txttaluka.TabIndex" type="System.Int32, mscorlib">
+=======
   <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
+>>>>>>> 2fc1de717e1ad1e8f1387b116e8689038950ef24
     <value>23</value>
   </data>
   <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
@@ -2179,8 +2435,13 @@
   <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+<<<<<<< HEAD
+  <data name="&gt;&gt;txttaluka.ZOrder" xml:space="preserve">
+    <value>8</value>
+=======
   <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
     <value>0</value>
+>>>>>>> 2fc1de717e1ad1e8f1387b116e8689038950ef24
   </data>
   <data name="textBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -2188,7 +2449,51 @@
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>187, 68</value>
   </data>
+<<<<<<< HEAD
+  <data name="txtcity.Items1" xml:space="preserve">
+    <value>Miss</value>
+  </data>
+  <data name="txtcity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 350</value>
+  </data>
+  <data name="txtcity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 29</value>
+  </data>
+  <data name="txtcity.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;txtcity.Name" xml:space="preserve">
+    <value>txtcity</value>
+  </data>
+  <data name="&gt;&gt;txtcity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtcity.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtcity.ZOrder" xml:space="preserve">
+    <value>9</value>
+
+  </data>
+  <data name="label22.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="label22.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label22.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 182</value>
+  </data>
+  <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 21</value>
+  </data>
+  <data name="label22.TabIndex" type="System.Int32, mscorlib">
+=======
   <data name="textBox1.MaxLength" type="System.Int32, mscorlib">
+>>>>>>> 2fc1de717e1ad1e8f1387b116e8689038950ef24
     <value>2</value>
   </data>
   <data name="textBox1.Multiline" type="System.Boolean, mscorlib">

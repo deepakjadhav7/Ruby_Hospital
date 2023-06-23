@@ -65,7 +65,7 @@ namespace Ruby_Hospital
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
             this.groupBox1.Controls.Add(this.panel4);
             this.groupBox1.Controls.Add(this.dataGridView2);
-            this.groupBox1.Location = new System.Drawing.Point(61, 238);
+            this.groupBox1.Location = new System.Drawing.Point(49, 238);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1244, 380);
             this.groupBox1.TabIndex = 88;
@@ -203,7 +203,7 @@ namespace Ruby_Hospital
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(61, 129);
+            this.panel1.Location = new System.Drawing.Point(49, 129);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1244, 93);
             this.panel1.TabIndex = 85;
@@ -216,6 +216,7 @@ namespace Ruby_Hospital
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1244, 93);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // pictureBox2
             // 

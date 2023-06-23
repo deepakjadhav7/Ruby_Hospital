@@ -90,5 +90,10 @@ namespace Ruby_Hospital
             panel_Regi_down.Visible = false;
 
         }
+
+        private void metroToolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
     }
 }

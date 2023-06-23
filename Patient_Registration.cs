@@ -289,7 +289,7 @@ namespace Ruby_Hospital
                 cmd.Parameters.AddWithValue("@State", txtstate.Text);
                 cmd.Parameters.AddWithValue("@District", txtdistrict.Text);
                 cmd.Parameters.AddWithValue("@Taluka", txttaluka.Text);
-                cmd.Parameters.AddWithValue("@City", txtcity.Text);
+                //cmd.Parameters.AddWithValue("@City", txtcity.Text);
                 cmd.Parameters.AddWithValue("@Doctors_Name", cmbDoctor.Text);
                 cmd.Parameters.AddWithValue("@Referred_By", cmbReferred.Text);
 
@@ -409,7 +409,7 @@ namespace Ruby_Hospital
                 cmd.Parameters.AddWithValue("@State", txtstate.Text);
                 cmd.Parameters.AddWithValue("@District", txtdistrict.Text);
                 cmd.Parameters.AddWithValue("@Taluka", txttaluka.Text);
-                cmd.Parameters.AddWithValue("@City", txtcity.Text);
+               // cmd.Parameters.AddWithValue("@City", txtcity.Text);
                 cmd.Parameters.AddWithValue("@Doctors_Name", cmbDoctor.Text);
                 cmd.Parameters.AddWithValue("@Referred_By", cmbReferred.Text);
                 cmd.Parameters.AddWithValue("@Date", System.DateTime.Now);
@@ -484,7 +484,7 @@ namespace Ruby_Hospital
                             txtstate.DataBindings.Add("Text", dt, "State");
                             txtdistrict.DataBindings.Add("Text", dt, "District");
                             txttaluka.DataBindings.Add("Text", dt, "Taluka");
-                            txtcity.DataBindings.Add("Text", dt, "City");
+                           // txtcity.DataBindings.Add("Text", dt, "City");
                             cmbDoctor.DataBindings.Add("Text", dt, "Doctors_Name");
                             cmbReferred.DataBindings.Add("Text", dt, "Referred_By");
 

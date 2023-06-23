@@ -559,6 +559,7 @@ namespace Ruby_Hospital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.ClientSize = new System.Drawing.Size(1304, 749);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.panel5);
@@ -598,8 +599,8 @@ namespace Ruby_Hospital
             this.PerformLayout();
 
         }
-
         #endregion
+   
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
@@ -642,3 +643,4 @@ namespace Ruby_Hospital
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }
+
